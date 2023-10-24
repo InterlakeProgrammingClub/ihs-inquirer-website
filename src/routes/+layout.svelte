@@ -1,6 +1,6 @@
 <body>
 	<nav>
-		<a href="/"><img class="logo" id="logo1" src="logo.png" alt="Logo of REDACTED Inquirer" /></a>
+		<a href="/"><img class="logo" id="logo1" src="/logo.png" alt="Logo of REDACTED Inquirer" /></a>
 		<div>
 			<div class="links">
 				<a href="/">Latest Issue</a>
@@ -13,7 +13,7 @@
 			<h1>THE REDACTED INQUIRER</h1>
 			<h2>The Official Student Newspaper of REDACTED</h2>
 		</div>
-		<a href="/"><img class="logo" id="logo2" src="logo.png" alt="Logo of REDACTED Inquirer" /></a>
+		<a href="/"><img class="logo" id="logo2" src="/logo.png" alt="Logo of REDACTED Inquirer" /></a>
 	</nav>
 
 	<div class="slot">
