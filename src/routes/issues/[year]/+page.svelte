@@ -4,10 +4,10 @@
 	export let data;
 
 	const { year } = $page.params;
-	const seasons = Object.keys(data.posts[year]);
+	const obj = data?.posts[year];
+	const seasons = obj ? Object?.keys(obj) : [];
 </script>
 
 {#each seasons as season}
-	<a href={'/issues/' + year + '/' + season}>{season}</a>
-	<br />
+	<a class="pretty-link" href={'/issues/' + year + '/' + season}>{season}</a>
 {/each}

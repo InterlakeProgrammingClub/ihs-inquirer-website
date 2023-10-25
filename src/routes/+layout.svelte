@@ -1,3 +1,7 @@
+<script>
+	import '../app.css';
+</script>
+
 <body>
 	<nav>
 		<a href="/"><img class="logo" id="logo1" src="/logo.png" alt="Logo of Interlake Inquirer" /></a>
@@ -24,6 +28,7 @@
 <style>
 	body {
 		margin: 0;
+		overflow-x: hidden;
 	}
 
 	nav {
