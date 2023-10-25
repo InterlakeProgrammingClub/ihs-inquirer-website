@@ -4,6 +4,7 @@ description: 'description here'
 author: 'Gauri Gupta'
 date: '2022'
 slug: 'you-belong-here'
+featured_img: '/images/2022/winter/clue-1.png'
 published: true
 ---
 

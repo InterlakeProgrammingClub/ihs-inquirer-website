@@ -4,6 +4,7 @@ description: 'description here'
 author: 'Azle Norsworthy'
 date: '2022'
 slug: 'healthy-or-harmful'
+featured_img: '/images/2022/winter/clue-1.png'
 published: true
 ---
 

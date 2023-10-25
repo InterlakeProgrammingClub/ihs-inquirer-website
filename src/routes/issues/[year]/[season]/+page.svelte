@@ -3,8 +3,6 @@
 	import Panel from '$lib/components/panel.svelte';
 	export let data;
 	const { year, season } = $page.params;
-
-	console.log(data.posts[year][season]);
 </script>
 
 <div class="panels">
