@@ -1,0 +1,48 @@
+{
+    "editors": [
+        {
+            "name": "Trinity Lee",
+            "position": "Editor-in-Chief",
+            "bio": "Trinity is a junior and the editor-in-chief for the Interlake Inquirer. Other than journalism, she loves painting and baking. She is looking forward to meeting new people and writing more articles!",
+            "img": ""
+        },
+        {
+            "name": "Ameiya Isaac",
+            "position": "Editor",
+            "bio": "Ameiya is a junior and an editor this year, and has been on the Interlake Inquirer since her sophomore year. She enjoys swimming, doing taekwondo, and skiing. She also loves to spend time with her friends and family.",
+            "img": ""
+        },
+        {
+            "name": "Alexandra Hui",
+            "position": "Editor",
+            "bio": "Alexandra is a junior at Interlake and is excited to be writing for the Inquirer. When not working on articles, you can find her playing the violin, doing Model UN, reading, and having fun with her friends or sister.",
+            "img": ""
+        },
+        {
+            "name": "Tuck Ellis",
+            "position": "Editor",
+            "bio": "~~~",
+            "img": ""
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Albert Zhan",
+            "position": "Lead Photographer",
+            "bio": "Albert Zhan is a junior this year and is serving as the lead photographer for the Interlake Inquirer. Besides photography, he likes drawing, playing Valorant, and playing soccer. He hopes to bring interesting and creative photos to the school newspaper!",
+            "img": ""
+        },
+        {
+            "name": "Zoya Merakov",
+            "position": "Writer",
+            "bio": "Zoya is a senior who is excited to be a writer for The Interlake Inquirer! Other than writing, she loves working out, reading, and hanging out with friends!",
+            "img": ""
+        },
+        {
+            "name": "Shyam Argumam",
+            "position": "Writer",
+            "bio": "Shyam Arumugam is a senior at Interlake High School. He is part of the Interlake Saints Robotics (1899) team, DECA, and plays soccer in his freetime. He loves listening to, playing, and mixing music, as well as hiking in the summer. He enjoys using writing as a medium to share unique perspectives on topics.",
+            "img": ""
+        }
+    ]
+}
