@@ -3,8 +3,6 @@
 
 	const editors = Bio.editors;
 	const contributors = Bio.contributors;
-
-	console.log(editors);
 </script>
 
 <h1>About</h1>
