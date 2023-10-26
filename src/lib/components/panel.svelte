@@ -3,7 +3,9 @@
 </script>
 
 <div class="panel">
-	<img src={post.featured_img} alt="" />
+	<picture>
+		<img src={post.featured_img} alt="" />
+	</picture>
 	<h2>{post.title}</h2>
 	<p>By {post.author}</p>
 	<p>{post.date}</p>
@@ -17,13 +19,13 @@
 		border: 2px solid black;
 		border-radius: 4px;
 		margin: 20px;
-		padding: 5px;
 		background-color: var(--link-color-1);
 	}
 
 	img {
-		display: relative;
-		width: 100%;
+		width: 280px;
+		height: 200px;
+		object-fit: cover;
 	}
 
 	h2 {

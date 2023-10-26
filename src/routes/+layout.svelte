@@ -2,31 +2,28 @@
 	import '../app.css';
 </script>
 
-<body>
-	<nav>
-		<a href="/"><img class="logo" id="logo1" src="/logo.png" alt="Logo of Interlake Inquirer" /></a>
-		<div>
-			<div class="links">
-				<a href="/">Latest Issue</a>
-				<a href="/about">About</a>
-				<a href="/issues">Past Issues</a>
-				<a href="/weekly-woof">The Weekly Woof</a>
-				<a href="/contact">Contact</a>
-			</div>
-			<hr />
-			<h1>THE INTERLAKE INQUIRER</h1>
-			<h2>The Official Student Newspaper of Interlake High School</h2>
+<nav>
+	<a href="/"><img class="logo" id="logo1" src="/logo.png" alt="Logo of Interlake Inquirer" /></a>
+	<div>
+		<div class="links">
+			<a href="/">Latest Issue</a>
+			<a href="/about">About</a>
+			<a href="/issues">Past Issues</a>
+			<a href="/weekly-woof">The Weekly Woof</a>
+			<a href="/contact">Contact</a>
 		</div>
-		<a href="/"><img class="logo" id="logo2" src="/logo.png" alt="Logo of Interlake Inquirer" /></a>
-	</nav>
-
-	<div class="slot">
-		<slot />
+		<hr />
+		<h1>THE INTERLAKE INQUIRER</h1>
+		<h2>The Official Student Newspaper of Interlake High School</h2>
 	</div>
-</body>
+	<a href="/"><img class="logo" id="logo2" src="/logo.png" alt="Logo of Interlake Inquirer" /></a>
+</nav>
+<div class="slot">
+	<slot />
+</div>
 
 <style>
-	body {
+	:global(body) {
 		margin: 0;
 		overflow-x: hidden;
 	}
@@ -74,7 +71,7 @@
 	}
 
 	.slot {
-		margin: 0 30px;
+		padding: 0 30px;
 	}
 
 	@media (max-width: 832px) {
