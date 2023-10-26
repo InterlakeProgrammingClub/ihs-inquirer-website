@@ -1,13 +1,12 @@
 <script>
 	import { page } from '$app/stores';
-	import struct from '/src/bio/struct.json';
 	import Panel from '$lib/components/panel.svelte';
 	export let data;
 	const { year, season } = $page.params;
 </script>
 
 <div class="panels">
-	{#each data.posts[year][season] as post}
+	{#each data.posts[year]['seasons'][season].articles as post}
 		<a href={`/issues/${year}/${season}/${post.slug}`}><Panel {post} /></a>
 	{/each}
 </div>

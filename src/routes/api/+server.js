@@ -1,23 +1,17 @@
 import { json } from '@sveltejs/kit';
+import struct from "/src/bio/struct.json";
 
 async function getPosts() {
-    const modules = import.meta.glob('/src/issues/*/*/*.md');
-    let posts = {};
+    const modules = import.meta.glob('/src/issues/*.md');
+
+    const temp = await JSON.stringify(struct);
+    let posts = JSON.parse(temp);
 
     for (const path in modules) {
         const post = await modules[path]();
-        const years = path.split('/')[3];
-        const season = path.split('/')[4];
-        
-        if(!posts[years]) {
-            posts[years] = {};
-        }
-        if(!posts[years][season]) {
-            posts[years][season] = [];
-        }
-
         const slug = path.split('/').pop().split('.')[0];
-        posts[years][season].push({...post.metadata, slug});
+        const thing = posts[post.metadata.year?.toLowerCase()].seasons[post.metadata.season?.toLowerCase()].articles;
+        thing?.push({...post.metadata, slug});
     }
 
     return posts;
