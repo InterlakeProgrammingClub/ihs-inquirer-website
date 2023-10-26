@@ -32,6 +32,7 @@
 	}
 
 	nav {
+		background-color: var(--header-color);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
