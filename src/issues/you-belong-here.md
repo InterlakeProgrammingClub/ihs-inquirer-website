@@ -5,13 +5,16 @@ author: 'Gauri Gupta'
 year: '2022'
 season: 'winter'
 slug: 'you-belong-here'
-featured_img: '/images/2022/winter/clue-1.png'
+featured_img: '/images/2022/winter/you-belong-here-1.png'
 published: true
 ---
+<script>
+    import Image from "$lib/components/image.svelte";
+</script>
+
+<Image paths={['/images/2022/winter/you-belong-here-1.png']} />
 
 Interlake High School’s theme for this school year is “You Belong Here,” indicating its mission to promote equality and inclusivity within the student body. This is somewhat ironic considering the major separations that constantly divide Interlake students, whether it be along racial identity, athletic/academic interests, or family backgrounds. Although these divisions are quite common within all high schools, they are especially accentuated within Interlake because of our school’s AL and General Education divisions. This brings up the question: “How much of Interlake’s message of belongingness is being reflected in the school?”
-
-​
 
 There’s a common consensus that the “You Belong Here” theme is necessary because students spend so much of their lives at Interlake. It’s crucial for us to become aware of this and to come up with potential solutions to end educational divisions.
 
@@ -23,14 +26,8 @@ We should all learn from Mr. Murphy’s teaching philosophy. He believes that it
 
 Several student advocates are actively working to close the gap between Interlake students and to foster a strong sense of inclusion. For example, Nathan Kim, a senior, founded the Interlake Bridge, which is a club that aims to bridge the gap between AL and general education students. He believes that students can foster a more inclusive culture “by showing each other more respect.” He recognizes that the problem lies in the lack of interaction the different cohorts have with each other, causing us to lose respect for each other. Nathan believes that in the end, “we’re all students trying to live our lives; we all do that in different ways. If we can understand that people are different, and grow to respect those differences, Interlake will be a much more inclusive community.” Nathan hopes that through leading the Interlake Bridge and attending board meetings, Interlake students will become supportive of one another. He hopes for a warm community where a divide doesn’t exist.
 
-​
-
 There is quite a bit of work left to be done to bridge the gap between Interlake students and to foster a true sense of belonging. However, the administrators are doing their best to begin approaching this long-standing issue by implementing a few reforms around the school. The Panorama Survey is an excellent method of gauging the sentiments of the students within the school and to understand the areas for improvement. Interlake administers this survey a couple of times in a school year, thereby allowing for the holistic judgment of our school and better planning of our schoolwide activities aimed at fostering belongingness. Furthermore, the Friday community period had been added every week to carve out time for students to interact with each other and engage in interactive and sociable lessons outside of academics. Something unique for this school year is that every Friday, the Interlake staff all wear special Interlake t-shirts, thereby increasing the sense of uniformity within the school and strengthening our school-wide spirit and conscience.
-
-​
 
 Through these efforts, hopefully we will see a different Interlake in the coming months. This new school goal—to make everyone feel like they belong—is an admirable one. And the best part about our goal? You can help us reach it.
 
-​
-
-Update: We recently received a note from a reader asking us to clarify that at Interlake, students who do not want to pursue a full IB Diploma can still register for IB classes.
+*Update: We recently received a note from a reader asking us to clarify that at Interlake, students who do not want to pursue a full IB Diploma can still register for IB classes.*
