@@ -1,1 +1,1 @@
-<h1>Weekly Woof</h1>
+<h1>Weekly Wolf</h1>

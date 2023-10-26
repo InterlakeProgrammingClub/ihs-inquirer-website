@@ -1,11 +1,9 @@
 <script>
 	import { page } from '$app/stores';
-
-	export let data;
+	import struct from '/src/bio/struct.json';
 
 	const { year } = $page.params;
-	const obj = data?.posts[year];
-	const seasons = obj ? Object?.keys(obj) : [];
+	const seasons = Object.keys(struct[year]);
 </script>
 
 {#each seasons as season}

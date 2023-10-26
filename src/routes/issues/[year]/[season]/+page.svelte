@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import struct from '/src/bio/struct.json';
 	import Panel from '$lib/components/panel.svelte';
 	export let data;
 	const { year, season } = $page.params;

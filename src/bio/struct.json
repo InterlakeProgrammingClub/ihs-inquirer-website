@@ -1,0 +1,27 @@
+{
+    "2022": {
+        "spring": {
+            "articles": []
+        },
+        "winter": {
+            "articles": [
+                {
+                    "url": "/issues/2022/winter/clue",
+                    "markdown_path": "/src/issues/2022/winter/clue.md"
+                },
+                {
+                    "url": "/issues/2022/winter/healthy-or-harmful",
+                    "markdown_path": "/src/issues/2022/winter/healthy-or-harmful.md"
+                },
+                {
+                    "url": "/issues/2022/winter/interlake-baldies",
+                    "markdown_path": "/src/issues/2022/winter/interlake-baldies.md"
+                },
+                {
+                    "url": "/issues/2022/winter/you-belong-here",
+                    "markdown_path": "/src/issues/2022/winter/you-belong-here.md"
+                }
+            ]
+        }
+    }
+}

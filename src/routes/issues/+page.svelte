@@ -1,7 +1,7 @@
 <script>
-	export let data;
+	import struct from '/src/bio/struct.json';
 
-	const years = Object.keys(data.posts);
+	const years = Object.keys(struct);
 </script>
 
 <h1>Past Issues</h1>
