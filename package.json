@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-auto": "^2.1.0"
+		"@sveltejs/adapter-auto": "^2.1.0",
+		"decap-cms-app": "^3.0.12"
 	}
 }

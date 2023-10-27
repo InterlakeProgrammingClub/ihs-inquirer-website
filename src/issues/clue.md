@@ -1,11 +1,11 @@
 ---
 title: 'The Interlake Inquirer Spotlight: Clue!'
+slug: 'clue'
 description: 'description here'
 author: 'Alexandra Hui'
 year: '2022'
 quarter: 'winter'
-slug: 'clue'
-featured_img: '/images/2022/winter/clue-1.png'
+featured_img: '/images/uploads/clue-1.png'
 published: true
 ---
 
@@ -13,7 +13,7 @@ published: true
     import Image from "$lib/components/image.svelte";
 </script>
 
-<Image paths={['/images/2022/winter/clue-1.png', '/images/2022/winter/clue-2.png', '/images/2022/winter/clue-3.png']} />
+<Image paths={['/images/uploads/clue-1.png', '/images/uploads/clue-2.png', '/images/uploads/clue-3.png']} />
 
 Based on the popular board game, Interlake Theatre’s Clue centered around six mysterious guests who were all invited to the same mansion for unknown reasons. Guided by the estate’s charming butler, the guests uncovered secrets, feuds, hidden passages, and more than one dead body. As the characters scrambled to find the killer, they discovered that more was afoot than they had initially believed. Interlake’s cast and crew, led by director Mr. Alex Glover, made their unique mark on this humorous and suspenseful story for this year’s Fall Play.
 
@@ -21,7 +21,7 @@ The play opens on a dark stage, quietly ominous music promising the beginning of
 
 From the very beginning, we can see that the crew has done a marvelous job. The sound effects, music, and lighting are thoughtfully planned, creating a dark and suspenseful mood. The set itself has been painstakingly painted and designed. Every painting on the wall of the manor appears to have been curated to evoke both the sophistication of a high-profile socialite and the setting of 1954.
 
-<Image paths={['/images/2022/winter/clue-4.png']} />
+<Image paths={['/images/uploads/clue-4.png']} />
 
 The guests arrive one by one, each cleverly accompanied by a shocking background of their respective color. First is Colonel Mustard (Niyati Nayak), a comically clueless military man. Next arrive the elegant, yet morbid, Mrs. White (Delilah Cohen), the flamboyant Mrs. Peacock (Amarrah Gates), and the nervous Mr. Green (Gia Papadopulos). The final two, Professor Plum (Giselle Kendrick) and Ms. Scarlet (Dashiell Pinck), step in together with a flourish. The actors all get an individual moment to shine as they enter the manor, and they make the most of that opportunity. Each character has a distinct personality, which every actor brings out beautifully with each carefully planned movement, glance, and action. Even when it isn’t their turn to speak, the actors remain in character, glancing around, sipping from their champagne glass, or side-eying one another in a way that makes the entire performance feel immersive.
 

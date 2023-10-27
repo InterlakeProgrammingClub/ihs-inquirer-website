@@ -1,18 +1,19 @@
 ---
 title: 'You Belong Here'
+slug: 'you-belong-here'
 description: 'description here'
 author: 'Gauri Gupta'
 year: '2022'
 quarter: 'winter'
-slug: 'you-belong-here'
-featured_img: '/images/2022/winter/you-belong-here-1.png'
+featured_img: '/images/uploads/you-belong-here-1.png'
 published: true
 ---
+
 <script>
     import Image from "$lib/components/image.svelte";
 </script>
 
-<Image paths={['/images/2022/winter/you-belong-here-1.png']} />
+<Image paths={['/images/uploads/you-belong-here-1.png']} />
 
 Interlake High School’s theme for this school year is “You Belong Here,” indicating its mission to promote equality and inclusivity within the student body. This is somewhat ironic considering the major separations that constantly divide Interlake students, whether it be along racial identity, athletic/academic interests, or family backgrounds. Although these divisions are quite common within all high schools, they are especially accentuated within Interlake because of our school’s AL and General Education divisions. This brings up the question: “How much of Interlake’s message of belongingness is being reflected in the school?”
 
@@ -30,4 +31,4 @@ There is quite a bit of work left to be done to bridge the gap between Interlake
 
 Through these efforts, hopefully we will see a different Interlake in the coming months. This new school goal—to make everyone feel like they belong—is an admirable one. And the best part about our goal? You can help us reach it.
 
-*Update: We recently received a note from a reader asking us to clarify that at Interlake, students who do not want to pursue a full IB Diploma can still register for IB classes.*
+_Update: We recently received a note from a reader asking us to clarify that at Interlake, students who do not want to pursue a full IB Diploma can still register for IB classes._
