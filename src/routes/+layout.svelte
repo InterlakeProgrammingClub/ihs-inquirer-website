@@ -2,22 +2,26 @@
 	import '../app.css';
 </script>
 
-<nav>
-	<div class="left">
-		<a href="/"><img class="logo" id="logo1" src="/logo.png" alt="Logo of Interlake Inquirer" /></a>
-		<div class="name">The Interlake Inquirer</div>
-		<!-- <h2>The Official Student Newspaper of Interlake High School</h2> -->
+<div class="layout">
+	<nav>
+		<div class="left">
+			<a href="/"
+				><img class="logo" id="logo1" src="/logo.png" alt="Logo of Interlake Inquirer" /></a
+			>
+			<div class="name">The Interlake Inquirer</div>
+			<!-- <h2>The Official Student Newspaper of Interlake High School</h2> -->
+		</div>
+		<div class="links">
+			<a href="/">Latest Issue</a>
+			<a href="/about">About</a>
+			<a href="/issues">Past Issues</a>
+			<a href="/weekly-woof">The Weekly Woof</a>
+			<a href="/contact">Contact</a>
+		</div>
+	</nav>
+	<div class="slot">
+		<slot />
 	</div>
-	<div class="links">
-		<a href="/">Latest Issue</a>
-		<a href="/about">About</a>
-		<a href="/issues">Past Issues</a>
-		<a href="/weekly-woof">The Weekly Woof</a>
-		<a href="/contact">Contact</a>
-	</div>
-</nav>
-<div class="slot">
-	<slot />
 </div>
 
 <style>
@@ -25,6 +29,9 @@
 		margin: 0;
 		overflow-x: hidden;
 		background-color: var(--header-color);
+	}
+
+	.layout {
 		display: flex;
 		flex-direction: column;
 	}
