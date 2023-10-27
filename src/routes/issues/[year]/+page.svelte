@@ -3,9 +3,17 @@
 	import struct from '/src/bio/struct.json';
 
 	const { year } = $page.params;
-	const seasons = Object.keys(struct[year].seasons);
+	const quarters = struct.issues[year].quarters;
 </script>
 
-{#each seasons as season}
-	<a class="pretty-link" href={`/issues/${year}/${season}`}>{season}</a>
+{#each Object.keys(quarters) as quarter}
+	<a class="pretty-link" href={`/issues/${year}/${quarter}`}>
+		{quarters[quarter].meta.name}
+	</a>
 {/each}
+
+<style>
+	a:first-child {
+		margin-top: 30px;
+	}
+</style>

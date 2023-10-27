@@ -1,6 +1,7 @@
 :root {
     --header-color: #a5d6f0;
-    --link-color-1: lightgray;
+    --background-color: rgba(227, 227, 227, 0.968);
+    --link-color-1: rgb(204, 204, 204);
 }
 
 .pretty-link {

@@ -3,7 +3,7 @@ title: 'You Belong Here'
 description: 'description here'
 author: 'Gauri Gupta'
 year: '2022'
-season: 'winter'
+quarter: 'winter'
 slug: 'you-belong-here'
 featured_img: '/images/2022/winter/you-belong-here-1.png'
 published: true

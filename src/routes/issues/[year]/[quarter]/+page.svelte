@@ -2,12 +2,12 @@
 	import { page } from '$app/stores';
 	import Panel from '$lib/components/panel.svelte';
 	export let data;
-	const { year, season } = $page.params;
+	const { year, quarter } = $page.params;
 </script>
 
 <div class="panels">
-	{#each data.posts[year]['seasons'][season].articles as post}
-		<a href={`/issues/${year}/${season}/${post.slug}`}><Panel {post} /></a>
+	{#each data.posts[year].quarters[quarter].articles as post}
+		<a href={`/search/${post.slug}`}><Panel {post} /></a>
 	{/each}
 </div>
 

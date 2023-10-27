@@ -1,18 +1,48 @@
 {
-    "2022": {
-        "meta": {
-            "title": "2022",
-            "description": "2022"
-            
-        },
-        "seasons": {
-            "spring": {
-                "articles": []
+    "issues": {
+        "2022": {
+            "meta": {
+                "name": "2022-2023",
+                "description": "The Print Issue Year"
+                
             },
-            "winter": {
-                "articles": []
+            "quarters": {
+                "spring": {
+                    "meta": {
+                        "name": "Spring Issue"
+                    },
+                    "articles": []
+                },
+                "winter": {
+                    "meta": {
+                        "name": "Winter Issue"
+                    },
+                    "articles": []
+                }
             }
-        }
 
+        },
+        "2021": {
+            "meta": {
+                "name": "2021-2022",
+                "description": "The Print Issue Year"
+                
+            },
+            "quarters": {
+                "spring": {
+                    "meta": {
+                        "name": "Spring Issue"
+                    },
+                    "articles": []
+                },
+                "winter": {
+                    "meta": {
+                        "name": "Winter Issue"
+                    },
+                    "articles": []
+                }
+            }
+    
+        }
     }
 }

@@ -3,7 +3,7 @@ title: 'Healthy or Harmful?'
 description: 'description here'
 author: 'Azle Norsworthy'
 year: '2022'
-season: 'winter'
+quarter: 'winter'
 slug: 'healthy-or-harmful'
 featured_img: '/images/2022/winter/healthy-or-harmful-1.png'
 published: true

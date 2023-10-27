@@ -3,7 +3,7 @@ function nameFromPath(path) {
 	return path.split('/').slice(-1)[0].split('.')[0]
 }
 
-export async function load({params, url}) {
+export async function load({params}) {
     const modules = import.meta.glob("/src/issues/*.md");
 
     let match = {};

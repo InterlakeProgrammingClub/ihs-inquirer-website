@@ -3,7 +3,7 @@ title: 'The Interlake Inquirer Spotlight: Clue!'
 description: 'description here'
 author: 'Alexandra Hui'
 year: '2022'
-season: 'winter'
+quarter: 'winter'
 slug: 'clue'
 featured_img: '/images/2022/winter/clue-1.png'
 published: true

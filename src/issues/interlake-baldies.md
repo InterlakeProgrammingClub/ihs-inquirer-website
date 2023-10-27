@@ -3,7 +3,7 @@ title: "Interlake's Favorite Baldies"
 description: 'description here'
 author: 'Ananya Chavali & Sayana Isaac'
 year: '2022'
-season: 'winter'
+quarter: 'winter'
 slug: 'interlake-baldies'
 featured_img: '/images/2022/winter/interlake-baldies-1.png'
 published: true

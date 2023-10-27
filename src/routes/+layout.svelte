@@ -8,13 +8,13 @@
 		<div class="name">The Interlake Inquirer</div>
 		<!-- <h2>The Official Student Newspaper of Interlake High School</h2> -->
 	</div>
-		<div class="links">
-			<a href="/">Latest Issue</a>
-			<a href="/about">About</a>
-			<a href="/issues">Past Issues</a>
-			<a href="/weekly-woof">The Weekly Woof</a>
-			<a href="/contact">Contact</a>
-		</div>
+	<div class="links">
+		<a href="/">Latest Issue</a>
+		<a href="/about">About</a>
+		<a href="/issues">Past Issues</a>
+		<a href="/weekly-woof">The Weekly Woof</a>
+		<a href="/contact">Contact</a>
+	</div>
 </nav>
 <div class="slot">
 	<slot />
@@ -24,6 +24,9 @@
 	:global(body) {
 		margin: 0;
 		overflow-x: hidden;
+		background-color: var(--header-color);
+		display: flex;
+		flex-direction: column;
 	}
 
 	nav {
@@ -33,7 +36,6 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 5px 20px;
-		margin: 10px 1em;
 	}
 
 	.name {
@@ -61,16 +63,23 @@
 	}
 
 	.links a {
-		font-size: 26px;
+		font-size: 18px;
+		font-weight: bold;
 		color: black;
 		text-decoration: none;
 	}
 
-	.slot {
-		padding: 0 30px;
+	.links > *:not(:first-child) {
+		margin-left: 20px;
 	}
 
-	@media (max-width: 1200px) {
+	.slot {
+		padding: 0 30px;
+		background-color: var(--background-color);
+		min-height: 500px;
+	}
+
+	@media (max-width: 950px) {
 		.name {
 			display: none;
 		}
