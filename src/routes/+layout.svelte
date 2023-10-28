@@ -29,6 +29,7 @@
 		margin: 0;
 		overflow-x: hidden;
 		background-color: var(--header-color);
+		font-family: 'Roboto', sans-serif;
 	}
 
 	.layout {
@@ -38,6 +39,7 @@
 
 	nav {
 		background-color: var(--header-color);
+		color: var(--header-text);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -70,9 +72,9 @@
 	}
 
 	.links a {
+		color: var(--header-text);
 		font-size: 18px;
 		font-weight: bold;
-		color: black;
 		text-decoration: none;
 	}
 

@@ -5,6 +5,9 @@ description: 'description here'
 author: 'Alexandra Hui'
 year: '2022'
 quarter: 'winter'
+date: '2022-10-01'
+categories: ['arts']
+readtime: 3
 featured_img: '/images/uploads/clue-1.png'
 published: true
 ---

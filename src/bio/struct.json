@@ -1,4 +1,8 @@
 {
+    "home": {
+        "big": "you-belong-here",
+        "small": ["clue", "interlake-baldies", "healthy-or-harmful", "mental-health-interventions"]
+    },
     "issues": {
         "2022": {
             "meta": {
@@ -25,7 +29,51 @@
         "2021": {
             "meta": {
                 "name": "2021-2022",
-                "description": "The Print Issue Year"
+                "description": "The \"New Normal\" Year"
+                
+            },
+            "quarters": {
+                "spring": {
+                    "meta": {
+                        "name": "Spring Issue"
+                    },
+                    "articles": []
+                },
+                "winter": {
+                    "meta": {
+                        "name": "Winter Issue"
+                    },
+                    "articles": []
+                }
+            }
+    
+        },
+        "2020": {
+            "meta": {
+                "name": "2020-2021",
+                "description": "The Quaratine Year"
+                
+            },
+            "quarters": {
+                "spring": {
+                    "meta": {
+                        "name": "Spring Issue"
+                    },
+                    "articles": []
+                },
+                "winter": {
+                    "meta": {
+                        "name": "Winter Issue"
+                    },
+                    "articles": []
+                }
+            }
+    
+        },
+        "2019": {
+            "meta": {
+                "name": "2019-2020",
+                "description": "The Pandemic Year"
                 
             },
             "quarters": {

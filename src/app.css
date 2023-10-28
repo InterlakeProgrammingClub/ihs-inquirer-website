@@ -1,7 +1,9 @@
 :root {
-    --header-color: #a5d6f0;
+    --header-color: rgb(142, 193, 238);
+    --header-text: #1e2022;
     --background-color: rgba(227, 227, 227, 0.968);
     --link-color-1: rgb(204, 204, 204);
+    --heading-font: 'Roboto', sans-serif;
 }
 
 .pretty-link {

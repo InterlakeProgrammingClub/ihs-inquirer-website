@@ -5,6 +5,9 @@ description: 'description here'
 author: 'Gauri Gupta'
 year: '2022'
 quarter: 'winter'
+date: '2022-10-01'
+categories: ['arts']
+readtime: 5
 featured_img: '/images/uploads/you-belong-here-1.png'
 published: true
 ---

@@ -5,6 +5,9 @@ description: 'description here'
 author: 'Ananya Chavali & Sayana Isaac'
 year: '2022'
 quarter: 'winter'
+date: '2022-10-01'
+categories: ['arts']
+readtime: 2
 featured_img: '/images/uploads/interlake-baldies-1.png'
 published: true
 ---

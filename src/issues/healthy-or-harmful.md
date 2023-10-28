@@ -5,6 +5,9 @@ description: 'description here'
 author: 'Azle Norsworthy'
 year: '2022'
 quarter: 'winter'
+date: '2022-10-01'
+categories: ['arts']
+readtime: 1
 featured_img: '/images/uploads/healthy-or-harmful-1.png'
 published: true
 ---

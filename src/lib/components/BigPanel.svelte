@@ -1,0 +1,60 @@
+<script>
+	import { formatDate } from '$lib/date.js';
+	export let post;
+
+	const date = formatDate(post.date);
+</script>
+
+<a href={`/search/${post.slug}`}>
+	<div class="container">
+		<img src={post.featured_img} alt="" />
+		<div class="info">
+			<div id="title">{post.title}</div>
+			<div id="author">{post.author} | {date}</div>
+			<div id="readtime">{post.readtime} min read</div>
+		</div>
+		<div id="description">{post.description}</div>
+	</div>
+</a>
+
+<style>
+	.container {
+		position: relative;
+		width: 650px;
+		height: 520px;
+		border-radius: 10px;
+		color: white;
+		text-shadow: 0 0 4px #000000;
+		font-weight: bold;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: 10px;
+		border: 1px solid black;
+	}
+
+	.info {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+	}
+
+	#title {
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	#description {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+</style>

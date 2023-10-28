@@ -1,6 +1,5 @@
 <script>
 	import struct from '/src/bio/struct.json';
-
 	const years = Object.keys(struct.issues);
 	years.sort((a, b) => b - a);
 </script>
