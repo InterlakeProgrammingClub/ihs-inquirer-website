@@ -13,19 +13,32 @@
 			<div id="author">{post.author} | {date}</div>
 			<div id="readtime">{post.readtime} min read</div>
 		</div>
-		<div id="description">{post.description}</div>
+		<!-- <div id="description">{post.description}</div> -->
 	</div>
 </a>
 
 <style>
 	.container {
 		position: relative;
-		width: 650px;
+		width: 720px;
 		height: 520px;
 		border-radius: 10px;
 		color: white;
 		text-shadow: 0 0 4px #000000;
 		font-weight: bold;
+		overflow: hidden;
+	}
+
+	@media (max-width: 1125px) {
+		.container {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 650px) {
+		.container {
+			height: auto;
+		}
 	}
 
 	img {
@@ -34,6 +47,11 @@
 		object-fit: cover;
 		border-radius: 10px;
 		border: 1px solid black;
+		transition: 0.2s ease-in-out;
+	}
+
+	img:hover {
+		transform: scale(1.1);
 	}
 
 	.info {

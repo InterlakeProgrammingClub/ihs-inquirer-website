@@ -14,6 +14,7 @@
 <main>
 	<div class="content">
 		<BigPanel post={posts[struct.home.big]} />
+
 		<LongPanel post={longPanel} />
 	</div>
 </main>
@@ -27,8 +28,13 @@
 	.content {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		flex-wrap: wrap;
+		justify-content: space-around;
 		margin: 40px 0;
+	}
+
+	@media (max-width: 650px) {
+		.content {
+			flex-direction: column;
+		}
 	}
 </style>

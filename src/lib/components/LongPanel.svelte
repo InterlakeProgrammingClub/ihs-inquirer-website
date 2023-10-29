@@ -9,8 +9,10 @@
 			<div class="post">
 				<div class="info">
 					<div id="title">{p.title}</div>
-					<div id="author">{p.author}</div>
-					<div>{formatDate(p.date)} | {p.readtime} min read</div>
+					<div id="secondary">
+						<div id="date">{formatDate(p.date)} | {p.readtime} min read</div>
+						<div id="author"><a href="/n">{p.author}</a></div>
+					</div>
 				</div>
 				<img src={p.featured_img} alt="" />
 			</div>
@@ -24,6 +26,11 @@
 		height: 100px;
 		object-fit: cover;
 		border-radius: 10px;
+		transition: transform 0.2s ease-in-out;
+	}
+
+	img:hover {
+		transform: scale(1.1);
 	}
 
 	.scroll {
@@ -46,11 +53,34 @@
 
 	#title {
 		font-size: 20px;
+		max-height: 70px;
+		overflow: hidden;
 		font-weight: bold;
+		display: inline-block;
 	}
 
-	a {
+	#title:hover {
+		text-decoration: underline;
+	}
+
+	#author {
+		display: inline-block;
+	}
+	#author:hover {
+		text-decoration: underline;
+	}
+
+	#date {
 		text-decoration: none;
-		color: black;
+	}
+
+	@media (max-width: 650px) {
+		.scroll {
+			margin-left: 0;
+			height: auto;
+		}
+		.post {
+			width: auto;
+		}
 	}
 </style>

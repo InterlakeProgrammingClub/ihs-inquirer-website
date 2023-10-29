@@ -22,6 +22,8 @@
 	<div class="slot">
 		<slot />
 	</div>
+
+	<footer>Hello World</footer>
 </div>
 
 <style>
@@ -30,6 +32,11 @@
 		overflow-x: hidden;
 		background-color: var(--header-color);
 		font-family: 'Roboto', sans-serif;
+	}
+
+	:global(a) {
+		text-decoration: none;
+		color: black;
 	}
 
 	.layout {
@@ -75,7 +82,6 @@
 		color: var(--header-text);
 		font-size: 18px;
 		font-weight: bold;
-		text-decoration: none;
 	}
 
 	.links > *:not(:first-child) {
@@ -83,9 +89,8 @@
 	}
 
 	.slot {
-		padding: 0 30px;
+		padding: 0 10px;
 		background-color: var(--background-color);
-		min-height: 500px;
 	}
 
 	@media (max-width: 950px) {
