@@ -11,7 +11,7 @@
 					<div id="title">{p.title}</div>
 					<div id="secondary">
 						<div id="date">{formatDate(p.date)} | {p.readtime} min read</div>
-						<div id="author"><a href="/n">{p.author}</a></div>
+						<div id="author"><a href="/">{p.author}</a></div>
 					</div>
 				</div>
 				<img src={p.featured_img} alt="" />
