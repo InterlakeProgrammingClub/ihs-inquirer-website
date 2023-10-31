@@ -31,7 +31,7 @@ collections:
       - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
       - { label: 'Categories', 
           name: 'categories', 
-          widget: 'selection', 
+          widget: 'select', 
           options: ['Arts', 'Sports', 'Student Life', 'Academics', 'Entertainment', 'Miscellaneous'],
           multiple: true, 
           required: false 
