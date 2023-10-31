@@ -3,7 +3,7 @@ title: 'Interlake’s Mental Health Interventions: Are They Actually Effective?'
 slug: 'mental-health-interventions'
 description: description here
 author: Trinity Lee
-year: '2022'
+year: "2022-2023"
 quarter: winter
 date: '2022-10-01'
 categories: ['arts']

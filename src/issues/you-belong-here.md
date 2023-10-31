@@ -3,7 +3,7 @@ title: 'You Belong Here'
 slug: 'you-belong-here'
 description: 'description here'
 author: 'Gauri Gupta'
-year: '2022'
+year: "2022-2023"
 quarter: 'winter'
 date: '2022-10-01'
 categories: ['arts']
