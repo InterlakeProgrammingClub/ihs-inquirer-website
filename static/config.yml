@@ -27,7 +27,7 @@ collections:
           widget: 'select',
           options: ['winter', 'spring', 'summer', 'fall']
         }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
       - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false, default: '/images/uploads{{slug}}-1' }
       - { label: 'Categories', name: 'categories', widget: 'list', required: false }
       - { label: 'Readtime', name: 'readtime', widget: 'number', value_type: 'int', step: 1 }
