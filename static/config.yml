@@ -28,8 +28,14 @@ collections:
           options: ['winter', 'spring', 'summer', 'fall']
         }
       - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
-      - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false, default: '/images/uploads{{slug}}-1' }
-      - { label: 'Categories', name: 'categories', widget: 'list', required: false }
+      - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
+      - { label: 'Categories', 
+          name: 'categories', 
+          widget: 'selection', 
+          options: ['Arts', 'Sports', 'Student Life', 'Academics', 'Entertainment', 'Miscellaneous'],
+          multiple: true, 
+          required: false 
+        }
       - { label: 'Readtime', name: 'readtime', widget: 'number', value_type: 'int', step: 1 }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: false }
