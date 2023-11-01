@@ -11,7 +11,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="scss">
 	.panels {
 		display: flex;
 		flex-wrap: wrap;

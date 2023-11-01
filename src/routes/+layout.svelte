@@ -1,101 +1,62 @@
 <script>
-	import '../app.css';
+	import '@fontsource-variable/literata';
+	import '@fontsource-variable/aleo';
+	import '../app.scss';
+
+	import { page } from '$app/stores';
 </script>
 
 <div class="layout">
-	<nav>
-		<div class="left">
-			<a href="/"
-				><img class="logo" id="logo1" src="/logo.png" alt="Logo of Interlake Inquirer" /></a
-			>
-			<div class="name">The Interlake Inquirer</div>
-			<!-- <h2>The Official Student Newspaper of Interlake High School</h2> -->
-		</div>
+	<nav class:home={$page.url.pathname === '/'}>
+		<h1><a href="/">The Interlake Inquirer</a></h1>
 		<div class="links">
 			<a href="/">Latest Issue</a>
-			<a href="/about">About</a>
 			<a href="/issues">Past Issues</a>
 			<a href="/weekly-woof">The Weekly Woof</a>
+			<a href="/about">About</a>
 			<a href="/contact">Contact</a>
 		</div>
 	</nav>
 	<div class="slot">
 		<slot />
 	</div>
-
 	<footer>Hello World</footer>
 </div>
 
-<style>
-	:global(body) {
-		margin: 0;
-		overflow-x: hidden;
-		background-color: var(--header-color);
-		font-family: 'Roboto', sans-serif;
-	}
-
-	:global(a) {
-		text-decoration: none;
-		color: black;
-	}
-
+<style lang="scss">
 	.layout {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	.slot {
+		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 	}
 
+	h1 {
+		font-size: 2rem;
+		margin: 0.5rem 0 1rem 0;
+		transition: 0.2s ease-out;
+	}
+
 	nav {
-		background-color: var(--header-color);
-		color: var(--header-text);
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 5px 20px;
-	}
-
-	.name {
-		font-weight: bold;
-		font-size: 26px;
-	}
-
-	.logo {
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		margin-right: 10px;
-	}
-
-	.left {
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
+		text-align: center;
+		padding: 1rem 0;
 	}
 
 	.links {
 		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
 	}
 
-	.links a {
-		color: var(--header-text);
-		font-size: 18px;
-		font-weight: bold;
-	}
-
-	.links > *:not(:first-child) {
-		margin-left: 20px;
-	}
-
-	.slot {
-		padding: 0 10px;
-		background-color: var(--background-color);
-	}
-
-	@media (max-width: 950px) {
-		.name {
-			display: none;
+	nav.home {
+		h1 {
+			font-size: 3.5rem;
+			margin: 2.5rem 0 1.5rem 0;
 		}
 	}
 </style>

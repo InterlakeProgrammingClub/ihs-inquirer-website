@@ -8,7 +8,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="scss">
 	img {
 		max-height: 250px;
 		margin-bottom: 20px;

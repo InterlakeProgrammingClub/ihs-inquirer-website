@@ -20,7 +20,7 @@
 	{/each}
 </div>
 
-<style>
+<style lang="scss">
 	img {
 		width: 100px;
 		height: 100px;

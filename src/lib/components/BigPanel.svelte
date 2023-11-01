@@ -17,7 +17,7 @@
 	</div>
 </a>
 
-<style>
+<style lang="scss">
 	.container {
 		position: relative;
 		width: 720px;

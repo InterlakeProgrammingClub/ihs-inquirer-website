@@ -12,7 +12,7 @@
 	<p>{post.description}</p>
 </div>
 
-<style>
+<style lang="scss">
 	.panel {
 		width: 280px;
 		min-height: 400px;

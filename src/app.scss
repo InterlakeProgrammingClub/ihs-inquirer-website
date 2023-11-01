@@ -1,0 +1,25 @@
+:root {
+	--bg-1: hsl(220, 60%, 95%);
+	--text-1: hsl(220, 60%, 10%);
+	--divider: hsl(220, 20%, 70%);
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Aleo Variable', serif;
+	background: var(--bg-1);
+	color: var(--text-1);
+}
+
+#svelte {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

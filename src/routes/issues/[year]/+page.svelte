@@ -12,7 +12,7 @@
 	</a>
 {/each}
 
-<style>
+<style lang="scss">
 	a:first-child {
 		margin-top: 30px;
 	}

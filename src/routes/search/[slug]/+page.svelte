@@ -18,7 +18,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
 	.content {
 		max-width: 60em;
 		margin: auto;
