@@ -6,11 +6,15 @@
 	const quarters = struct.issues[year].quarters;
 </script>
 
-{#each Object.keys(quarters) as quarter}
-	<a class="pretty-link" href={`/issues/${year}/${quarter}`}>
-		{quarters[quarter].meta.name}
-	</a>
-{/each}
+<main>
+	<h1>{struct.issues[year].meta.name}</h1>
+	<h2>{struct.issues[year].meta.description}</h2>
+	{#each Object.keys(quarters) as quarter}
+		<a class="pretty-link" href={`/issues/${year}/${quarter}`}>
+			{quarters[quarter].meta.name}
+		</a>
+	{/each}
+</main>
 
 <style lang="scss">
 	a:first-child {

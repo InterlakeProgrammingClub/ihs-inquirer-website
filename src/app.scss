@@ -12,6 +12,10 @@ body {
 	color: var(--text-1);
 }
 
+main {
+	margin: 0 50px;
+}
+
 #svelte {
 	display: flex;
 	flex-direction: column;
@@ -23,3 +27,21 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+
+.pretty-link {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    font-size: 50px;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pretty-link:hover {
+    background-color: gray;
+}
+
