@@ -16,7 +16,9 @@ published: true
     import Image from "$lib/components/image.svelte";
 </script>
 
-<Image paths={['/images/uploads/clue-1.png', '/images/uploads/clue-2.png', '/images/uploads/clue-3.png']} />
+<Image paths={['/images/uploads/clue-1.png']} />
+
+<Image paths={['/images/uploads/clue-2.png', '/images/uploads/clue-3.png']} />
 
 Based on the popular board game, Interlake Theatre’s Clue centered around six mysterious guests who were all invited to the same mansion for unknown reasons. Guided by the estate’s charming butler, the guests uncovered secrets, feuds, hidden passages, and more than one dead body. As the characters scrambled to find the killer, they discovered that more was afoot than they had initially believed. Interlake’s cast and crew, led by director Mr. Alex Glover, made their unique mark on this humorous and suspenseful story for this year’s Fall Play.
 

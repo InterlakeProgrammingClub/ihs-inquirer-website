@@ -10,13 +10,15 @@
 
 <style lang="scss">
 	img {
-		max-height: 250px;
-		margin-bottom: 20px;
+		max-width: 100%;
+		min-width: 0%;
+		height: auto;
+		flex-grow: 1;
 	}
 
 	.gallery {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+		gap: 1rem;
+		margin: 1rem 0;
 	}
 </style>

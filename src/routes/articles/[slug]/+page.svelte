@@ -6,13 +6,12 @@
 <div class="content">
 	<h1>{data.meta.title}</h1>
 	<h3>
-		<div>By {data.meta.author}</div>
-		<div>{formatDate(data.meta.date)} | {data.meta.readtime} minute read</div>
+		By {data.meta.author} &nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp {data.meta
+			.readtime} minute read
 	</h3>
-
-	<h5 id="description">
+	<div class="description">
 		{data.meta.description}
-	</h5>
+	</div>
 	<div class="text">
 		<svelte:component this={data.content} />
 	</div>
@@ -24,8 +23,12 @@
 		margin: auto;
 	}
 
-	:global(p) {
-		font-size: 1.1rem;
-		line-height: 1.5;
+	h3 {
+		font-weight: 500;
+	}
+
+	.description {
+		margin: 1rem 0;
+		font-style: italic;
 	}
 </style>
