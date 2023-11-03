@@ -5,7 +5,7 @@
 	const date = formatDate(post.date);
 </script>
 
-<a href={`/search/${post.slug}`}>
+<a href={`/articles/${post.slug}`}>
 	<div class="container">
 		<img src={post.featured_img} alt="" />
 		<div class="info">

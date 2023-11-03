@@ -1,7 +1,9 @@
 :root {
-	--bg-1: hsl(220, 60%, 95%);
-	--text-1: hsl(220, 60%, 10%);
-	--divider: hsl(220, 20%, 70%);
+	--bg-1: hsl(215, 60%, 95%);
+	--text-1: hsl(215, 50%, 10%);
+	--text-2: hsl(215, 20%, 25%);
+	--acc-1: hsl(215, 85%, 75%);
+	--divider: hsl(215, 30%, 80%);
 	box-sizing: border-box;
 }
 
@@ -28,20 +30,26 @@ a {
 	color: inherit;
 }
 
-
 .pretty-link {
-    display: block;
-    text-decoration: none;
-    color: black;
-    background-color: lightgray;
-    text-align: center;
-    font-size: 50px;
-    padding: 20px 0;
-    border-radius: 10px;
-    margin-bottom: 10px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	background-color: lightgray;
+	text-align: center;
+	font-size: 50px;
+	padding: 20px 0;
+	border-radius: 10px;
+	margin-bottom: 10px;
 }
 
 .pretty-link:hover {
-    background-color: gray;
+	background-color: gray;
 }
 
+.ver-divider {
+	border-right: 2px solid var(--divider);
+}
+
+.hor-divider {
+	border-bottom: 2px solid var(--divider);
+}

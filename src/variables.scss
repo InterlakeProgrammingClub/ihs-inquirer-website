@@ -1,0 +1,12 @@
+@mixin underline {
+	text-decoration: none;
+	text-decoration-color: transparent;
+	text-decoration-thickness: 0rem;
+	transition: 0.1s linear;
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-color: var(--acc-1);
+		text-decoration-thickness: 0.3rem;
+	}
+}

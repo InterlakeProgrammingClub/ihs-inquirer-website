@@ -7,16 +7,17 @@
 </script>
 
 <div class="layout">
-	<nav class:home={$page.url.pathname === '/'}>
+	<header class:home={$page.url.pathname === '/'}>
 		<h1><a href="/">The Interlake Inquirer</a></h1>
-		<div class="links">
+		<nav>
 			<a href="/">Latest Issue</a>
 			<a href="/issues">Past Issues</a>
 			<a href="/weekly-woof">The Weekly Woof</a>
 			<a href="/about">About</a>
 			<a href="/contact">Contact</a>
-		</div>
-	</nav>
+		</nav>
+		<div class="hor-divider"></div>
+	</header>
 	<div class="slot">
 		<slot />
 	</div>
@@ -37,26 +38,45 @@
 	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		margin: 0.5rem 0 1rem 0;
 		transition: 0.2s ease-out;
 	}
 
-	nav {
+	.hor-divider {
+		max-width: 40rem;
+		margin: 1.5rem auto 0 auto;
+		transition: 0.2s ease-out;
+	}
+
+	header {
 		text-align: center;
 		padding: 1rem 0;
 	}
 
-	.links {
+	header.home {
+		h1 {
+			font-size: 3rem;
+			margin: 2.5rem 0 1.5rem 0;
+		}
+
+		.hor-divider {
+			max-width: 76rem;
+			margin: 3rem auto 0 auto;
+		}
+	}
+
+	nav {
 		display: flex;
 		justify-content: center;
 		gap: 2rem;
-	}
 
-	nav.home {
-		h1 {
-			font-size: 3.5rem;
-			margin: 2.5rem 0 1.5rem 0;
+		a {
+			color: var(--text-2);
+			font-size: 1.1rem;
+			position: relative;
+
+			@include underline;
 		}
 	}
 </style>

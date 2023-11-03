@@ -6,10 +6,29 @@
 
 <main>
 	<h1>Past Issues</h1>
-	{#each years as year}
-		<a class="pretty-link" href={`/issues/${year}`}>
-			<div>{struct.issues[year].meta.name}</div>
-			<div>{struct.issues[year].meta.description}</div>
+
+	<div class="hor-divider" />
+	{#each years as year, i}
+		<a href={`/issues/${year}`}>
+			{struct.issues[year].meta.name} - {struct.issues[year].meta.description}
 		</a>
+
+		<div class="hor-divider" />
 	{/each}
 </main>
+
+<style lang="scss">
+	main {
+		max-width: 40rem;
+		width: 40rem;
+		margin: 0 auto;
+	}
+
+	a {
+		display: block;
+		padding: 1.5rem 0;
+		font-size: 1.2rem;
+
+		@include underline;
+	}
+</style>

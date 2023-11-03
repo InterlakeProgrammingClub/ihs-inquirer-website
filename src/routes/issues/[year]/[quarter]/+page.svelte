@@ -10,7 +10,7 @@
 	<h1>{struct.issues[year].meta.name} {struct.issues[year].quarters[quarter].meta.name}</h1>
 	<div class="panels">
 		{#each data.posts[year].quarters[quarter].articles as post}
-			<a href={`/search/${post.slug}`}><Panel {post} /></a>
+			<a href={`/articles/${post.slug}`}><Panel {post} /></a>
 		{/each}
 	</div>
 </main>

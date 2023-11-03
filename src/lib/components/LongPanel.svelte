@@ -5,7 +5,7 @@
 
 <div class="scroll">
 	{#each post as p}
-		<a href={`/search/${p.slug}`}>
+		<a href={`/articles/${p.slug}`}>
 			<div class="post">
 				<div class="info">
 					<div id="title">{p.title}</div>

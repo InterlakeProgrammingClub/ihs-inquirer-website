@@ -20,14 +20,12 @@
 
 <style lang="scss">
 	.content {
-		max-width: 60em;
+		max-width: 40rem;
 		margin: auto;
 	}
-	.text > :global(*) {
-		font-size: 20px;
-	}
 
-	#description {
-		font-style: italic;
+	:global(p) {
+		font-size: 1.1rem;
+		line-height: 1.5;
 	}
 </style>

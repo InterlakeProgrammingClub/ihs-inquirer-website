@@ -16,21 +16,29 @@
 	}
 	let leftPanel = longPanel.slice(0, 2);
 	let rightPanel = longPanel.slice(2, 4);
+
+	function formatDate(date) {
+		let d = new Date(date);
+		return d.toLocaleDateString('en-us', {
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
+			timeZone: 'UTC'
+		});
+	}
 </script>
 
 <PageHead title="" description="" />
 
 <main>
-	<!-- <h1>The Interlake Inquirer</h1> -->
-
 	<div class="articles">
 		<div class="column">
 			{#each leftPanel as post, i}
-				<a href={`/search/${post.slug}`} class="article">
+				<a href={`/articles/${post.slug}`} class="article">
 					<img src={post.featured_img} alt="" />
 					<div class="info">
 						<h2 class="title">{post.title}</h2>
-						<div class="author">{post.author} | {post.date}</div>
+						<div class="author">{post.author} | {formatDate(post.date)}</div>
 					</div>
 				</a>
 				{#if i != rightPanel.length - 1}
@@ -40,22 +48,24 @@
 		</div>
 		<div class="ver-divider" />
 		<div class="main">
-			<a href={`/search/${featured.slug}`} class="featured">
+			<a href={`/articles/${featured.slug}`} class="featured">
 				<img src={featured.featured_img} alt="" />
 				<div class="info">
 					<h2 class="title">{featured.title}</h2>
-					<div class="author">{featured.author} | {featured.date}</div>
+					<div class="author">{featured.author} | {formatDate(featured.date)}</div>
 				</div>
 			</a>
 		</div>
 		<div class="ver-divider" />
 		<div class="column">
 			{#each rightPanel as post, i}
-				<a href={`/search/${post.slug}`} class="article">
+				<a href={`/articles/${post.slug}`} class="article">
 					<img src={post.featured_img} alt="" />
 					<div class="info">
 						<h3 class="title">{post.title}</h3>
-						<div class="author">{post.author} | {post.date}</div>
+						<div class="author">
+							{post.author} | {formatDate(post.date)}
+						</div>
 					</div>
 				</a>
 				{#if i != rightPanel.length - 1}
@@ -68,13 +78,8 @@
 
 <style lang="scss">
 	main {
-		margin: 3rem auto;
+		margin: 1rem auto;
 		flex-grow: 1;
-	}
-
-	h1 {
-		font-size: 3.5rem;
-		text-align: center;
 	}
 
 	.articles {
@@ -91,16 +96,11 @@
 	.column {
 		display: flex;
 		flex-direction: column;
-		max-width: 18%;
+		max-width: 20%;
 		padding: 0 2rem;
 	}
 
-	.ver-divider {
-		border-right: 1px solid var(--divider);
-	}
-
 	.hor-divider {
-		border-bottom: 1px solid var(--divider);
 		margin: 2rem 0;
 	}
 
@@ -112,8 +112,8 @@
 		}
 
 		.title {
-			font-size: 2rem;
-			margin: 1rem 0 0.6rem 0;
+			font-size: 1.8rem;
+			margin: 1rem 0 0.5rem 0;
 		}
 	}
 
@@ -121,9 +121,23 @@
 		display: block;
 
 		.title {
-			font-size: 1.3rem;
-			margin: 0.8rem 0 0.6rem 0;
+			font-size: 1.2rem;
+			margin: 0.8rem 0 0.5rem 0;
 		}
+
+		.author {
+			font-size: 0.9rem;
+		}
+	}
+
+	.title {
+		font-size: 1.2rem;
+
+		@include underline;
+	}
+
+	.author {
+		color: var(--text-2);
 	}
 
 	img {
