@@ -1,5 +1,6 @@
 <script>
 	import struct from '/src/bio/struct.json';
+	import PageHead from '$lib/components/PageHead.svelte';
 	import BigPanel from '$lib/components/BigPanel.svelte';
 	import LongPanel from '$lib/components/LongPanel.svelte';
 
@@ -16,6 +17,8 @@
 	let leftPanel = longPanel.slice(0, 2);
 	let rightPanel = longPanel.slice(2, 4);
 </script>
+
+<PageHead title="" description="" />
 
 <main>
 	<!-- <h1>The Interlake Inquirer</h1> -->
