@@ -13,7 +13,7 @@ published: true
 ---
 
 <script>
-    import Image from "$lib/components/image.svelte";
+    import Image from "$lib/components/Image.svelte";
 </script>
 
 <Image paths={['/images/uploads/you-belong-here-1.png']} />
