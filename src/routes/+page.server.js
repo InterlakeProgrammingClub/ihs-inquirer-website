@@ -1,5 +1,5 @@
 export async function load() {
-	const modules = import.meta.glob('/src/issues/*.md');
+	const modules = import.meta.glob('/src/articles/*.md');
 
 	let posts = {};
 

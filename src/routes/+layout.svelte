@@ -4,10 +4,22 @@
 	import '../app.scss';
 
 	import { page } from '$app/stores';
+
+	let pageClass = '';
+
+	$: {
+		if ($page.url.pathname === '/') {
+			pageClass = 'home';
+		} else if ($page.url.pathname.startsWith('/articles')) {
+			pageClass = 'article';
+		} else {
+			pageClass = '';
+		}
+	}
 </script>
 
 <div class="layout">
-	<header class:home={$page.url.pathname === '/'}>
+	<header class={pageClass}>
 		<h1><a href="/">The Interlake Inquirer</a></h1>
 		<nav>
 			<a href="/">Latest Issue</a>
@@ -40,13 +52,13 @@
 	h1 {
 		font-size: 1.8rem;
 		margin: 0.5rem 0 1rem 0;
-		transition: 0.2s ease-out;
+		transition: 0.1s ease-out;
 	}
 
 	.hor-divider {
-		max-width: 40rem;
+		max-width: 50rem;
 		margin: 1.5rem auto 0 auto;
-		transition: 0.2s ease-out;
+		transition: 0.1s ease-out;
 	}
 
 	header {
@@ -63,6 +75,14 @@
 		.hor-divider {
 			max-width: 76rem;
 			margin: 3rem auto 0 auto;
+		}
+	}
+
+	header.article {
+		.hor-divider {
+			max-width: 40rem;
+			margin: 1.5rem auto 0 auto;
+			transition: 0.2s ease-out;
 		}
 	}
 

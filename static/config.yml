@@ -8,7 +8,7 @@ public_folder: '/images/uploads' # The src attribute for uploaded media will beg
 collections:
   - name: 'article' # Used in routes, e.g., /admin/collections/blog
     label: 'Article' # Used in the UI
-    folder: 'src/issues' # The path to the folder where the documents are stored
+    folder: 'src/articles' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -16,10 +16,11 @@ collections:
       - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Author', name: 'author', widget: 'string' }
-      - { label: 'Year', 
-          name: 'year', 
-          widget: 'select', 
-          options: ['2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020'] 
+      - {
+          label: 'Year',
+          name: 'year',
+          widget: 'select',
+          options: ['2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020']
         }
       - {
           label: 'Quarter',
@@ -29,13 +30,39 @@ collections:
         }
       - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
       - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
-      - { label: 'Categories', 
-          name: 'categories', 
-          widget: 'select', 
-          options: ['Arts', 'Sports', 'Student Life', 'Academics', 'Entertainment', 'Miscellaneous'],
-          multiple: true, 
-          required: false 
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'select',
+          options:
+            ['Arts', 'Sports', 'Student Life', 'Academics', 'Entertainment', 'Miscellaneous'],
+          multiple: true,
+          required: false
         }
       - { label: 'Readtime', name: 'readtime', widget: 'number', value_type: 'int', step: 1 }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: false }
+  - name: 'bios'
+    label: 'Bios'
+    folder: 'src/bios'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Name', name: 'title', widget: 'string' }
+      - { label: 'Role', name: 'role', widget: 'string' }
+      - { label: 'Bio', name: 'description', widget: 'text' }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Bios'
+        name: 'bios'
+        file: 'src/pages/bios.json'
+        fields:
+          - label: 'Bios'
+            name: 'bios'
+            widget: 'list'
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Photo, name: photo, widget: image }
+              - { label: Bio, name: bio, widget: text }
