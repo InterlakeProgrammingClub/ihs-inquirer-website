@@ -2,7 +2,7 @@ import { json } from '@sveltejs/kit';
 import struct from '/src/bio/struct.json';
 
 async function getPosts() {
-	const modules = import.meta.glob('/src/articles/*.md');
+	const modules = import.meta.glob('/src/content/articles/*.md');
 
 	const temp = JSON.stringify(struct.issues);
 	let posts = JSON.parse(temp);

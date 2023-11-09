@@ -1,13 +1,13 @@
 export async function load() {
-	const modules = import.meta.glob('/src/articles/*.md');
+	const modules = import.meta.glob('/src/content/articles/*.md');
 
-	let posts = {};
+	let articles = {};
 
 	for (const path in modules) {
 		const post = await modules[path]();
 		const slug = path.split('/').pop().split('.')[0];
-		posts[slug] = { ...post.metadata };
+		articles[slug] = { ...post.metadata };
 	}
 
-	return { posts };
+	return { posts: articles };
 }

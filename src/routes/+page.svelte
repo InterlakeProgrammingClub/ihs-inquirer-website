@@ -7,8 +7,6 @@
 	export let data;
 	const posts = data.posts;
 
-	console.log(posts);
-
 	let featured = posts[struct.home.big];
 	let longPanel = [];
 	for (let slug of struct.home.small) {
@@ -102,6 +100,10 @@
 
 	.hor-divider {
 		margin: 2rem 0;
+	}
+
+	a {
+		text-decoration: none;
 	}
 
 	.featured {

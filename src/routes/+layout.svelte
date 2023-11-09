@@ -10,7 +10,9 @@
 	$: {
 		if ($page.url.pathname === '/') {
 			pageClass = 'home';
-		} else if ($page.url.pathname.startsWith('/articles')) {
+		} else if ($page.url.pathname.startsWith('/articles/')) {
+			pageClass = 'article';
+		} else if ($page.url.pathname.startsWith('/issues/') && $page.url.pathname !== '/issues/') {
 			pageClass = 'article';
 		} else {
 			pageClass = '';
@@ -51,7 +53,7 @@
 
 	h1 {
 		font-size: 1.8rem;
-		margin: 0.5rem 0 1rem 0;
+		margin: 0.5rem 0 1.5rem 0;
 		transition: 0.1s ease-out;
 	}
 
@@ -81,8 +83,6 @@
 	header.article {
 		.hor-divider {
 			max-width: 40rem;
-			margin: 1.5rem auto 0 auto;
-			transition: 0.2s ease-out;
 		}
 	}
 
@@ -93,10 +93,14 @@
 
 		a {
 			color: var(--text-2);
-			font-size: 1.1rem;
+			font-size: 1.2rem;
 			position: relative;
 
 			@include underline;
 		}
+	}
+
+	a {
+		text-decoration: none;
 	}
 </style>

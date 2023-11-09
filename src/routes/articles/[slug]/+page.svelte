@@ -12,7 +12,7 @@
 	<div class="description">
 		{data.meta.description}
 	</div>
-	<div class="text">
+	<div class="text article">
 		<svelte:component this={data.content} />
 	</div>
 </div>
@@ -20,7 +20,7 @@
 <style lang="scss">
 	.content {
 		max-width: 40rem;
-		margin: auto;
+		margin: 0 auto 4rem auto;
 	}
 
 	h3 {

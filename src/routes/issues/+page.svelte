@@ -1,18 +1,20 @@
 <script>
-	import struct from '/src/bio/struct.json';
+	export let data;
+
+	console.log(data);
 </script>
 
 <main>
 	<h1>Past Issues</h1>
 
 	<div class="hor-divider" />
-	{#each Object.entries(struct.issues) as [yearId, year], i}
+	{#each Object.entries(data.years) as [yearId, year], i}
 		<h2 class="year">
-			{year.name} - {year.description}
+			{yearId} - {year.name}
 		</h2>
-		{#each Object.entries(year.quarters) as [quarterId, quarter], j}
-			<a href={`/issues/${yearId}-${quarterId}`} class="quarter">
-				{quarter.name}
+		{#each Object.entries(year.issues) as [issuesId, issue], j}
+			<a href={`/issues/${issuesId}`} class="issue">
+				{issue.issue_name}
 			</a>
 		{/each}
 		<div class="hor-divider" />
@@ -22,7 +24,7 @@
 <style lang="scss">
 	main {
 		max-width: 50rem;
-		width: 50rem;
+		width: 100%;
 		margin: 0 auto;
 	}
 
@@ -32,12 +34,9 @@
 		font-weight: normal;
 	}
 
-	.quarter {
+	.issue {
 		margin: 1.5rem;
 		display: block;
 		font-size: 1.1rem;
-		font-weight: bold;
-
-		@include underline;
 	}
 </style>
