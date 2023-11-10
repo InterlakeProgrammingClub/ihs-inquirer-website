@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	<h1>{data.issue.year.title} {data.issue.title}</h1>
+	<h1>{data.issue.title}</h1>
 	<div class="text">
 		<svelte:component this={data.content} />
 	</div>

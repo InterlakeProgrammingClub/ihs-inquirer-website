@@ -33,29 +33,17 @@ a {
 
 p {
 	font-size: 1.1rem;
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
-.text.article p:first-of-type::first-letter {
-	font-size: 3.2em;
+.text.article > p:first-of-type::first-letter {
+	font-size: 3.8em;
 	float: left;
-	margin: 0.3rem 0.4rem 0 0;
+	margin: 0.3rem 0.5rem 0 0;
 }
 
-.pretty-link {
-	display: block;
-	text-decoration: none;
-	color: black;
-	background-color: lightgray;
-	text-align: center;
-	font-size: 50px;
-	padding: 20px 0;
-	border-radius: 10px;
-	margin-bottom: 10px;
-}
-
-.pretty-link:hover {
-	background-color: gray;
+.text.article > p:first-of-type {
+	min-height: 3.6rem;
 }
 
 .ver-divider {

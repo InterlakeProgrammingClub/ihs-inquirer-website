@@ -23,7 +23,13 @@ export async function load() {
 		}
 	}
 
-	console.log(years);
+	years = Object.keys(years)
+		.sort()
+		.reverse()
+		.reduce((obj, key) => {
+			obj[key] = years[key];
+			return obj;
+		}, {});
 
 	return { years };
 }
