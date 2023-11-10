@@ -12,7 +12,6 @@
 		<h2 class="year">
 			{year.title} - {year.year_name}
 		</h2>
-		{JSON.stringify(data)}
 		{#each Object.entries(year.issues) as [issueId, issue], j}
 			<a href={`/issues/${yearId}/${issueId}`} class="issue">
 				{issue.title}
