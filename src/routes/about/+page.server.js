@@ -18,7 +18,5 @@ export async function load() {
 		}
 	});
 
-	console.log(bios);
-
 	return { bios };
 }

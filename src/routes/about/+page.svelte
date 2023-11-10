@@ -4,6 +4,7 @@
 
 <div class="content">
 	<h1>Staff</h1>
+	<div class="hor-divider" />
 	{#each data.bios as staff}
 		<div class="staff">
 			{#if !staff.photo}
@@ -17,6 +18,7 @@
 				<p>{staff.description}</p>
 			</div>
 		</div>
+		<div class="hor-divider" />
 	{/each}
 </div>
 
@@ -29,7 +31,7 @@
 	.staff {
 		display: flex;
 		gap: 3rem;
-		margin: 2.5rem 0;
+		margin: 2rem 0;
 
 		h2 {
 			margin: 0;
