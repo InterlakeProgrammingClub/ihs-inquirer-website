@@ -1,5 +1,5 @@
 <script>
-	import { formatDate } from '$lib/date.js';
+	import { formatDate } from '$lib/js/date.js';
 	export let data;
 </script>
 

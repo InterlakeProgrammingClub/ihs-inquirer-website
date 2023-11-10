@@ -52,21 +52,30 @@ collections:
       - { label: 'Role', name: 'role', widget: 'string' }
       - { label: 'Photo', name: 'photo', widget: 'image', required: false }
       - { label: 'Bio', name: 'description', widget: 'text' }
-  - name: 'issues'
-    label: 'Issues'
-    folder: 'src/content/issues'
+  - name: 'years'
+    label: 'Past Issue Years'
+    folder: 'src/content/years'
     create: true
     slug: '{{slug}}'
     fields:
       - { label: 'Year', name: 'title', widget: 'string' }
       - { label: 'Year Name', name: 'year_name', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-      - label: 'Issues'
-        name: 'issues'
-        widget: 'list'
-        fields:
-          - { label: 'Issue Name', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'issues'
+    label: 'Past Issues'
+    folder: 'src/content/issues'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Issue Name', name: 'title', widget: 'string' }
+      - label: 'Year'
+        name: 'year'
+        widget: 'relation'
+        collection: 'years'
+        search_fields: ['title', 'year_name']
+        value_field: 'title'
+        display_fields: ['title', 'year_name']
+      - { label: 'Body', name: 'body', widget: 'markdown' }
   # - name: 'pages'
   #   label: 'Pages'
   #   files:

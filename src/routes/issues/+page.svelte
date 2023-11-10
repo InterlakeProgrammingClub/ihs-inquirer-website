@@ -1,7 +1,6 @@
 <script>
+	import { urlify } from '$lib/utils.js';
 	export let data;
-
-	console.log(data);
 </script>
 
 <main>
@@ -10,11 +9,11 @@
 	<div class="hor-divider" />
 	{#each Object.entries(data.years) as [yearId, year], i}
 		<h2 class="year">
-			{yearId} - {year.name}
+			{yearId} - {year.year_name}
 		</h2>
-		{#each Object.entries(year.issues) as [issuesId, issue], j}
-			<a href={`/issues/${issuesId}`} class="issue">
-				{issue.issue_name}
+		{#each year.issues as issue, j}
+			<a href={`/issues/${yearId}/${urlify(issue.title)}`} class="issue">
+				{issue.title}
 			</a>
 		{/each}
 		<div class="hor-divider" />
