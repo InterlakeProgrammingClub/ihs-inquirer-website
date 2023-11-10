@@ -50,8 +50,9 @@ collections:
     fields:
       - { label: 'Name', name: 'title', widget: 'string' }
       - { label: 'Role', name: 'role', widget: 'string' }
+      - { label: 'Order (lower number = higher up)', name: 'order', widget: 'number' }
       - { label: 'Photo', name: 'photo', widget: 'image', required: false }
-      - { label: 'Bio', name: 'description', widget: 'text' }
+      - { label: 'Description', name: 'description', widget: 'text' }
   - name: 'years'
     label: 'Past Issue Years'
     folder: 'src/content/years'

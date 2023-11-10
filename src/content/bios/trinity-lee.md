@@ -1,6 +1,7 @@
 ---
 title: Trinity Lee
 role: Editor-in-Chief
+order: 0
 photo: /images/uploads/trinity-lee.png
 description: Trinity is a junior and the editor-in-chief for the Interlake
   Inquirer. Other than journalism, she loves painting and baking. She is looking
