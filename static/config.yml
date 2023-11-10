@@ -60,7 +60,7 @@ collections:
     fields:
       - { label: 'Year', name: 'title', widget: 'string' }
       - { label: 'Year Name', name: 'year_name', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
       - label: 'Issues'
         name: 'issues'
         widget: 'list'
