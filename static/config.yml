@@ -56,12 +56,11 @@ collections:
     label: 'Issues'
     folder: 'src/content/issues'
     create: true
-    slug: '{{fields.year}}-{{fields.quarter}}'
-    identifier_field: 'slug'
+    slug: '{{slug}}'
     fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Year', name: 'year', widget: 'string' }
       - { label: 'Year Name', name: 'year_name', widget: 'string' }
-      - { label: 'Issue Name', name: 'issue_name', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   # - name: 'pages'
   #   label: 'Pages'

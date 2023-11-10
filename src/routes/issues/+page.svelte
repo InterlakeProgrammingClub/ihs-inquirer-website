@@ -30,12 +30,10 @@
 
 	.year {
 		margin: 1.5rem 0;
-		font-size: 1.2rem;
-		font-weight: normal;
 	}
 
 	.issue {
-		margin: 1.5rem;
+		margin: 1.5rem 1.5rem 1.5rem 2rem;
 		display: block;
 		font-size: 1.1rem;
 	}
