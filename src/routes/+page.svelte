@@ -145,5 +145,10 @@
 	img {
 		width: 100%;
 		border-radius: 0.6rem;
+		transition: 0.1s ease-out;
+
+		&:hover {
+			transform: scale(1.02);
+		}
 	}
 </style>

@@ -3,7 +3,8 @@
 	--text-1: hsl(215, 50%, 10%);
 	--text-2: hsl(215, 20%, 25%);
 	--acc-1: hsl(215, 85%, 75%);
-	--divider: hsl(215, 30%, 80%);
+	--acc-2: hsl(215, 50%, 50%);
+	--divider: hsl(215, 20%, 70%);
 	box-sizing: border-box;
 }
 
@@ -34,6 +35,14 @@ a {
 p {
 	font-size: 1.1rem;
 	line-height: 1.75;
+	margin: 1.5em 0;
+}
+
+blockquote {
+	font-style: italic;
+	margin: 1.5rem 0;
+	padding-left: 2rem;
+	border-left: 1px solid var(--divider);
 }
 
 .text.article > p:first-of-type::first-letter {
@@ -47,9 +56,9 @@ p {
 }
 
 .ver-divider {
-	border-right: 2px solid var(--divider);
+	border-right: 1px solid var(--divider);
 }
 
 .hor-divider {
-	border-bottom: 2px solid var(--divider);
+	border-bottom: 1px solid var(--divider);
 }

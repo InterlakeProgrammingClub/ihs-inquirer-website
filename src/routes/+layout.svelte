@@ -22,7 +22,7 @@
 
 <div class="layout">
 	<header class={pageClass}>
-		<h1><a href="/">The Interlake Inquirer</a></h1>
+		<h1><a href="/">The <span>I</span>nterlake <span>I</span>nquirer</a></h1>
 		<nav>
 			<a href="/">Latest Issue</a>
 			<a href="/issues">Past Issues</a>
@@ -102,5 +102,9 @@
 
 	a {
 		text-decoration: none;
+	}
+
+	span {
+		color: var(--acc-2);
 	}
 </style>
