@@ -5,6 +5,6 @@
 
 <style lang="scss">
 	:global(#svelte) {
-		display: none;
+		display: none !important;
 	}
 </style>
