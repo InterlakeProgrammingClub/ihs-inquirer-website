@@ -1,11 +1,9 @@
 <script>
 	export let data;
-
-	console.log(data);
 </script>
 
 <main>
-	<h1>{data.meta.year} {data.meta.issue_name}</h1>
+	<h1>{data.issue.year.title} {data.issue.title}</h1>
 	<div class="text">
 		<svelte:component this={data.content} />
 	</div>

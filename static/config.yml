@@ -65,7 +65,8 @@ collections:
     label: 'Past Issues'
     folder: 'src/content/issues'
     create: true
-    slug: '{{slug}}'
+    slug: '{{title}}-{{year}}'
+    identifier_field: '{{title}}-{{year}}'
     fields:
       - { label: 'Issue Name', name: 'title', widget: 'string' }
       - label: 'Year'
