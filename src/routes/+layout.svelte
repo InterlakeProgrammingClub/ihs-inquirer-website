@@ -28,7 +28,7 @@
 			<a href="/issues">Past Issues</a>
 			<a href="/weekly-woof">The Weekly Woof</a>
 			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
+			<!-- <a href="/contact">Contact</a> -->
 		</nav>
 		<div class="hor-divider"></div>
 	</header>
@@ -53,6 +53,7 @@
 
 	h1 {
 		font-size: 1.8rem;
+		font-weight: 900;
 		margin: 0.5rem 0 1.5rem 0;
 		transition: 0.1s ease-out;
 	}
@@ -65,7 +66,7 @@
 
 	header {
 		text-align: center;
-		padding: 1rem 0;
+		padding: 1rem 0 0 0;
 	}
 
 	header.home {
@@ -75,7 +76,7 @@
 		}
 
 		.hor-divider {
-			max-width: 76rem;
+			max-width: 80rem;
 			margin: 3rem auto 0 auto;
 		}
 	}

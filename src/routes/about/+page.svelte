@@ -18,7 +18,7 @@
 				<p>{staff.description}</p>
 			</div>
 		</div>
-		<div class="hor-divider" />
+		<!-- <div class="hor-divider" /> -->
 	{/each}
 </div>
 
@@ -32,6 +32,9 @@
 		display: flex;
 		gap: 3rem;
 		margin: 2rem 0;
+		padding: 0 1.5rem 2rem 0;
+
+		@include border;
 
 		h2 {
 			margin: 0;
@@ -47,7 +50,7 @@
 	}
 
 	.photo {
-		max-width: 10rem;
+		max-width: 11rem;
 		width: 100%;
 		height: fit-content;
 		border-radius: 0.6rem;

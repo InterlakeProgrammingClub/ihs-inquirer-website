@@ -40,11 +40,11 @@
 					</div>
 				</a>
 				{#if i != rightPanel.length - 1}
-					<div class="hor-divider" />
+					<!-- <div class="hor-divider" /> -->
 				{/if}
 			{/each}
 		</div>
-		<div class="ver-divider" />
+		<!-- <div class="ver-divider" /> -->
 		<div class="main">
 			<a href={`/articles/${featured.slug}`} class="featured">
 				<img src={featured.featured_img} alt="" />
@@ -54,7 +54,7 @@
 				</div>
 			</a>
 		</div>
-		<div class="ver-divider" />
+		<!-- <div class="ver-divider" /> -->
 		<div class="column">
 			{#each rightPanel as post, i}
 				<a href={`/articles/${post.slug}`} class="article">
@@ -67,7 +67,7 @@
 					</div>
 				</a>
 				{#if i != rightPanel.length - 1}
-					<div class="hor-divider" />
+					<!-- <div class="hor-divider" /> -->
 				{/if}
 			{/each}
 		</div>
@@ -76,7 +76,7 @@
 
 <style lang="scss">
 	main {
-		margin: 1rem auto;
+		margin: 1.5rem auto;
 		flex-grow: 1;
 	}
 
@@ -88,14 +88,15 @@
 
 	.main {
 		flex-grow: 1;
-		padding: 0 2rem;
+		padding: 0 1.5rem;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.column {
 		display: flex;
 		flex-direction: column;
-		max-width: 20%;
-		padding: 0 2rem;
+		max-width: 22%;
 	}
 
 	.hor-divider {
@@ -108,6 +109,11 @@
 
 	.featured {
 		display: block;
+		padding: 0 1.5rem 2rem 0;
+		margin-bottom: 2rem;
+		flex-grow: 1;
+
+		@include border;
 
 		.info {
 			text-align: center;
@@ -121,6 +127,11 @@
 
 	.article {
 		display: block;
+		padding: 0 1.5rem 2rem 0;
+		margin-bottom: 2rem;
+		height: 100%;
+
+		@include border;
 
 		.title {
 			font-size: 1.2rem;
@@ -148,7 +159,7 @@
 		transition: 0.1s ease-out;
 
 		&:hover {
-			transform: scale(1.02);
+			transform: scale(1.01);
 		}
 	}
 </style>

@@ -5,3 +5,8 @@
 		text-decoration-thickness: 0.2rem;
 	}
 }
+
+@mixin border {
+	border-right: 1px solid var(--divider);
+	border-bottom: 1px solid var(--divider);
+}
