@@ -6,7 +6,7 @@
 	<h1>Staff</h1>
 	<div class="hor-divider" />
 	{#each data.bios as staff}
-		<a class="staff" href={`/about/${staff.title.replace(' ', '-').toLowerCase()}`}>
+		<a class="staff" href={`/about/${staff.slug}`}>
 			{#if !staff.photo}
 				<div class="photo placeholder" />
 			{:else}

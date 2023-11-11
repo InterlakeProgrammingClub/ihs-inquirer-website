@@ -2,61 +2,40 @@ import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
 	// bio
-	const bioInfo = import.meta.glob('/src/content/bios/*.md');
+	const bioModules = import.meta.glob('/src/content/bios/*.md');
 
-	let bios = {};
+	let match = {};
 
-	for (const path in bioInfo) {
-		const file = await bioInfo[path]();
-		const slug = path.split('/').pop().split('.')[0];
-		bios[slug] = { ...file.metadata };
-	}
-
-	bios = Object.values(bios);
-	bios.sort((a, b) => {
-		if (a.order != b.order) {
-			return a.order > b.order ? 1 : -1;
-		} else {
-			return a.title.localeCompare(b.title) ? 1 : -1;
+	for (const [path, resolver] of Object.entries(bioModules)) {
+		if (path.split('/').pop().split('.')[0] === params.slug) {
+			match = { path, resolver };
+			break;
 		}
-	});
-
-	const slugs = bios.map((item) => item.title.replace(' ', '-').toLowerCase());
-
-	if (!slugs.includes(params.slug)) {
-		throw error(404, 'Page Not Found');
 	}
 
-	const title = params.slug
-		.split('-')
-		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-		.join(' ');
-	const data = bios.find((item) => item.title === title);
+	const bio = await match?.resolver?.();
+
+	if (!bio) {
+		throw error(404, 'Staff not found');
+	}
 
 	// articles
-	const articleInfo = import.meta.glob('/src/content/articles/*.md');
+	const articleModules = import.meta.glob('/src/content/articles/*.md');
 
-	let articles = {};
+	let articles = [];
 
-	for (const path in articleInfo) {
-		const file = await articleInfo[path]();
+	for (const path in articleModules) {
+		const post = await articleModules[path]();
 		const slug = path.split('/').pop().split('.')[0];
-		articles[slug] = { ...file.metadata };
+		articles.push({ ...post.metadata, slug: slug });
 	}
 
-	articles = Object.values(articles);
-	articles.sort((a, b) => {
-		if (a.order != b.order) {
-			return a.order > b.order ? 1 : -1;
-		} else {
-			return a.title.localeCompare(b.title) ? 1 : -1;
-		}
-	});
-
-	const personalArticles = articles.filter((item) => item.author.includes(title) === true);
+	const personalArticles = articles.filter(
+		(item) => item.author.includes(bio.metadata.title) === true
+	);
 
 	return {
-		bio: data,
-		articles: personalArticles ? personalArticles : ''
+		bio: bio.metadata,
+		articles: personalArticles
 	};
 }

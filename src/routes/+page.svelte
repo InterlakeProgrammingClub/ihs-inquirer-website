@@ -1,8 +1,7 @@
 <script>
 	import struct from '/src/bio/struct.json';
 	import PageHead from '$lib/components/PageHead.svelte';
-	import BigPanel from '$lib/components/BigPanel.svelte';
-	import LongPanel from '$lib/components/LongPanel.svelte';
+	import { formatDate } from '$lib/js/utils.js';
 
 	export let data;
 	const posts = data.posts;
@@ -14,16 +13,6 @@
 	}
 	let leftPanel = longPanel.slice(0, 2);
 	let rightPanel = longPanel.slice(2, 4);
-
-	function formatDate(date) {
-		let d = new Date(date);
-		return d.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-			timeZone: 'UTC'
-		});
-	}
 </script>
 
 <PageHead title="" description="" />

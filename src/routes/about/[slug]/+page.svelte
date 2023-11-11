@@ -1,106 +1,109 @@
 <script>
+	import { formatDate } from '$lib/js/utils.js';
+
 	export let data;
 </script>
 
 <div class="content">
-	<div class="mainContainer">
+	<div class="bio">
+		{#if !data.bio.photo}
+			<div class="photo placeholder" />
+		{:else}
+			<img class="photo" src={data.bio.photo} alt={data.bio.title} />
+		{/if}
 		<div class="textContainer">
 			<h1>{data.bio.title}</h1>
-			<h2>{data.bio.role}</h2>
+			<h3>{data.bio.role}</h3>
 			<p>{data.bio.description}</p>
 		</div>
-
-		{#if data.bio.photo}
-			<div class="imageContainer">
-				<img src={data.bio.photo} alt={`${data.bio.title}'s Photo`} />
-			</div>
-		{/if}
 	</div>
 	{#if data.articles.length > 0}
 		<div class="articlesContainer">
 			<h1>Articles</h1>
-			<div class="articles">
-				{#each data.articles as item}
-					<div class="article">
-						<div class="articleImageContainer">
-							<img src={item.featured_img} alt="Featured" />
-						</div>
+			<div class="hor-divider" />
+			{#each data.articles as article}
+				<div class="article">
+					<img src={article.featured_img} alt="Featured" />
 
-						<div class="articleText">
-							<h1>{item.title}</h1>
-
-							{#each item.categories as categories}
-								<div>
-									{categories}
-								</div>
-							{/each}
+					<div class="articleText">
+						<h2 class="title">{article.title}</h2>
+						<div class="author">
+							{article.author} | {formatDate(article.date)}
 						</div>
 					</div>
-				{/each}
-			</div>
+				</div>
+			{/each}
 		</div>
 	{/if}
 </div>
 
 <style lang="scss">
 	.content {
+		max-width: 50rem;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.bio {
 		display: flex;
-		flex-direction: column;
+		margin-top: 2rem;
+		gap: 3rem;
+		padding: 0 1.5rem 2rem 0;
+
+		@include border;
+
+		h1 {
+			margin-top: 0;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		h3 {
+			margin: 0.8rem 0;
+		}
 	}
 
-	.mainContainer {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		margin-top: 1rem;
-	}
-
-	.textContainer {
-		text-align: center;
-		width: 40%;
-	}
-
-	.imageContainer {
-		margin-left: 5rem;
-		height: 30rem;
-	}
-
-	.imageContainer img {
-		max-height: 100%;
-		width: auto;
-	}
-
-	.textContainer h2 {
-		font-size: large;
+	.photo {
+		max-width: 11rem;
+		width: 100%;
+		height: fit-content;
+		border-radius: 0.6rem;
+		aspect-ratio: 4/5;
+		object-fit: cover;
 	}
 
 	.articlesContainer {
-		text-align: center;
-	}
-
-	.articles {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		margin-bottom: 5rem;
+		margin: auto;
 	}
 
 	.article {
-		border: solid 1px black;
-		width: 30rem;
 		display: flex;
-		flex-direction: column;
+		gap: 3rem;
+		margin-top: 2rem;
+		padding: 0 1.5rem 2rem 0;
+
+		@include border;
+
+		img {
+			max-width: 8rem;
+			width: 100%;
+			height: fit-content;
+			border-radius: 0.6rem;
+			aspect-ratio: 1/1;
+			object-fit: cover;
+		}
 	}
 
-	.articleImageContainer {
-		margin-top: 1rem;
-		display: flex;
-		justify-content: center;
-		width: 100%;
+	.author {
+		font-size: 1.1rem;
+		color: var(--text-2);
 	}
 
-	.articleImageContainer img {
-		max-height: 10rem;
-		width: auto;
+	.articleText {
+		h2 {
+			margin: 0 0 1rem 0;
+		}
 	}
 </style>
