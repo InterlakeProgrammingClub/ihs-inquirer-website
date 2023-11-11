@@ -6,7 +6,7 @@
 	<h1>Staff</h1>
 	<div class="hor-divider" />
 	{#each data.bios as staff}
-		<div class="staff">
+		<a class="staff" href={`/about/${staff.title.replace(' ', '-').toLowerCase()}`}>
 			{#if !staff.photo}
 				<div class="photo placeholder" />
 			{:else}
@@ -17,7 +17,7 @@
 				<h3>{staff.role}</h3>
 				<p>{staff.description}</p>
 			</div>
-		</div>
+		</a>
 		<!-- <div class="hor-divider" /> -->
 	{/each}
 </div>
@@ -33,6 +33,7 @@
 		gap: 3rem;
 		margin: 2rem 0;
 		padding: 0 1.5rem 2rem 0;
+		text-decoration: none;
 
 		@include border;
 
