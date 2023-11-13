@@ -12,24 +12,42 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - { label: 'Published', name: 'published', widget: 'boolean', default: false }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
+      - label: 'Authors'
+        name: 'authors'
+        widget: 'list'
+        fields:
+          - {
+              label: 'Name',
+              name: 'name',
+              widget: 'relation',
+              collection: 'bios',
+              search_fields: ['title'],
+              value_field: 'title',
+              display_fields: ['title']
+            }
       - {
           label: 'Year',
           name: 'year',
-          widget: 'select',
-          options: ['2023-2024', '2022-2023', '2021-2022', '2020-2021', '2019-2020']
+          widget: 'relation',
+          collection: 'years',
+          search_fields: ['title'],
+          value_field: 'title',
+          display_fields: ['title'],
+          required: false
         }
       - {
-          label: 'Quarter',
-          name: 'quarter',
-          widget: 'select',
-          options: ['winter', 'spring', 'summer', 'fall']
+          label: 'Issue',
+          name: 'issue',
+          widget: 'relation',
+          collection: 'issues',
+          search_fields: ['title'],
+          value_field: 'title',
+          display_fields: ['title'],
+          required: false
         }
-      - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
-      - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
       - {
           label: 'Categories',
           name: 'categories',
@@ -39,9 +57,16 @@ collections:
           multiple: true,
           required: false
         }
-      - { label: 'Readtime', name: 'readtime', widget: 'number', value_type: 'int', step: 1 }
+      - { label: 'Readtime (minutes)', name: 'readtime', widget: 'number', value_type: 'int' }
+      - {
+          label: 'URL ending (leave blank to auto-generate)',
+          name: 'slug',
+          widget: 'string',
+          required: false
+        }
+      - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
+      - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Published', name: 'published', widget: 'boolean', default: false }
   - name: 'bios'
     label: 'Bios'
     folder: 'src/content/bios'
@@ -49,12 +74,19 @@ collections:
     slug: '{{slug}}'
     fields:
       - { label: 'Name', name: 'title', widget: 'string' }
-      - { label: 'Role', name: 'role', widget: 'string' }
-      - { label: 'Order (lower number = higher up)', name: 'order', widget: 'number' }
+      - { label: 'Category', name: 'category', widget: 'select', options: ['Staff', 'Contributor'] }
+      - { label: 'Role', name: 'role', widget: 'string', required: false }
+      - {
+          label: 'Order (lower number = higher up)',
+          name: 'order',
+          widget: 'number',
+          value_type: 'int',
+          default: 1
+        }
       - { label: 'Photo', name: 'photo', widget: 'image', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
   - name: 'years'
-    label: 'Past Issue Years'
+    label: 'Years'
     folder: 'src/content/years'
     create: true
     slug: '{{slug}}'
@@ -63,20 +95,21 @@ collections:
       - { label: 'Year Name', name: 'year_name', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown', required: false }
   - name: 'issues'
-    label: 'Past Issues'
+    label: 'Issues'
     folder: 'src/content/issues'
     create: true
     slug: '{{fields.year}}-{{fields.title}}'
-    identifier_field: '{{fields.year}}-{{fields.title}}'
     fields:
-      - { label: 'Issue Name', name: 'title', widget: 'string' }
-      - label: 'Year'
-        name: 'year'
-        widget: 'relation'
-        collection: 'years'
-        search_fields: ['title', 'year_name']
-        value_field: 'title'
-        display_fields: ['title', 'year_name']
+      - { label: 'Issue Name (PLEASE SPECIFY YEAR)', name: 'title', widget: 'string' }
+      - {
+          label: 'Year',
+          name: 'year',
+          widget: 'relation',
+          collection: 'years',
+          search_fields: ['title', 'year_name'],
+          value_field: 'title',
+          display_fields: ['title', 'year_name']
+        }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   # - name: 'pages'
   #   label: 'Pages'
