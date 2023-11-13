@@ -1,4 +1,5 @@
 <script>
+	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
 
 	export let data;
@@ -28,7 +29,7 @@
 					<div class="articleText">
 						<h2 class="title">{article.title}</h2>
 						<div class="author">
-							{article.author} | {formatDate(article.date)}
+							<AuthorLink name={article.author} /> | {formatDate(article.date)}
 						</div>
 					</div>
 				</div>
