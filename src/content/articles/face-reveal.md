@@ -1,6 +1,9 @@
 ---
 title: Face Reveal!
-description: 'description here'
+slug:
+ - face-reveal
+description: |
+  description here
 author: Claire Li
 year: "2022-2023"
 quarter: winter
