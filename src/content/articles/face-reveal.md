@@ -1,8 +1,9 @@
 ---
 authors:
   - name: Claire Li
+readtime: 2
 author: Claire Li
-slug: ""
+slug: face-reveal
 quarter: winter
 published: true
 title: Face Reveal!
