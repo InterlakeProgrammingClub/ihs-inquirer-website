@@ -1,5 +1,5 @@
 ---
-authors-other:
+authors_other:
   - name: Ananya Chavali
   - name: Sayana Isaac
 readtime: 2

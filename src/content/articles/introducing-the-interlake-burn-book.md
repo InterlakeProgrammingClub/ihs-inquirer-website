@@ -1,5 +1,5 @@
 ---
-authors-other:
+authors_other:
   - name: Mercan Draman
   - name: Sophie Wang
   - name: Sanjna Sikka
