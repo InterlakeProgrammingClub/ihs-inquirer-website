@@ -29,14 +29,11 @@ export async function load({ params }) {
 	if (!bio) {
 		let nameFromSlug = decodeURIComponent(params.slug.replace(/-/g, ' '));
 
-		console.log(nameFromSlug);
-
 		let name;
 		for (const article of articles) {
-			console.log(article.authors);
 			for (const author of article.authors) {
-				if (author.name.toLowerCase() === nameFromSlug) {
-					name = author.name;
+				if (author.title.toLowerCase() === nameFromSlug) {
+					name = author.title;
 					break;
 				}
 			}
@@ -51,7 +48,7 @@ export async function load({ params }) {
 
 	const personalArticles = articles.filter((item) => {
 		if (item.authors) {
-			return item.authors.some((author) => author.name === bio.metadata.title);
+			return item.authors.some((author) => author.title === bio.metadata.title);
 		}
 	});
 

@@ -1,11 +1,13 @@
 <script>
+	import AuthorLink from '../../lib/components/AuthorLink.svelte';
+
 	export let data;
 </script>
 
 <div class="content">
 	<h1>Staff</h1>
 	<div class="hor-divider" />
-	{#each data.bios as staff}
+	{#each data.staff as staff}
 		<a class="staff" href={`/about/${staff.slug}`}>
 			{#if !staff.photo}
 				<div class="photo placeholder" />
@@ -18,8 +20,16 @@
 				<p>{staff.description}</p>
 			</div>
 		</a>
-		<!-- <div class="hor-divider" /> -->
 	{/each}
+	<h2>Contributors</h2>
+	<div class="hor-divider" />
+	<div class="contributors">
+		{#each data.contributors as contributor}
+			<div class="contributor">
+				<AuthorLink names={[contributor]} />
+			</div>
+		{/each}
+	</div>
 </div>
 
 <style lang="scss">
@@ -63,5 +73,15 @@
 		background: var(--bg-1);
 		filter: brightness(0.9);
 		height: 100%;
+	}
+
+	.contributors {
+		column-width: 12rem;
+		padding: 2rem 0;
+	}
+
+	.contributor {
+		font-size: 1.2rem;
+		padding: 0.5rem 0;
 	}
 </style>

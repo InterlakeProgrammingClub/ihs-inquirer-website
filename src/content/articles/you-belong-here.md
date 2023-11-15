@@ -1,6 +1,6 @@
 ---
 authors:
-  - name: Gauri Gupta
+  - title: Gauri Gupta
 readtime: 5
 slug: you-belong-here
 quarter: winter

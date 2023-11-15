@@ -1,7 +1,7 @@
 ---
 authors:
-  - name: Ananya Chavali
-  - name: Sayana Isaac
+  - title: Ananya Chavali
+  - title: Sayana Isaac
 readtime: 2
 slug: interlake-baldies
 quarter: winter

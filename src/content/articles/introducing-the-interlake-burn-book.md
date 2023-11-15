@@ -1,8 +1,8 @@
 ---
 authors:
-  - name: Mercan Draman
-  - name: Sophie Wang
-  - name: Sanjna Sikka
+  - title: Mercan Draman
+  - title: Sophie Wang
+  - title: Sanjna Sikka
 readtime: 3
 slug: burn-book
 quarter: winter

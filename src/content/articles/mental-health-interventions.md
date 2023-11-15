@@ -1,6 +1,6 @@
 ---
 authors:
-  - name: Trinity Lee
+  - title: Trinity Lee
 readtime: 4
 slug: mental-health-interventions
 quarter: winter

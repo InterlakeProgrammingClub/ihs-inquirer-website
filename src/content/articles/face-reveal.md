@@ -1,6 +1,6 @@
 ---
 authors:
-  - name: Claire Li
+  - title: Claire Li
 readtime: 2
 slug: face-reveal
 quarter: winter
