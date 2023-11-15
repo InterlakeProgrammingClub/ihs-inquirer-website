@@ -29,6 +29,11 @@ collections:
               value_field: 'title',
               display_fields: ['title']
             }
+      - label: 'Authors without bio page'
+        name: 'authors-other'
+        widget: 'list'
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
       - {
           label: 'Year',
           name: 'year',
