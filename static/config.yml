@@ -84,7 +84,7 @@ collections:
           default: 1
         }
       - { label: 'Photo', name: 'photo', widget: 'image', required: false }
-      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
   - name: 'years'
     label: 'Years'
     folder: 'src/content/years'
