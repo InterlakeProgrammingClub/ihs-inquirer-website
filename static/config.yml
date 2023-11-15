@@ -57,7 +57,13 @@ collections:
           multiple: true,
           required: false
         }
-      - { label: 'Readtime (minutes)', name: 'readtime', widget: 'number', value_type: 'int' }
+      - {
+          label: 'Readtime (minutes)',
+          name: 'readtime',
+          widget: 'number',
+          value_type: 'int',
+          required: false
+        }
       - {
           label: 'URL ending (leave blank to auto-generate)',
           name: 'slug',
