@@ -2,7 +2,6 @@
 authors:
   - name: Alexandra Hui
 readtime: 3
-author: Alexandra Hui
 slug: clue
 quarter: winter
 published: true

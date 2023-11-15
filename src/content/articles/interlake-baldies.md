@@ -3,7 +3,6 @@ authors-other:
   - name: Ananya Chavali
   - name: Sayana Isaac
 readtime: 2
-author: Ananya Chavali & Sayana Isaac
 slug: interlake-baldies
 quarter: winter
 published: true

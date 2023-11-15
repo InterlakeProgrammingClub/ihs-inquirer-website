@@ -1,8 +1,5 @@
 ---
-authors-other:
-  - name: Gauri Gupta
 readtime: 5
-author: Gauri Gupta
 slug: you-belong-here
 quarter: winter
 published: true

@@ -2,7 +2,6 @@
 authors:
   - name: Trinity Lee
 readtime: 4
-author: Trinity Lee
 slug: mental-health-interventions
 quarter: winter
 published: true
@@ -35,4 +34,4 @@ Although there are conflicting opinions about the effectiveness of the school’
 
 Mental health is an incredibly important issue, especially for us high-schoolers, and it is important that we know how to receive the support that we need.
 
-_If you feel that you are struggling with your mental health, please connect with a counselor or trusted person, and visit https://bsd405.org/interlake/counseling/mental-health-resources/._
+_If you feel that you are struggling with your mental health, please connect with a counselor or trusted person, and visit <https://bsd405.org/interlake/counseling/mental-health-resources/>._

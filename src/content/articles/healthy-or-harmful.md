@@ -2,7 +2,6 @@
 authors:
   - name: Azle Norsworthy
 readtime: 1
-author: Azle Norsworthy
 slug: healthy-or-harmful
 quarter: winter
 published: true
