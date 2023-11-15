@@ -1,5 +1,6 @@
 ---
 title: Trinity Lee
+category: Staff
 role: Editor-in-Chief
 order: 0
 photo: /images/uploads/trinity-lee.png

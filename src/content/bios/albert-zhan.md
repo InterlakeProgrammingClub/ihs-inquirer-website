@@ -1,5 +1,6 @@
 ---
 title: Albert Zhan
+category: Staff
 role: Lead Photographer
 order: 2
 photo: /images/uploads/albert-zhan.png

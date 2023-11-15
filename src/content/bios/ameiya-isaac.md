@@ -1,5 +1,6 @@
 ---
 title: Ameiya Isaac
+category: Staff
 role: Editor
 order: 1
 photo: /images/uploads/ameiya-isaac.png
