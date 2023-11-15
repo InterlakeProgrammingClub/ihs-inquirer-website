@@ -23,7 +23,7 @@
 			<h1>Articles</h1>
 			<div class="hor-divider" />
 			{#each data.articles as article}
-				<div class="article">
+				<a href={`/articles/${article.slug}`} class="article">
 					<img src={article.featured_img} alt="Featured" />
 
 					<div class="articleText">
@@ -32,7 +32,7 @@
 							<AuthorLink names={article.authors} /> | {formatDate(article.date)}
 						</div>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	{/if}
@@ -84,6 +84,7 @@
 		gap: 3rem;
 		margin-top: 2rem;
 		padding: 0 1.5rem 2rem 0;
+		text-decoration: none;
 
 		@include border;
 
@@ -95,6 +96,10 @@
 			aspect-ratio: 1/1;
 			object-fit: cover;
 		}
+	}
+
+	.title {
+		@include underline;
 	}
 
 	.author {

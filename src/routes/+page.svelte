@@ -21,13 +21,13 @@
 <main>
 	<div class="articles">
 		<div class="column">
-			{#each leftPanel as post, i}
-				<a href={`/articles/${post.slug}`} class="article">
-					<img src={post.featured_img} alt="" />
+			{#each leftPanel as article, i}
+				<a href={`/articles/${article.slug}`} class="article">
+					<img src={article.featured_img} alt="" />
 					<div class="info">
-						<h2 class="title">{post.title}</h2>
+						<h2 class="title">{article.title}</h2>
 						<div class="author">
-							<AuthorLink names={post.authors} /> | {formatDate(post.date)}
+							<AuthorLink names={article.authors} /> | {formatDate(article.date)}
 						</div>
 					</div>
 				</a>
@@ -45,13 +45,13 @@
 			</a>
 		</div>
 		<div class="column">
-			{#each rightPanel as post, i}
-				<a href={`/articles/${post.slug}`} class="article">
-					<img src={post.featured_img} alt="" />
+			{#each rightPanel as article, i}
+				<a href={`/articles/${article.slug}`} class="article">
+					<img src={article.featured_img} alt="" />
 					<div class="info">
-						<h3 class="title">{post.title}</h3>
+						<h3 class="title">{article.title}</h3>
 						<div class="author">
-							<AuthorLink names={post.authors} /> | {formatDate(post.date)}
+							<AuthorLink names={article.authors} /> | {formatDate(article.date)}
 						</div>
 					</div>
 				</a>
