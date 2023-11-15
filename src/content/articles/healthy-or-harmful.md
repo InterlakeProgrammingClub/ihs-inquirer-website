@@ -1,15 +1,18 @@
 ---
-title: 'Healthy or Harmful?'
-slug: 'healthy-or-harmful'
-description: 'description here'
-author: 'Azle Norsworthy'
-year: "2022-2023"
-quarter: 'winter'
-date: '2022-10-01'
-categories: ['arts']
+authors:
+  - name: Azle Norsworthy
 readtime: 1
-featured_img: '/images/uploads/healthy-or-harmful-1.png'
+author: Azle Norsworthy
+slug: healthy-or-harmful
+quarter: winter
 published: true
+title: Healthy or Harmful?
+date: 2022-10-01
+year: 2022-2023
+categories:
+  - arts
+featured_img: /images/uploads/healthy-or-harmful-1.png
+description: description here
 ---
 
 <script>
