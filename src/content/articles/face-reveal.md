@@ -1,13 +1,15 @@
 ---
-title: Face Reveal!
-slug:
-  - face-reveal
-description: |
-  description here
+authors:
+  - name: Claire Li
 author: Claire Li
-year: "2022-2023"
+slug: ""
 quarter: winter
 published: true
+title: Face Reveal!
+date: 2023-11-15T05:38:22.595Z
+year: ""
+description: |
+  description here
 ---
 Of all the influencers whose personas revolve around masked anonymity, [Dream](https://www.youtube.com/c/dream)—as known online—is among the most famous. A matter of months ago, the YouTuber removed his plasticky disguise and revealed his face to the world. To his millions of subscribers, it was a monumental event, but not everyone was impressed: reactions ranged from giddy compliments to underwhelmed disappointment, with people insulting his features or commenting that he looked too normal. 
 
