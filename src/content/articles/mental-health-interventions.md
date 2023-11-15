@@ -1,15 +1,18 @@
 ---
-title: 'Interlake’s Mental Health Interventions: Are They Actually Effective?'
-slug: 'mental-health-interventions'
-description: description here
+authors:
+  - name: Trinity Lee
+readtime: 4
 author: Trinity Lee
-year: "2022-2023"
+slug: mental-health-interventions
 quarter: winter
-date: '2022-10-01'
-categories: ['arts']
-readtime: 5
-featured_img: /images/uploads/mental-health-interventions-1.png
 published: true
+title: "Interlake’s Mental Health Interventions: Are They Actually Effective?"
+date: 2022-10-01
+year: 2022-2023
+categories:
+  - arts
+featured_img: /images/uploads/mental-health-interventions-1.png
+description: description here
 ---
 
 Mental health has grown to become a heavily regarded topic.
