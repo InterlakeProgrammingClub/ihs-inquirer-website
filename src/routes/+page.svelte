@@ -1,8 +1,8 @@
 <script>
 	import struct from '/src/bio/struct.json';
 	import PageHead from '$lib/components/PageHead.svelte';
-	import BigPanel from '$lib/components/BigPanel.svelte';
-	import LongPanel from '$lib/components/LongPanel.svelte';
+	import AuthorLink from '$lib/components/AuthorLink.svelte';
+	import { formatDate } from '$lib/js/utils.js';
 
 	export let data;
 	const posts = data.posts;
@@ -14,16 +14,6 @@
 	}
 	let leftPanel = longPanel.slice(0, 2);
 	let rightPanel = longPanel.slice(2, 4);
-
-	function formatDate(date) {
-		let d = new Date(date);
-		return d.toLocaleDateString('en-us', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-			timeZone: 'UTC'
-		});
-	}
 </script>
 
 <PageHead title="" description="" />
@@ -36,7 +26,7 @@
 					<img src={post.featured_img} alt="" />
 					<div class="info">
 						<h2 class="title">{post.title}</h2>
-						<div class="author">{post.author} | {formatDate(post.date)}</div>
+						<div class="author"><AuthorLink name={post.author} /> | {formatDate(post.date)}</div>
 					</div>
 				</a>
 				{#if i != rightPanel.length - 1}
@@ -50,7 +40,9 @@
 				<img src={featured.featured_img} alt="" />
 				<div class="info">
 					<h2 class="title">{featured.title}</h2>
-					<div class="author">{featured.author} | {formatDate(featured.date)}</div>
+					<div class="author">
+						<AuthorLink name={featured.author} /> | {formatDate(featured.date)}
+					</div>
 				</div>
 			</a>
 		</div>
@@ -62,7 +54,7 @@
 					<div class="info">
 						<h3 class="title">{post.title}</h3>
 						<div class="author">
-							{post.author} | {formatDate(post.date)}
+							<AuthorLink name={post.author} /> | {formatDate(post.date)}
 						</div>
 					</div>
 				</a>
