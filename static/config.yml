@@ -20,19 +20,6 @@ collections:
         name: 'authors'
         widget: 'list'
         fields:
-          - {
-              label: 'Name',
-              name: 'name',
-              widget: 'relation',
-              collection: 'bios',
-              search_fields: ['title'],
-              value_field: 'title',
-              display_fields: ['title']
-            }
-      - label: 'Authors without bio page'
-        name: 'authors_other'
-        widget: 'list'
-        fields:
           - { label: 'Name', name: 'name', widget: 'string' }
       - {
           label: 'Year',

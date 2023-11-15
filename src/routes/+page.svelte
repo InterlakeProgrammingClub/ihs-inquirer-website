@@ -26,27 +26,24 @@
 					<img src={post.featured_img} alt="" />
 					<div class="info">
 						<h2 class="title">{post.title}</h2>
-						<div class="author"><AuthorLink name={post.author} /> | {formatDate(post.date)}</div>
+						<div class="author">
+							<AuthorLink names={post.authors} /> | {formatDate(post.date)}
+						</div>
 					</div>
 				</a>
-				{#if i != rightPanel.length - 1}
-					<!-- <div class="hor-divider" /> -->
-				{/if}
 			{/each}
 		</div>
-		<!-- <div class="ver-divider" /> -->
 		<div class="main">
 			<a href={`/articles/${featured.slug}`} class="featured">
 				<img src={featured.featured_img} alt="" />
 				<div class="info">
 					<h2 class="title">{featured.title}</h2>
 					<div class="author">
-						<AuthorLink name={featured.author} /> | {formatDate(featured.date)}
+						<AuthorLink names={featured.authors} /> | {formatDate(featured.date)}
 					</div>
 				</div>
 			</a>
 		</div>
-		<!-- <div class="ver-divider" /> -->
 		<div class="column">
 			{#each rightPanel as post, i}
 				<a href={`/articles/${post.slug}`} class="article">
@@ -54,13 +51,10 @@
 					<div class="info">
 						<h3 class="title">{post.title}</h3>
 						<div class="author">
-							<AuthorLink name={post.author} /> | {formatDate(post.date)}
+							<AuthorLink names={post.authors} /> | {formatDate(post.date)}
 						</div>
 					</div>
 				</a>
-				{#if i != rightPanel.length - 1}
-					<!-- <div class="hor-divider" /> -->
-				{/if}
 			{/each}
 		</div>
 	</div>

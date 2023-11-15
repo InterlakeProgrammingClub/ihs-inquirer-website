@@ -1,4 +1,6 @@
 ---
+authors:
+  - name: Gauri Gupta
 readtime: 5
 slug: you-belong-here
 quarter: winter
@@ -6,8 +8,6 @@ published: true
 title: You Belong Here
 date: 2022-10-01
 featured_img: /images/uploads/you-belong-here-1.png
-authors_other:
-  - name: Guari Gupta
 year: 2022-2023
 categories:
   - arts

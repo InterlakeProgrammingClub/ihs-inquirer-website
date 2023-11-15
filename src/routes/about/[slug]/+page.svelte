@@ -7,15 +7,15 @@
 
 <div class="content">
 	<div class="bio">
-		{#if !data.bio.photo}
-			<div class="photo placeholder" />
-		{:else}
+		{#if data.bio.photo}
 			<img class="photo" src={data.bio.photo} alt={data.bio.title} />
 		{/if}
 		<div class="textContainer">
 			<h1>{data.bio.title}</h1>
 			<h3>{data.bio.role}</h3>
-			<p>{data.bio.description}</p>
+			{#if data.bio.description}
+				<p>{data.bio.description}</p>
+			{/if}
 		</div>
 	</div>
 	{#if data.articles.length > 0}
@@ -29,7 +29,7 @@
 					<div class="articleText">
 						<h2 class="title">{article.title}</h2>
 						<div class="author">
-							<AuthorLink name={article.author} /> | {formatDate(article.date)}
+							<AuthorLink names={article.authors} /> | {formatDate(article.date)}
 						</div>
 					</div>
 				</div>
@@ -57,12 +57,12 @@
 			margin-top: 0;
 		}
 
-		p {
-			margin-bottom: 0;
-		}
-
 		h3 {
 			margin: 0.8rem 0;
+		}
+
+		.textContainer > :last-child {
+			margin-bottom: 0;
 		}
 	}
 

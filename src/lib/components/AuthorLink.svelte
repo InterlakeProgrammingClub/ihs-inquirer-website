@@ -1,13 +1,18 @@
 <script>
-	export let name;
-	name = name.includes('&') ? name.split('&').map((name) => name.trim()) : [name];
+	export let names;
+
+	console.log(names);
 </script>
 
-{#each name as author, i}
-	{#if i > 0}
+{#each names as author, i}
+	{#if i > 0 && i < names.length - 1}
+		{', '}
+	{:else if i > 0 && i === names.length - 1}
 		{' & '}
 	{/if}
-	<a href={`/about/${author.replace(' ', '-').toLowerCase()}`}>{author}</a>
+	<a href={`/about/${encodeURIComponent(author.name.replace(/\s+/g, ' ').toLowerCase())}`}>
+		{author.name}
+	</a>
 {/each}
 
 <style lang="scss">

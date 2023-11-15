@@ -1,5 +1,5 @@
 <script>
-  import AuthorLink from '$lib/components/AuthorLink.svelte';
+	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
 	export let data;
 </script>
@@ -7,8 +7,8 @@
 <div class="content">
 	<h1>{data.meta.title}</h1>
 	<h3>
-		By <AuthorLink name={data.meta.author} />&nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp {data.meta
-			.readtime} minute read
+		By <AuthorLink names={data.meta.authors} />&nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp
+		{data.meta.readtime} minute read
 	</h3>
 	<div class="description">
 		{data.meta.description}
