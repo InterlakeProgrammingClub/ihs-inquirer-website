@@ -1,15 +1,19 @@
 ---
-title: "Interlake's Favorite Baldies"
-slug: 'interlake-baldies'
-description: 'description here'
-author: 'Ananya Chavali & Sayana Isaac'
-year: "2022-2023"
-quarter: 'winter'
-date: '2022-10-01'
-categories: ['arts']
+authors-other:
+  - name: Ananya Chavali
+  - name: Sayana Isaac
 readtime: 2
-featured_img: '/images/uploads/interlake-baldies-1.png'
+author: Ananya Chavali & Sayana Isaac
+slug: interlake-baldies
+quarter: winter
 published: true
+title: Interlake's Favorite Baldies
+date: 2022-10-01
+year: 2022-2023
+categories:
+  - arts
+featured_img: /images/uploads/interlake-baldies-1.png
+description: description here
 ---
 
 <script>
