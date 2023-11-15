@@ -13,11 +13,7 @@ export async function load({ params }) {
 		}
 	}
 
-	const bio = await match?.resolver?.();
-
-	if (!bio) {
-		throw error(404, 'Staff not found');
-	}
+	let bio = await match?.resolver?.();
 
 	// articles
 	const articleModules = import.meta.glob('/src/content/articles/*.md');
@@ -30,9 +26,26 @@ export async function load({ params }) {
 		articles.push({ ...post.metadata, slug: slug });
 	}
 
-	const personalArticles = articles.filter(
-		(item) => item.author.includes(bio.metadata.title) === true
-	);
+	let personalArticles;
+
+	if (!bio) {
+		let nameFromSlug = decodeURIComponent(params.slug.replace(/\s+/g, '-'));
+		let name;
+		articles.forEach((item) => {
+			if (item.authors_other && item.authors_other.toLowerCase().includes(nameFromSlug)) {
+				name = item.author;
+			}
+		});
+
+		if (!name) {
+			throw error(404, 'Bio not found');
+		}
+
+		bio = { metadata: { title: name, role: '', description: '', image: '' } };
+		personalArticles = articles.filter((item) => item.author.includes(name) === true);
+	}
+
+	personalArticles = articles.filter((item) => item.author.includes(bio.metadata.title) === true);
 
 	return {
 		bio: bio.metadata,
