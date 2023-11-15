@@ -11,7 +11,7 @@ year: ""
 description: |
   description here
 ---
-Of all the influencers whose personas revolve around masked anonymity, [Dream](https://www.youtube.com/c/dream)—as known online—is among the most famous. A matter of months ago, the YouTuber removed his plasticky disguise and revealed his face to the world. To his millions of subscribers, it was a monumental event, but not everyone was impressed: reactions ranged from giddy compliments to underwhelmed disappointment, with people insulting his features or commenting that he looked too normal. 
+Of all the influencers whose personas revolve around masked anonymity, [Dream](https://www.youtube.com/c/dream)—as known online—is among the most famous. A matter of months ago, the YouTuber removed his plasticky disguise and revealed his face to the world. To his millions of subscribers, it was a monumental event, but not everyone was impressed: reactions ranged from giddy compliments to underwhelmed disappointment, with people insulting his features or commenting that he looked too normal.
 
 A different type of masking has gripped the world since the COVID-19 pandemic’s start in 2020.
 

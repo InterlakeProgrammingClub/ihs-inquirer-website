@@ -10,10 +10,11 @@ collections:
     label: 'Article' # Used in the UI
     folder: 'src/content/articles' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Published', name: 'published', widget: 'boolean', default: false }
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'URL ending', name: 'slug', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
       - label: 'Authors'
         name: 'authors'
@@ -58,12 +59,6 @@ collections:
           required: false
         }
       - { label: 'Readtime (minutes)', name: 'readtime', widget: 'number', value_type: 'int' }
-      - {
-          label: 'URL ending (leave blank to auto-generate)',
-          name: 'slug',
-          widget: 'string',
-          required: false
-        }
       - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

@@ -1,18 +1,15 @@
 ---
-authors:
-  - name: Alexandra Hui
+title: 'The Interlake Inquirer Spotlight: Clue!'
+slug: 'clue'
+description: 'description here'
+author: 'Alexandra Hui'
+year: '2022-2023'
+quarter: 'winter'
+date: '2022-10-01'
+categories: ['arts']
 readtime: 3
-author: Alexandra Hui
-slug: clue
-quarter: winter
+featured_img: '/images/uploads/clue-1.png'
 published: true
-title: "The Interlake Inquirer Spotlight: Clue!"
-date: 2022-10-01
-year: 2022-2023
-categories:
-  - Arts
-featured_img: /images/uploads/clue-1.png
-description: description here
 ---
 
 <script>
