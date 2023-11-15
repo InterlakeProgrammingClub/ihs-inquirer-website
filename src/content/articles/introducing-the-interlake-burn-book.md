@@ -1,15 +1,19 @@
 ---
-title: Introducing The Interlake Burn Book
-slug: burn-book
-description: description here
+authors-other:
+  - name: Mercan Draman
+  - name: Sophie Wang
+  - name: Sanjna Sikka
+readtime: 3
 author: Mercan Draman, Sophie Wang, & Sanjna Sikka
-year: 2022-2023
+slug: burn-book
 quarter: winter
+published: true
+title: Introducing The Interlake Burn Book
 date: 2022-10-01T19:21:50.085Z
+year: 2022-2023
 categories:
   - Student Life
-readtime: 3
-published: true
+description: description here
 ---
 Dear Interlake,
 
