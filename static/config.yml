@@ -103,7 +103,7 @@ collections:
     folder: 'src/content/woofs'
     create: true
     fields:
-      - { label: 'Week', name: 'title', widget: 'string' }
+      - { label: 'Week (Month StartDay-EndDay, Year)', name: 'title', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
   # - name: 'pages'
   #   label: 'Pages'

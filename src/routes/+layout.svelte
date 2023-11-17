@@ -14,6 +14,8 @@
 			pageClass = 'article';
 		} else if ($page.url.pathname.startsWith('/issues/') && $page.url.pathname !== '/issues/') {
 			pageClass = 'article';
+		} else if ($page.url.pathname.startsWith('/weekly-woof')) {
+			pageClass = 'wide';
 		} else {
 			pageClass = '';
 		}
@@ -84,6 +86,12 @@
 	header.article {
 		.hor-divider {
 			max-width: 40rem;
+		}
+	}
+
+	header.wide {
+		.hor-divider {
+			max-width: 60rem;
 		}
 	}
 

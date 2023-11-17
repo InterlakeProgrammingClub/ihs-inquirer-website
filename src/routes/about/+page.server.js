@@ -34,8 +34,6 @@ export async function load() {
 		}
 	}
 
-	console.log(contributors);
-
 	contributors.sort((a, b) => {
 		if (a.order != b.order) {
 			return a.order > b.order ? 1 : -1;
@@ -43,8 +41,6 @@ export async function load() {
 			return a.title.localeCompare(b.title);
 		}
 	});
-
-	console.log(contributors);
 
 	return { staff, contributors };
 }

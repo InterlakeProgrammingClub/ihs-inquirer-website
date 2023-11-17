@@ -41,8 +41,8 @@
 	.staff {
 		display: flex;
 		gap: 3rem;
-		margin: 2rem 0;
-		padding: 0 1.5rem 2rem 0;
+		margin: 1.5rem 0;
+		padding: 0 1rem 1.5rem 0;
 		text-decoration: none;
 
 		@include border;
@@ -61,7 +61,7 @@
 	}
 
 	.photo {
-		max-width: 11rem;
+		max-width: 10.5rem;
 		width: 100%;
 		height: fit-content;
 		border-radius: 0.6rem;
