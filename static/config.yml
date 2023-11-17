@@ -103,12 +103,7 @@ collections:
     folder: 'src/content/woofs'
     create: true
     fields:
-      - {
-          label: 'Week Start Date (Monday)',
-          name: 'date_start',
-          widget: 'datetime',
-          time_format: false
-        }
+      - { label: 'Week Start Date (Monday)', name: 'title', widget: 'datetime', time_format: false }
       - {
           label: 'Week End Date (Friday)',
           name: 'date_end',
