@@ -4,7 +4,7 @@
 	export let data;
 </script>
 
-<div class="content">
+<main>
 	<h1>{data.meta.title}</h1>
 	<h3>
 		By <AuthorLink names={data.meta.authors} />&nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp
@@ -16,10 +16,10 @@
 	<div class="text article">
 		<svelte:component this={data.content} />
 	</div>
-</div>
+</main>
 
 <style lang="scss">
-	.content {
+	main {
 		max-width: 40rem;
 		margin: 0 auto 4rem auto;
 	}
