@@ -19,8 +19,6 @@ description: description here
     import Image from "$lib/components/Image.svelte";
 </script>
 
-<Image paths={['/images/uploads/interlake-baldies-1.png']} />
-
 Have you ever wondered what it’s like to be a bald man? Have you ever wondered about the life of a teacher? What about the lives of bald teachers?
 
 At The Interlake Inquirer, we decided to ask some of our bald staff members about their daily interactions at Interlake; we also were curious about the differences between the experiences of Interlake’s bald staff members and those of Interlake’s most luscious-haired teachers.

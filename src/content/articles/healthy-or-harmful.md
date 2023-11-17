@@ -18,8 +18,6 @@ description: description here
     import Image from "$lib/components/Image.svelte";
 </script>
 
-<Image paths={['/images/uploads/healthy-or-harmful-1.png']}/>
-
 There’s a common consensus that school lunch isn’t exactly fine dining.
 
 A regular query one might have while eating a pizza that seems greasier than butter is whether school lunches are healthy or not. Well, actually, in a simple calculation of calories, the answer is yes. This is likely due to Washington state’s extremely strict regulations concerning school lunch. However, many nutrients in the school lunch can only be found in the fruits and veggies from the salad bar.

@@ -18,8 +18,6 @@ description: description here
     import Image from "$lib/components/Image.svelte";
 </script>
 
-<Image paths={['/images/uploads/clue-1.png']} />
-
 Based on the popular board game, Interlake Theatre’s Clue centered around six mysterious guests who were all invited to the same mansion for unknown reasons. Guided by the estate’s charming butler, the guests uncovered secrets, feuds, hidden passages, and more than one dead body. As the characters scrambled to find the killer, they discovered that more was afoot than they had initially believed. Interlake’s cast and crew, led by director Mr. Alex Glover, made their unique mark on this humorous and suspenseful story for this year’s Fall Play.
 
 The play opens on a dark stage, quietly ominous music promising the beginning of an intriguing story. Thunder rings out with a flash of light, and three silhouettes enter, screaming when noticing each other’s presence. It’s our first introduction to the illustrious butler Wadsworth (Yasmine Lo Presti), fanciful maid Yvette (Ava Mishra), and no-nonsense Cook (Alaina Bryzcki), who are frantically preparing Boddy Manor for the arrival of some very special guests.

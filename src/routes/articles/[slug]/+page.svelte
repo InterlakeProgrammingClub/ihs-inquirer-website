@@ -5,13 +5,18 @@
 </script>
 
 <main>
-	<h1>{data.meta.title}</h1>
-	<h3>
-		By <AuthorLink names={data.meta.authors} />&nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp
-		{data.meta.readtime} minute read
-	</h3>
-	<div class="description">
-		{data.meta.description}
+	<div class="featured">
+		<img src={data.meta.featured_img} alt={data.meta.description} />
+	</div>
+	<div class="header">
+		<h1>{data.meta.title}</h1>
+		<h3>
+			By <AuthorLink names={data.meta.authors} />&nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp
+			{data.meta.readtime} minute read
+		</h3>
+		<div class="description">
+			{data.meta.description}
+		</div>
 	</div>
 	<div class="text article">
 		<svelte:component this={data.content} />
@@ -29,7 +34,16 @@
 	}
 
 	.description {
-		margin: 1rem 0;
+		margin: 1rem 0 2rem 0;
 		font-style: italic;
+	}
+
+	.featured {
+		margin: 2rem auto;
+	}
+
+	img {
+		width: 100%;
+		border-radius: 0.6rem;
 	}
 </style>

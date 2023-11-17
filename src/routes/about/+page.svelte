@@ -77,7 +77,10 @@
 
 	.contributors {
 		column-width: 12rem;
-		padding: 1.5rem 0;
+		margin: 1.5rem 0;
+		padding: 0rem 1rem 1.5rem 0;
+
+		@include border;
 	}
 
 	.contributor {

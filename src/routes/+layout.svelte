@@ -54,7 +54,7 @@
 	}
 
 	h1 {
-		font-size: 1.8rem;
+		font-size: 2.2rem;
 		font-weight: 900;
 		margin: 0.5rem 0 1.5rem 0;
 		transition: 0.1s ease-out;

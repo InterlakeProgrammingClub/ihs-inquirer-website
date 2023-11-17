@@ -18,8 +18,6 @@ description: description here
     import Image from "$lib/components/Image.svelte";
 </script>
 
-<Image paths={['/images/uploads/you-belong-here-1.png']} />
-
 Interlake High School’s theme for this school year is “You Belong Here,” indicating its mission to promote equality and inclusivity within the student body. This is somewhat ironic considering the major separations that constantly divide Interlake students, whether it be along racial identity, athletic/academic interests, or family backgrounds. Although these divisions are quite common within all high schools, they are especially accentuated within Interlake because of our school’s AL and General Education divisions. This brings up the question: “How much of Interlake’s message of belongingness is being reflected in the school?”
 
 There’s a common consensus that the “You Belong Here” theme is necessary because students spend so much of their lives at Interlake. It’s crucial for us to become aware of this and to come up with potential solutions to end educational divisions.
