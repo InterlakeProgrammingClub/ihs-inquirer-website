@@ -25,8 +25,8 @@
 	}
 
 	.woof {
-		margin: 2rem 0;
-		padding: 0 1.5rem 2rem 0;
+		margin: 1.5rem 0;
+		padding: 0 1.5rem 1.5rem 0;
 		@include border;
 	}
 </style>
