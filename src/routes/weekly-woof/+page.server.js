@@ -2,7 +2,6 @@ function getDate(title) {
 	const month = title.split('-')[0].split(' ')[0];
 	const day = title.split('-')[0].split(' ')[1];
 	const year = title.slice(-4);
-	console.log(day, month, year);
 	return new Date(`${month} ${day}, ${year}`);
 }
 

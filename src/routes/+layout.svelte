@@ -37,7 +37,33 @@
 	<div class="slot">
 		<slot />
 	</div>
-	<footer>Hello World</footer>
+
+	<footer class={pageClass}>
+		<div class="generalContainer">
+			<a href="/">
+				<img src="/logo.png" alt="Logo" />
+			</a>
+			<p>Copyright &copy; 2023 Interlake Inquirer</p>
+		</div>
+
+		<div class="linkContainer">
+			<div>
+				<h1>Links</h1>
+				<a href="/">Latest Issue</a>
+				<a href="/issues">Past Issues</a>
+				<a href="/weekly-woof">Weekly Woof</a>
+				<a href="/about">About</a>
+			</div>
+
+			<div>
+				<h1>Socials</h1>
+				<a href="mailto:interlakenewspaperclub@gmail.com">Email</a>
+				<a href="https://www.facebook.com/interlakeinquirer">Facebook</a>
+				<a href="https://www.instagram.com/theinterlakeinquirer/">Instagram</a>
+				<a href="https://issuu.com/interlakeinquirer">Issuu</a>
+			</div>
+		</div>
+	</footer>
 </div>
 
 <style lang="scss">
@@ -115,5 +141,66 @@
 
 	span {
 		color: var(--acc-2);
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 5rem auto;
+		width: 100%;
+		max-width: 50rem;
+
+		&.home {
+			max-width: 80rem;
+		}
+
+		&.article {
+			max-width: 40rem;
+		}
+
+		&.wide {
+			max-width: 60rem;
+		}
+
+		a {
+			margin: 0.5rem;
+
+			@include underline;
+		}
+
+		.generalContainer {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			margin: 1rem;
+
+			img {
+				width: 2rem;
+				border-radius: 50%;
+			}
+
+			p {
+				font-size: x-small;
+			}
+		}
+
+		.linkContainer {
+			display: flex;
+			flex-direction: row;
+			justify-content: right;
+
+			div {
+				display: flex;
+				flex-direction: column;
+				margin: 1rem;
+			}
+
+			h1 {
+				text-transform: uppercase;
+				font-size: medium;
+				margin-left: 0.5rem;
+			}
+		}
 	}
 </style>

@@ -85,10 +85,6 @@
 		max-width: 22%;
 	}
 
-	.hor-divider {
-		margin: 2rem 0;
-	}
-
 	a {
 		text-decoration: none;
 	}

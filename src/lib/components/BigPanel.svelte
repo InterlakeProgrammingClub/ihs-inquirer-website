@@ -65,12 +65,6 @@
 		font-weight: bold;
 	}
 
-	#description {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-	}
-
 	a {
 		text-decoration: none;
 		color: black;

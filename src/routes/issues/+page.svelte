@@ -34,9 +34,6 @@
 		margin: 0 auto;
 	}
 
-	.year {
-	}
-
 	.issue {
 		margin: 1.5rem 1.5rem 1.5rem 3rem;
 		display: block;
