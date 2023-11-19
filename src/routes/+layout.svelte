@@ -4,7 +4,10 @@
 	import '../app.scss';
 
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
+	let showSearch = false;
+	let query = '';
 	let pageClass = '';
 
 	$: {
@@ -20,6 +23,14 @@
 			pageClass = '';
 		}
 	}
+
+	const search = (event) => {
+		event.preventDefault();
+		goto(`/search?q=${encodeURIComponent(query)}`);
+    
+		showSearch = !showSearch;
+		query = '';
+	};
 </script>
 
 <div class="layout">
@@ -30,7 +41,20 @@
 			<a href="/issues">Past Issues</a>
 			<a href="/weekly-woof">The Weekly Woof</a>
 			<a href="/about">About</a>
-			<!-- <a href="/contact">Contact</a> -->
+			<div>
+				<button on:click={() => (showSearch = !showSearch)}>
+					<img src="/search.png" alt="Search" />
+				</button>
+
+				{#if showSearch}
+					<div>
+						<form on:submit={search}>
+							<!-- svelte-ignore a11y-autofocus -->
+							<input placeholder="Search" bind:value={query} autofocus />
+						</form>
+					</div>
+				{/if}
+			</div>
 		</nav>
 		<div class="hor-divider"></div>
 	</header>
@@ -124,6 +148,7 @@
 	nav {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		gap: 2rem;
 
 		a {
@@ -132,6 +157,27 @@
 			position: relative;
 
 			@include underline;
+		}
+
+		button {
+			cursor: pointer;
+			background-color: transparent;
+			border: 0;
+			width: 1.5rem;
+
+			img {
+				width: 1.5rem;
+				height: auto;
+			}
+		}
+
+		div {
+			position: relative;
+		}
+
+		form {
+			position: absolute;
+			right: 0;
 		}
 	}
 
