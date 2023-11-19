@@ -1,3 +1,5 @@
+export const prerender = false;
+
 export async function load({ params, url }) {
 	let query = url.searchParams.get('q');
 
