@@ -3,6 +3,7 @@
 	import '@fontsource-variable/aleo';
 	import '../app.scss';
 
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
@@ -24,10 +25,23 @@
 		}
 	}
 
+	onMount(() => {
+		const handleClick = (event) => {
+			if (event.target === document.getElementById('show')) showSearch = !showSearch;
+			else if (showSearch && event.target !== document.getElementById('search')) showSearch = false;
+		};
+
+		document.addEventListener('click', handleClick);
+
+		return () => {
+			document.removeEventListener('click', handleClick);
+		};
+	});
+
 	const search = (event) => {
 		event.preventDefault();
 		goto(`/search?q=${encodeURIComponent(query)}`);
-    
+
 		showSearch = !showSearch;
 		query = '';
 	};
@@ -42,15 +56,15 @@
 			<a href="/weekly-woof">The Weekly Woof</a>
 			<a href="/about">About</a>
 			<div>
-				<button on:click={() => (showSearch = !showSearch)}>
-					<img src="/search.png" alt="Search" />
+				<button>
+					<img src="/search.png" alt="Search" id="show" />
 				</button>
 
 				{#if showSearch}
 					<div>
 						<form on:submit={search}>
 							<!-- svelte-ignore a11y-autofocus -->
-							<input placeholder="Search" bind:value={query} autofocus />
+							<input placeholder="Search" id="search" bind:value={query} autofocus />
 						</form>
 					</div>
 				{/if}
@@ -178,6 +192,19 @@
 		form {
 			position: absolute;
 			right: 0;
+
+			input {
+				border: solid 1px;
+				border-radius: 5px;
+				background-color: var(--bg-1);
+				height: 2rem;
+				width: 20rem;
+				text-indent: 0.5rem;
+			}
+
+			:focus {
+				outline: none;
+			}
 		}
 	}
 

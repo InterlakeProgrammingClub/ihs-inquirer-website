@@ -14,7 +14,7 @@
 
 <div class="content">
 	<form on:submit={search}>
-		<input bind:value={query} />
+		<input placeholder="Search" bind:value={query} />
 		<button>
 			<img src="/search.png" alt="Search" />
 		</button>
@@ -47,20 +47,37 @@
 	}
 
 	form {
+		position: relative;
 		margin: 3rem;
 		display: flex;
 		justify-content: center;
-	}
+		align-items: center;
 
-	button {
-		cursor: pointer;
-		background-color: transparent;
-		border: 0;
-		width: 1.5rem;
+		input {
+			border: solid 1px;
+			border-radius: 5px;
+			background-color: transparent;
+			height: 2rem;
+			width: 20rem;
+			text-indent: 0.5rem;
+		}
 
-		img {
+		:focus {
+			outline: none;
+		}
+
+		button {
+			cursor: pointer;
+			background-color: transparent;
+			border: 0;
 			width: 1.5rem;
-			height: auto;
+			position: absolute;
+			right: 1rem;
+
+			img {
+				width: 1.5rem;
+				height: auto;
+			}
 		}
 	}
 
