@@ -26,9 +26,10 @@
 	}
 
 	onMount(() => {
+		showSearch = false;
+
 		const handleClick = (event) => {
-			if (event.target === document.getElementById('show')) showSearch = !showSearch;
-			else if (showSearch && event.target !== document.getElementById('search')) showSearch = false;
+			if (showSearch && !event.target.classList.contains('search-input')) showSearch = false;
 		};
 
 		document.addEventListener('click', handleClick);
@@ -41,8 +42,7 @@
 	const search = (event) => {
 		event.preventDefault();
 		goto(`/search?q=${encodeURIComponent(query)}`);
-
-		showSearch = !showSearch;
+		showSearch = false;
 		query = '';
 	};
 </script>
@@ -55,18 +55,16 @@
 			<a href="/issues">Past Issues</a>
 			<a href="/weekly-woof">The Weekly Woof</a>
 			<a href="/about">About</a>
-			<div>
-				<button>
-					<img src="/search.png" alt="Search" id="show" />
-				</button>
-
+			<div class="search-container">
 				{#if showSearch}
-					<div>
-						<form on:submit={search}>
-							<!-- svelte-ignore a11y-autofocus -->
-							<input placeholder="Search" id="search" bind:value={query} autofocus />
-						</form>
-					</div>
+					<form on:submit={search}>
+						<!-- svelte-ignore a11y-autofocus -->
+						<input placeholder="Search" class="search-input" bind:value={query} autofocus />
+					</form>
+				{:else}
+					<button on:focus={() => (showSearch = true)} class="search-button">
+						<img src="/search.png" alt="Search" />
+					</button>
 				{/if}
 			</div>
 		</nav>
@@ -164,6 +162,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 2rem;
+		height: 2rem;
 
 		a {
 			color: var(--text-2);
@@ -174,10 +173,9 @@
 		}
 
 		button {
-			cursor: pointer;
 			background-color: transparent;
-			border: 0;
 			width: 1.5rem;
+			height: 1.5rem;
 
 			img {
 				width: 1.5rem;
@@ -185,21 +183,20 @@
 			}
 		}
 
-		div {
-			position: relative;
-		}
-
 		form {
-			position: absolute;
-			right: 0;
-
 			input {
-				border: solid 1px;
-				border-radius: 5px;
-				background-color: var(--bg-1);
+				font-family: inherit;
+				border: solid 1px var(--divider);
+				border-radius: 0.6rem;
+				background-color: transparent;
 				height: 2rem;
 				width: 20rem;
 				text-indent: 0.5rem;
+			}
+
+			::placeholder {
+				font-family: var(--font-family);
+				color: var(--text-2);
 			}
 
 			:focus {

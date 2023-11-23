@@ -2,12 +2,15 @@
 	import { goto } from '$app/navigation';
 	import AuthorLink from '../../lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
+	import { onMount } from 'svelte';
 
 	export let data;
 	let query = data.query;
+	$: data, (query = data.query);
 
 	const search = (event) => {
 		event.preventDefault();
+		if (query === '') return;
 		goto(`/search?q=${encodeURIComponent(query)}`);
 	};
 </script>
@@ -21,6 +24,7 @@
 	</form>
 
 	<div class="articlesContainer">
+		<div class="hor-divider" />
 		{#each data.results as article}
 			<a href={`/articles/${article.slug}`} class="article">
 				<img src={article.featured_img} alt="Featured" />
@@ -41,21 +45,20 @@
 		max-width: 50rem;
 		width: 100%;
 		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 
 	form {
 		position: relative;
-		margin: 3rem;
+		margin: 3rem auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: fit-content;
 
 		input {
-			border: solid 1px;
-			border-radius: 5px;
+			font-family: inherit;
+			border: solid 1px var(--divider);
+			border-radius: 0.6rem;
 			background-color: transparent;
 			height: 2rem;
 			width: 20rem;
@@ -67,12 +70,11 @@
 		}
 
 		button {
-			cursor: pointer;
 			background-color: transparent;
-			border: 0;
 			width: 1.5rem;
+			height: 1.5rem;
 			position: absolute;
-			right: 1rem;
+			right: 0.5rem;
 
 			img {
 				width: 1.5rem;

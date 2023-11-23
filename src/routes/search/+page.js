@@ -1,6 +1,6 @@
 export const prerender = false;
 
-export async function load({ params, url }) {
+export async function load({ url }) {
 	let query = url.searchParams.get('q');
 
 	const modules = import.meta.glob('/src/content/articles/*.md');
@@ -13,7 +13,12 @@ export async function load({ params, url }) {
 		articles.push({ ...post.metadata, slug: slug });
 	}
 
-	const results = articles.filter((item) => item.title.toLowerCase().includes(query.toLowerCase()));
+	const results = articles.filter((item) => {
+		return (
+			item.title.toLowerCase().includes(query.toLowerCase()) ||
+			item.description.toLowerCase().includes(query.toLowerCase())
+		);
+	});
 
 	return {
 		results: results,
