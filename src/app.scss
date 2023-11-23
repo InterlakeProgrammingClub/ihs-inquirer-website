@@ -29,6 +29,7 @@ main {
 h1,
 h2 {
 	margin: 1.5rem 0;
+	font-weight: 600;
 }
 
 a {
@@ -51,9 +52,11 @@ blockquote {
 }
 
 .text.article > p:first-of-type::first-letter {
-	font-size: 3.8em;
+	font-size: 4rem;
+	line-height: 0.8;
 	float: left;
-	margin: 0.3rem 0.5rem 0 0;
+	padding: 0.4rem 0.5rem 0 0;
+	margin-bottom: -0.5rem;
 }
 
 .text.article > p:first-of-type {
