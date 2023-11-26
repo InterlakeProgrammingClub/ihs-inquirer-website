@@ -3,8 +3,12 @@
 	import '@fontsource-variable/aleo';
 	import '../app.scss';
 
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
+	let showSearch = false;
+	let query = '';
 	let pageClass = '';
 
 	$: {
@@ -20,6 +24,27 @@
 			pageClass = '';
 		}
 	}
+
+	onMount(() => {
+		showSearch = false;
+
+		const handleClick = (event) => {
+			if (showSearch && !event.target.classList.contains('search-input')) showSearch = false;
+		};
+
+		document.addEventListener('click', handleClick);
+
+		return () => {
+			document.removeEventListener('click', handleClick);
+		};
+	});
+
+	const search = (event) => {
+		event.preventDefault();
+		goto(`/search?q=${encodeURIComponent(query)}`);
+		showSearch = false;
+		query = '';
+	};
 </script>
 
 <div class="layout">
@@ -30,7 +55,18 @@
 			<a href="/issues">Past Issues</a>
 			<a href="/weekly-woof">The Weekly Woof</a>
 			<a href="/about">About</a>
-			<!-- <a href="/contact">Contact</a> -->
+			<div class="search-container">
+				{#if showSearch}
+					<form on:submit={search}>
+						<!-- svelte-ignore a11y-autofocus -->
+						<input placeholder="Search" class="search-input" bind:value={query} autofocus />
+					</form>
+				{:else}
+					<button on:focus={() => (showSearch = true)} class="search-button">
+						<img src="/search.png" alt="Search" />
+					</button>
+				{/if}
+			</div>
 		</nav>
 		<div class="hor-divider"></div>
 	</header>
@@ -124,7 +160,9 @@
 	nav {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		gap: 2rem;
+		height: 2rem;
 
 		a {
 			color: var(--text-2);
@@ -132,6 +170,38 @@
 			position: relative;
 
 			@include underline;
+		}
+
+		button {
+			background-color: transparent;
+			width: 1.5rem;
+			height: 1.5rem;
+
+			img {
+				width: 1.5rem;
+				height: auto;
+			}
+		}
+
+		form {
+			input {
+				font-family: inherit;
+				border: solid 1px var(--divider);
+				border-radius: 0.6rem;
+				background-color: transparent;
+				height: 2rem;
+				width: 20rem;
+				text-indent: 0.5rem;
+			}
+
+			::placeholder {
+				font-family: var(--font-family);
+				color: var(--text-2);
+			}
+
+			:focus {
+				outline: none;
+			}
 		}
 	}
 

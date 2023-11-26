@@ -5,12 +5,13 @@
 	--acc-1: hsl(215, 85%, 75%);
 	--acc-2: hsl(215, 50%, 50%);
 	--divider: hsl(215, 20%, 25%);
+	--font-family: 'Aleo Variable', serif;
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	font-family: 'Aleo Variable', serif;
+	font-family: var(--font-family);
 	background: var(--bg-1);
 	color: var(--text-1);
 }
@@ -36,6 +37,14 @@ a {
 	color: inherit;
 
 	@include underline;
+}
+
+button {
+	padding: 0;
+	border: none;
+	background: none;
+	color: inherit;
+	cursor: pointer;
 }
 
 p {
