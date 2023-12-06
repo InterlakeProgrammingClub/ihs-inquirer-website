@@ -2,9 +2,12 @@ import { error } from '@sveltejs/kit';
 
 export async function load({ params }) {
 	const issueModules = import.meta.glob('/src/content/issues/*.md');
+	const articlesModules = import.meta.glob("/src/content/articles/*.md");
 
 	let match = {};
+	let articles = [];
 
+	// find issue
 	for (const [path, resolver] of Object.entries(issueModules)) {
 		if (path.split('/').pop().split('.')[0] === params.slug) {
 			match = { path, resolver };
@@ -16,10 +19,24 @@ export async function load({ params }) {
 
 	if (!issue) {
 		throw error(404, 'Issue not found');
+	} else {
+		// find articles
+		for (const path in articlesModules) {
+			const file = await articlesModules[path]();
+			const slug = path.split('/').pop().split('.')[0];
+			
+			const year = file.metadata.year?.toLowerCase();
+			const quarter = file.metadata.quarter?.toLowerCase();
+			if(params.slug.split("-").slice(0, 3).join("-") === year + "-" + quarter) {
+				articles.push({ ...file.metadata, slug });
+			}
+			
+		}
 	}
 
 	return {
 		content: issue.default,
-		issue: issue.metadata
+		issue: issue.metadata,
+		articles
 	};
 }

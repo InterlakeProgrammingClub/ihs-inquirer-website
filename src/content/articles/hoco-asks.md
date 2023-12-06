@@ -7,9 +7,12 @@ authors:
   - title: Leslie Park
 categories:
   - Student Life
+year: 2023-2024
+quarter: fall
 readtime: 2
-description: "    "
+description: '    '
 ---
+
 Saints, do you remember HoCo week when love was in the air? From text to underwear to posters, there was a WIDE variety of interesting proposals and memories that are very interesting to recount.
 
 Lucas (12), Tamjeed (12), Arantxa (12):
@@ -20,15 +23,13 @@ Kenna (12) and Claire (12):
 
 Last year, Kenna asked Claire, so this time Claire asked Kenna out with an adorable poster. It read “Kenna-I take a sample of you to HoCo?” with a bright pink peach next to it. In a quote from Claire, she “…was going to say, ‘Sample of your gyat’, but \[her] friends advised otherwise”. The peach brings honor to the abandoned gyat, so the …suggestion… is still there. Anyhow, the friends have a vibrant chemistry you can see in the photos, and I hope they burn on!
 
- Anonymous:
+Anonymous:
 
 This person took to Teams after he (\*ahem\*) lost the courage to do so in-person. He makes up for the lack of confidence by BEING AHEAD OF THE GAME. The proposal took place last year through text, and though she had some uncertainty at first, he persevered until his date said yes. You could sense the palpable relief, enthusiasm, and happiness emanating from the messages with his all-caps “THANK YOU SO MUCH”. Though it started off unsteadily, it was an overall success. Wishing for smooth sailing ahead for this couple!
 
 Conrad (9):
 
 As a (hopefully) joke, Conrad’s so-called “homie” pulled a dynamic ask by pulling down his pants. Though it wasn’t a serious ask, I’m sure it was very memorable. A warning to the readers out there: Unless you ARE FAMILIAR with someone you are going to ask, stripping down your pants isn’t generally recommended.
-
- 
 
 Tiara Aguilar, Michael Montero-Poseda
 

@@ -1,5 +1,6 @@
 <script>
 	export let data;
+	console.log(data);
 </script>
 
 <main>
@@ -7,6 +8,14 @@
 	<div class="text">
 		<svelte:component this={data.content} />
 	</div>
+
+	{#each data.articles as article}
+		<a href="/articles/{article.slug}"
+			><article>
+				<h2>{article.title}</h2>
+			</article></a
+		>
+	{/each}
 </main>
 
 <style lang="scss">

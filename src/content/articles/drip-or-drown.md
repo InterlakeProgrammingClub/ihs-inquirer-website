@@ -7,10 +7,13 @@ authors:
   - title: Masha Maykova
 categories:
   - Entertainment
+year: 2023-2024
+quarter: fall
 readtime: 2
 featured_img: /images/uploads/screenshot-2023-12-05-194320.png
-description: "    "
+description: '    '
 ---
+
 To drip, or to drown, that is the question. Here at the Interlake inquirer, we’ve noticed some notable people whose style is absolutely admirable. On the other hand, we’ve also noticed that some need a lot of help to nail their fashion, as they’re currently drowning in bad style. We’ve decided to use the voice that we must call out and give admiration to those with impeccable drip and attempt to help those who struggle with their ultimately catastrophic attempts at having respectable drip.
 
 A fine example of a drippy gentleman:

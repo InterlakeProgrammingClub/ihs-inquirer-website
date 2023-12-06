@@ -7,21 +7,20 @@ authors:
   - title: Leslie Park
 categories:
   - Academics
+year: 2023-2024
+quarter: fall
 readtime: 2
 featured_img: /images/uploads/pxl_20231117_231342805.jpg
-description: "    "
+description: '    '
 ---
-These days, books and novels are rapidly disseminating through the media - and not all the books are necessarily of the best quality. But I am going to focus on two books: one a teenage cult classic, Twilight, and another (older) classic, War and Peace. I have a disclaimer for those reading that I dislike both books and I will stand by my opinions, no matter what anyone says. Despite all that, I will review (rant) about the books and make GOOD alternative books to read instead. Onwards!
 
- 
+These days, books and novels are rapidly disseminating through the media - and not all the books are necessarily of the best quality. But I am going to focus on two books: one a teenage cult classic, Twilight, and another (older) classic, War and Peace. I have a disclaimer for those reading that I dislike both books and I will stand by my opinions, no matter what anyone says. Despite all that, I will review (rant) about the books and make GOOD alternative books to read instead. Onwards!
 
 Twilight:
 
 It’s the classic (boring) trope about forbidden love and lust. A “vampire” Edward loves Bella, a girl with nothing special but the fact that her blood smells delicious. Wow… special, don’t you think? But what I don’t like is the fact that Bella has ALWAYS been a damsel in distress. Self-reliance is what most people survive on, and if you die because you are in an accident, you deal with it. She lost that capability and was fine with being under his protection 24/7. Growing up and becoming an adult is riddled with accidents, trouble, and the different issues life might throw in you. Being strong in the face of adversity (even if you are alone) is a lesson that most people learn. Bella obviously did not.
 
 Now, I suggest the novel Dracula instead. The original vampire story features stronger and well-developed characters that Twilight obviously lacks. Yes, there is horror, but the main female character, Mina maintains her faith and courage throughout, sticking to her beliefs and solving her own problems. The vampire Dracula is unpretentiously evil- he does not pretend to have internal beauty or a “bright side”. His darkness contrasts well with the light and vitality, creating a story of horror, love, and desperation that appeals to all readers (unlike Twilight).
-
- 
 
 War and Peace:
 

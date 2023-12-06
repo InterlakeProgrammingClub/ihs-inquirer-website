@@ -7,9 +7,12 @@ authors:
   - title: Willy Du
 categories:
   - Student Life
+year: 2023-2024
+quarter: fall
 readtime: 3
-description: "    "
+description: '    '
 ---
+
 For the high school students of Interlake, the end of October opens the lovely prospect of Halloween, trick-or-treating, and another month of learning. However, it’s not the same story for middle schools. Though news may have not yet reached you, something that will change the lives of many middle schoolers has just made its debut – middle school consolidation.
 
 Just before October, the district held a consolidation meeting with parents across all middle schools to discuss their troubles. Attendants listened to the explanation of consolidation from district officials and provided their own opinions. The district has been worried about enrollment declination, a problem attributed to current dropping enrollment rates (by 8% since the pandemic), reducing birth rate in Bellevue (by 15% over 8 years), and the sky-rocketing house prices (a whopping 42% increase since the pandemic started). The district projects a major decline of enrollment in Bellevue School District in the coming years. With these factors driving away students and families, the district means to merge schools to create those with larger numbers of students – in other words, consolidate them. Otherwise, they say, the budget and enrollment problems may lead to potentially negative impacts, such as cutting mental health services, decreasing elective choices, and minimizing academic intervention. Therefore, they plan to have a recommendation ready by January for the public to look over. But this puts many current middle school families in a bewildered, anxious dilemma. It’s a question as to whether the negatives outweigh the advantages.
