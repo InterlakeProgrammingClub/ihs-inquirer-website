@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: 2023 Nobel Prizes in Science
 slug: nobel-prizes-in-science-2023
 date: 2023-12-06T03:50:21.169Z
