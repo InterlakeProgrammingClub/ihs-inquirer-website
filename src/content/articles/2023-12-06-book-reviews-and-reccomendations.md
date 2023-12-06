@@ -1,6 +1,6 @@
 ---
 published: true
-title: Book Reviews and Reccomendations
+title: Book Reviews and Recommendations
 slug: book-reviews-and-reccomendations
 date: 2023-12-06T03:32:15.375Z
 authors:
