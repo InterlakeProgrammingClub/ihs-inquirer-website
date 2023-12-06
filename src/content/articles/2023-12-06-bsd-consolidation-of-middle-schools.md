@@ -1,6 +1,6 @@
 ---
 published: true
-title: BSD CONSOLIDATION OF MIDDLE SCHOOLS
+title: BSD Consolidation of Middle Schools
 slug: bsd-consolidation-of-middle-schools
 date: 2023-12-06T03:05:14.516Z
 authors:
@@ -8,7 +8,7 @@ authors:
 categories:
   - Student Life
 readtime: 3
-description: "   "
+description: "    "
 ---
 For the high school students of Interlake, the end of October opens the lovely prospect of Halloween, trick-or-treating, and another month of learning. However, it’s not the same story for middle schools. Though news may have not yet reached you, something that will change the lives of many middle schoolers has just made its debut – middle school consolidation.
 
