@@ -1,26 +1,12 @@
 <script>
-	import { goto } from '$app/navigation';
-	import AuthorLink from '../../lib/components/AuthorLink.svelte';
+	import AuthorLink from '../../../lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
 
 	export let data;
-	let query = data.query;
-	$: data, (query = data.query);
-
-	const search = (event) => {
-		event.preventDefault();
-		if (query === '') return;
-		goto(`/search?q=${encodeURIComponent(query)}`);
-	};
 </script>
 
 <div class="content">
-	<form on:submit={search}>
-		<input placeholder="Search" bind:value={query} />
-		<button>
-			<img src="/search.png" alt="Search" />
-		</button>
-	</form>
+	<h1>{data.query.charAt(0).toUpperCase() + data.query.slice(1)}</h1>
 
 	<div class="articlesContainer">
 		<div class="hor-divider" />
@@ -44,42 +30,6 @@
 		max-width: 50rem;
 		width: 100%;
 		margin: 0 auto;
-	}
-
-	form {
-		position: relative;
-		margin: 3rem auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: fit-content;
-
-		input {
-			font-family: inherit;
-			border: solid 1px var(--divider);
-			border-radius: 0.6rem;
-			background-color: transparent;
-			height: 2rem;
-			width: 20rem;
-			text-indent: 0.5rem;
-		}
-
-		:focus {
-			outline: none;
-		}
-
-		button {
-			background-color: transparent;
-			width: 1.5rem;
-			height: 1.5rem;
-			position: absolute;
-			right: 0.5rem;
-
-			img {
-				width: 1.5rem;
-				height: auto;
-			}
-		}
 	}
 
 	.articlesContainer {
