@@ -6,7 +6,11 @@
 
 <main>
 	<div class="featured">
-		<img src={data.meta.featured_img} alt={data.meta.description} />
+		{#if !data.meta.featured_img}
+			<img src="/images/placeholder.jpg" alt={data.meta.description} />
+		{:else}
+			<img src={data.meta.featured_img} alt={data.meta.description} />
+		{/if}
 	</div>
 	<div class="header">
 		<h1>{data.meta.title}</h1>
@@ -27,25 +31,26 @@
 
 <style lang="scss">
 	main {
-		max-width: 40rem;
 		margin: 0 auto 4rem auto;
+		max-width: 40rem;
 	}
 
 	h3 {
 		font-weight: 500;
 	}
 
-	.description {
-		margin: 1rem 0 2rem 0;
-		font-style: italic;
-	}
-
 	.featured {
 		margin: 2rem auto;
 	}
 
+	.header {
+		.description {
+			margin: 1rem 0 2rem 0;
+			font-style: italic;
+		}
+	}
+
 	img {
 		width: 100%;
-		border-radius: 0.6rem;
 	}
 </style>
