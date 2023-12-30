@@ -1,23 +1,21 @@
 :root {
 	--bg-1: hsl(215, 60%, 95%);
+	--bg-2: hsl(215, 30%, 85%);
 	--text-1: hsl(215, 50%, 10%);
-	--text-2: hsl(215, 20%, 25%);
+	--text-2: hsl(215, 20%, 30%);
 	--acc-1: hsl(215, 85%, 75%);
 	--acc-2: hsl(215, 50%, 50%);
 	--divider: hsl(215, 20%, 25%);
-	--font-family: 'Aleo Variable', serif;
+	--font-family: Figtree, sans-serif;
 	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
 	font-family: var(--font-family);
+	font-weight: 400;
 	background: var(--bg-1);
 	color: var(--text-1);
-}
-
-main {
-	margin: 0 50px;
 }
 
 #svelte {
@@ -30,7 +28,6 @@ main {
 h1,
 h2 {
 	margin: 1.5rem 0;
-	font-weight: 600;
 }
 
 a {
@@ -48,7 +45,6 @@ button {
 }
 
 p {
-	font-size: 1.1rem;
 	line-height: 1.75;
 	margin: 1.1rem 0;
 }

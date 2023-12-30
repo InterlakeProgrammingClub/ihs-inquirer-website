@@ -11,7 +11,7 @@ featured_img: /images/uploads/you-belong-here-1.png
 year: 2022-2023
 categories:
   - arts
-description: description here
+description: "Interlake High School’s theme for this school year is “You Belong Here.” But how much of Interlake’s message of belongingness is being reflected in the school?"
 ---
 
 <script>

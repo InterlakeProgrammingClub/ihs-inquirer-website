@@ -1,7 +1,7 @@
 ---
 published: true
 title: Book Reviews and Recommendations
-slug: book-reviews-and-reccomendations
+slug: book-reviews-and-recomendations
 date: 2023-12-06T03:32:15.375Z
 authors:
   - title: Leslie Park

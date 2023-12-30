@@ -11,8 +11,10 @@
 	<div class="header">
 		<h1>{data.meta.title}</h1>
 		<h3>
-			By <AuthorLink names={data.meta.authors} />&nbsp;•&nbsp {formatDate(data.meta.date)} &nbsp;•&nbsp
-			{data.meta.readtime} minute read
+			By <AuthorLink names={data.meta.authors} /> &nbsp;•&nbsp {formatDate(data.meta.date)}
+			{#if data.meta.readtime}
+				&nbsp;•&nbsp {data.meta.readtime} minute read
+			{/if}
 		</h3>
 		<div class="description">
 			{data.meta.description}

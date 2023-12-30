@@ -1,9 +1,4 @@
-function getDate(title) {
-	const month = title.split('-')[0].split(' ')[0];
-	const day = title.split('-')[0].split(' ')[1];
-	const year = title.slice(-4);
-	return new Date(`${month} ${day}, ${year}`);
-}
+import { getDate } from '$lib/js/utils.js';
 
 export async function load() {
 	const modules = import.meta.glob('/src/content/woofs/*.md');

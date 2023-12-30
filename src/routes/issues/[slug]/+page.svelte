@@ -10,18 +10,26 @@
 	</div>
 
 	{#each data.articles as article}
-		<a href="/articles/{article.slug}"
-			><article>
-				<h2>{article.title}</h2>
-			</article></a
-		>
+		<a href="/articles/{article.slug}">
+			<article>
+				<h3>{article.title}</h3>
+			</article>
+		</a>
 	{/each}
 </main>
 
 <style lang="scss">
 	main {
-		max-width: 40rem;
+		max-width: 50rem;
 		width: 100%;
 		margin: 0 auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	h3 {
+		font-weight: 600;
 	}
 </style>
