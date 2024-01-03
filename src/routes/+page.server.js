@@ -13,7 +13,7 @@ export async function load() {
 	}
 
 	articles.sort((a, b) => {
-		return Date(a.date) > Date(b.date) ? -1 : 1;
+		return Date.parse(a.date) > Date.parse(b.date) ? -1 : 1;
 	});
 
 	let latestWoof = {};

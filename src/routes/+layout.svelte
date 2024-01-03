@@ -49,7 +49,7 @@
 
 <div class="layout">
 	<header class={pageClass}>
-		<h1><a href="/">The <span>I</span>nterlake <span>I</span>nquirer</a></h1>
+		<a href="/"><h1>The <span>I</span>nterlake <span>I</span>nquirer</h1></a>
 		<nav>
 			<a href="/">Latest Issue</a>
 			<a href="/issues">Past Issues</a>
@@ -120,25 +120,25 @@
 	header {
 		display: flex;
 		justify-content: space-between;
-		width: 70rem;
+		width: 100%;
+		max-width: 72rem;
 		margin: 2rem auto;
+		padding: 0.5rem 1rem;
+		background-color: var(--bg-2);
+
+		a {
+			text-decoration: none;
+		}
 
 		h1 {
-			font-size: 2rem;
-			transition: font-size 0.1s ease-out;
+			font-size: 2.2rem;
+			// transition: font-size 0.1s ease-out;
 			margin: 0;
-
-			a {
-				text-decoration: none;
-			}
+			font-weight: 800;
 
 			span {
 				color: var(--acc-2);
 			}
-		}
-
-		&.home h1 {
-			font-size: 2.5rem;
 		}
 
 		nav {
@@ -192,7 +192,7 @@
 		justify-content: space-between;
 		margin: 3rem auto;
 		width: 100%;
-		max-width: 70rem;
+		max-width: 72rem;
 
 		.left {
 			display: flex;

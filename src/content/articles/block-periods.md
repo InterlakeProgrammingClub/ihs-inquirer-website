@@ -10,7 +10,7 @@ categories:
 year: 2023-2024
 quarter: fall
 readtime: 4
-description: 'A look into the advantages and disadvantages of block periods.'
+description: 'Exploring the advantages and disadvantages of block periods using data gathered from students.'
 ---
 
 Every Wednesday and Thursday, instead of the traditional seven-class, 50-minute schedule in middle schools, Interlake employs a modified schedule with fewer but longer (90 minute) classes. With fewer classes, teachers are better equipped to teach more material within a class period, allowing students to delve into more topics or activities in one period. While students acquire more knowledge, given that they are given significantly more time, it may be tedious. The purpose of this article is to explore the advantages and disadvantages of block periods using data we gathered from the students themselves.

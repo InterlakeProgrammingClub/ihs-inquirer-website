@@ -1,12 +1,15 @@
 :root {
 	--bg-1: hsl(215, 60%, 95%);
-	--bg-2: hsl(215, 30%, 85%);
+	--bg-2: hsl(215, 40%, 90%);
 	--text-1: hsl(215, 50%, 10%);
 	--text-2: hsl(215, 20%, 30%);
 	--acc-1: hsl(215, 85%, 75%);
 	--acc-2: hsl(215, 50%, 50%);
 	--divider: hsl(215, 20%, 25%);
-	--font-family: Figtree, sans-serif;
+	--font-family: 'Rethink Sans', sans-serif;
+}
+
+* {
 	box-sizing: border-box;
 }
 
@@ -28,6 +31,13 @@ body {
 h1,
 h2 {
 	margin: 1.5rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.2;
 }
 
 a {

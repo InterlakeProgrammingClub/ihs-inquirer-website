@@ -9,105 +9,112 @@
 	const featured = articles[0];
 	const leftPanel = articles.slice(1, 3);
 	const rightPanel = articles.slice(3, 5);
-
-	// let featured = posts[struct.home.big];
-	// let longPanel = [];
-	// for (let slug of struct.home.small) {
-	// 	longPanel.push(posts[slug]);
-	// }
-	// let leftPanel = longPanel.slice(0, 2);
-	// let rightPanel = longPanel.slice(2, 4);
 </script>
 
 <PageHead title="" description="" />
 
 <main>
 	<div class="articles">
-		<div class="column">
-			{#each leftPanel as article, i}
-				<a href={`/articles/${article.slug}`} class="article">
-					{#if !article.featured_img}
-						<img src="/images/placeholder.jpg" alt="" />
-					{:else}
-						<img src={article.featured_img} alt="" />
-					{/if}
-					<div class="info">
-						<h2 class="title">{article.title}</h2>
-						<div class="author">
-							<AuthorLink names={article.authors} /> <span>|</span>
-							{formatDate(article.date)}
-						</div>
-					</div>
-				</a>
-			{/each}
-		</div>
-		<div class="main">
-			<a href={`/articles/${featured.slug}`} class="featured">
-				{#if !featured.featured_img}
+		{#each leftPanel as article, i}
+			<a href={`/articles/${article.slug}`} class="article">
+				{#if !article.featured_img}
 					<img src="/images/placeholder.jpg" alt="" />
 				{:else}
-					<img src={featured.featured_img} alt="" />
+					<img src={article.featured_img} alt="" />
 				{/if}
 				<div class="info">
-					<h2 class="title">{featured.title}</h2>
-					<div class="description">
-						{featured.description}
-					</div>
+					<h2 class="title">{article.title}</h2>
 					<div class="author">
-						<AuthorLink names={featured.authors} /> <span>|</span>
-						{formatDate(featured.date)}
+						<AuthorLink names={article.authors} /> <span>|</span>
+						{formatDate(article.date)}
 					</div>
 				</div>
 			</a>
-		</div>
-		<div class="column">
-			{#each rightPanel as article, i}
-				<a href={`/articles/${article.slug}`} class="article">
-					{#if !article.featured_img}
-						<img src="/images/placeholder.jpg" alt="" />
-					{:else}
-						<img src={article.featured_img} alt="" />
-					{/if}
-					<div class="info">
-						<h2 class="title">{article.title}</h2>
-						<div class="author">
-							<AuthorLink names={article.authors} /> <span>|</span>
-							{formatDate(article.date)}
-						</div>
+		{/each}
+		<a href={`/articles/${featured.slug}`} class="featured">
+			{#if !featured.featured_img}
+				<img src="/images/placeholder.jpg" alt="" />
+			{:else}
+				<img src={featured.featured_img} alt="" />
+			{/if}
+			<div class="info">
+				<h2 class="title">{featured.title}</h2>
+				<div class="description">
+					{featured.description}
+				</div>
+				<div class="author">
+					<AuthorLink names={featured.authors} /> <span>|</span>
+					{formatDate(featured.date)}
+				</div>
+			</div>
+		</a>
+		{#each rightPanel as article, i}
+			<a href={`/articles/${article.slug}`} class="article">
+				{#if !article.featured_img}
+					<img src="/images/placeholder.jpg" alt="" />
+				{:else}
+					<img src={article.featured_img} alt="" />
+				{/if}
+				<div class="info">
+					<h2 class="title">{article.title}</h2>
+					<div class="author">
+						<AuthorLink names={article.authors} /> <span>|</span>
+						{formatDate(article.date)}
 					</div>
-				</a>
-			{/each}
-		</div>
+				</div>
+			</a>
+		{/each}
 	</div>
 	<br />
 	<br />
 	<br />
+	<h2><a class="header" href="/weekly-woof"> More Articles </a></h2>
+	<div class="more-articles">
+		{#each [0, 1] as col}
+			<div class="column">
+				{#each articles.slice(5 + col * 3, 8 + col * 3) as article, i}
+					<a href={`/articles/${article.slug}`} class="more-article">
+						<div class="info">
+							<h3 class="title">{article.title}</h3>
+							<div class="author">
+								<AuthorLink names={article.authors} /> <span>|</span>
+								{formatDate(article.date)}
+							</div>
+						</div>
+						{#if !article.featured_img}
+							<img src="/images/placeholder.jpg" alt="" />
+						{:else}
+							<img src={article.featured_img} alt="" />
+						{/if}
+					</a>
+				{/each}
+			</div>
+		{/each}
+	</div>
 	<br />
+	<br />
+	<br />
+	<h2><a class="header" href="/weekly-woof"> Latest Weekly Woof </a></h2>
 	<div class="woof">
-		<h2>Latest Weekly Woof</h2>
 		<img src={data.woof.image} alt="woof.title" />
 	</div>
 </main>
 
 <style lang="scss">
 	main {
-		margin: 2rem auto 4rem auto;
+		margin: 1rem auto 4rem auto;
 		flex-grow: 1;
+		width: 100%;
+		max-width: 72rem;
 	}
 
 	.articles {
-		display: flex;
+		display: grid;
 		margin: auto;
-		max-width: 70rem;
 		gap: 2rem;
-	}
-
-	.column {
-		display: flex;
-		flex-direction: column;
-		max-width: 15rem;
-		width: 100%;
-		gap: 2rem;
+		grid-template-columns: 20% auto 20%;
+		grid-template-rows: auto auto;
+		grid-auto-flow: column;
 	}
 
 	.article,
@@ -115,28 +122,39 @@
 		display: flex;
 		flex-direction: column;
 		text-decoration: none;
-
-		img {
-			width: 100%;
-			aspect-ratio: 4/3;
-			object-fit: cover;
-		}
 	}
 
 	.article {
 		h2 {
 			font-size: 1.2rem;
 			margin: 1rem 0 0.6rem 0;
+
+			@include line-clamp(2);
+		}
+
+		img {
+			aspect-ratio: 4/3;
 		}
 	}
 
 	.featured {
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
 		text-align: center;
 
 		h2 {
 			font-size: 1.8rem;
 			margin: 1.2rem 0 0.8rem 0;
 		}
+
+		img {
+			aspect-ratio: 3/2;
+		}
+	}
+
+	img {
+		width: 100%;
+		object-fit: cover;
 	}
 
 	h2,
@@ -147,24 +165,66 @@
 	.author {
 		// font-size: 0.9rem;
 		color: var(--text-2);
+
+		@include line-clamp(2);
 	}
 
 	.description {
 		margin-bottom: 0.8rem;
-		line-height: 1.25;
 	}
 
 	span {
 		margin: 0 0.2rem;
 	}
 
-	.woof {
-		max-width: 50rem;
-		margin: 0 auto;
+	a.header {
+		text-decoration: none;
+	}
 
-		h2 {
-			margin: 1rem 0;
+	h2 {
+		margin: 0 0 1.5rem 0;
+	}
+
+	.more-articles {
+		display: flex;
+		gap: 1rem;
+
+		.column {
+			display: flex;
+			gap: 1rem;
+			flex-direction: column;
+			width: 100%;
 		}
+
+		.more-article {
+			background-color: var(--bg-2);
+			display: flex;
+			gap: 1rem;
+			justify-content: space-between;
+			text-decoration: none;
+
+			img {
+				max-width: 25%;
+				aspect-ratio: 4/3;
+			}
+
+			.info {
+				padding: 1rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+
+		h3 {
+			margin: 0rem;
+
+			@include line-clamp(2);
+		}
+	}
+
+	.woof {
+		margin: 0 auto;
 
 		img {
 			width: 100%;
