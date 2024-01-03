@@ -10,28 +10,25 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.40.1",
-		"@sveltejs/adapter-auto": "^3.0.1",
-		"@sveltejs/kit": "^2.0.6",
-		"@sveltejs/vite-plugin-svelte": "^3.0.1",
-		"@types/eslint": "8.56.1",
-		"eslint": "^8.56.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.35.1",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
-		"svelte": "^4.2.8",
-		"vite": "^5.0.10",
-		"vitest": "^1.1.1",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.88",
 		"@sveltejs/adapter-static": "next",
+		"@sveltejs/kit": "^1.27.2",
+		"eslint": "^8.52.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-svelte": "^2.34.0",
 		"mdsvex": "^0.11.0",
-		"sass": "^1.69.7"
+		"prettier": "^3.0.3",
+		"prettier-plugin-svelte": "^3.0.3",
+		"sass": "^1.69.5",
+		"svelte": "^4.2.2",
+		"vite": "^4.5.0"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource-variable/aleo": "^5.0.3",
 		"@fontsource-variable/figtree": "^5.0.19",
-		"@fontsource-variable/literata": "^5.0.19",
+		"@fontsource-variable/literata": "^5.0.18",
 		"@fontsource-variable/rethink-sans": "^5.0.1"
 	}
 }
