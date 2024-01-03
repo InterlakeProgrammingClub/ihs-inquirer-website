@@ -1,6 +1,5 @@
 <script>
-	import '@fontsource-variable/literata';
-	import '@fontsource-variable/aleo';
+	import '@fontsource-variable/rethink-sans';
 	import '../app.scss';
 
 	import { onMount } from 'svelte';
