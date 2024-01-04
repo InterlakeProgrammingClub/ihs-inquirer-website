@@ -36,6 +36,7 @@
 
 	a {
 		background: var(--bg-2);
+		color: var(--text-2);
 		padding: 1rem;
 		margin: 0.6rem 0rem 0.6rem 0rem;
 		display: block;

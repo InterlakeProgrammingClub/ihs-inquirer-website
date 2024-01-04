@@ -5,7 +5,6 @@
 <main>
 	<h1>Weekly Woof</h1>
 
-	<div class="hor-divider" />
 	{#each data.woofs as woof}
 		<div class="woof">
 			<h2>{woof.title}</h2>
@@ -26,7 +25,5 @@
 
 	.woof {
 		margin: 1.5rem 0;
-		padding: 0 1.5rem 1.5rem 0;
-		@include border;
 	}
 </style>

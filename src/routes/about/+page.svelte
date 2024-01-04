@@ -4,25 +4,27 @@
 	export let data;
 </script>
 
-<div class="content">
+<main>
 	<h1>Staff</h1>
-	<div class="hor-divider" />
 	{#each data.staff as staff}
 		<a class="staff" href={`/about/${staff.slug}`}>
+			<div class="bio">
+				<div class="row">
+					<h2>{staff.title}</h2>
+					<h3>{staff.role}</h3>
+				</div>
+				<p>{staff.description}</p>
+			</div>
 			{#if !staff.photo}
 				<div class="photo placeholder" />
 			{:else}
 				<img class="photo" src={staff.photo} alt={staff.title} />
 			{/if}
-			<div class="bio">
-				<h2>{staff.title}</h2>
-				<h3>{staff.role}</h3>
-				<p>{staff.description}</p>
-			</div>
 		</a>
 	{/each}
+	<br />
+
 	<h2>Contributors</h2>
-	<div class="hor-divider" />
 	<div class="contributors">
 		{#each data.contributors as contributor}
 			<div class="contributor">
@@ -30,57 +32,66 @@
 			</div>
 		{/each}
 	</div>
-</div>
+</main>
 
 <style lang="scss">
-	.content {
+	main {
 		max-width: 50rem;
-		margin: 0 auto;
+		margin: 0 auto 4rem auto;
+	}
+
+	.row {
+		display: flex;
+		gap: 1.5rem;
+		align-items: center;
 	}
 
 	.staff {
+		background: var(--bg-2);
 		display: flex;
-		gap: 3rem;
-		margin: 1.5rem 0;
-		padding: 0 1rem 1.5rem 0;
+		gap: 0rem;
+		margin: 1rem 0;
 		text-decoration: none;
-
-		@include border;
+		justify-content: space-between;
 
 		h2 {
 			margin: 0;
 		}
 
-		p {
+		h3 {
 			margin: 0;
+			color: var(--text-2);
 		}
 
-		h3 {
-			margin: 1rem 0;
+		p {
+			margin: 0.8rem 0 0 0;
+			line-height: 1.5;
+		}
+
+		.bio {
+			padding: 1rem 1.2rem;
 		}
 	}
 
 	.photo {
-		max-width: 10.5rem;
+		max-width: 8.5rem;
 		width: 100%;
 		height: fit-content;
-		border-radius: 0.6rem;
 		aspect-ratio: 4/5;
 		object-fit: cover;
 	}
 
 	.photo.placeholder {
-		background: var(--bg-1);
+		background: var(--bg-2);
 		filter: brightness(0.9);
 		height: 100%;
 	}
 
 	.contributors {
-		column-width: 12rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 11rem);
+		justify-content: space-between;
 		margin: 1.5rem 0;
-		padding: 0rem 1rem 1.5rem 0;
-
-		@include border;
 	}
 
 	.contributor {

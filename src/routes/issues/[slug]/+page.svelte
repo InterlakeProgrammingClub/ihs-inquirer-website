@@ -74,5 +74,9 @@
 
 			@include line-clamp(2);
 		}
+
+		.author {
+			color: var(--text-2);
+		}
 	}
 </style>
