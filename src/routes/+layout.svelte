@@ -122,8 +122,8 @@
 		width: 100%;
 		max-width: 72rem;
 		margin: 2rem auto;
-		padding: 0.5rem 1rem;
-		background-color: var(--bg-2);
+		padding: 0.5rem 1.2rem;
+		background: var(--bg-2);
 
 		a {
 			text-decoration: none;
@@ -155,13 +155,17 @@
 			}
 		}
 
-		.search-button {
-			width: 1.4rem;
-			height: 1.4rem;
+		.search-container {
+			display: flex;
 
-			img {
+			.search-button {
 				width: 1.4rem;
 				height: 1.4rem;
+
+				img {
+					width: 1.4rem;
+					height: 1.4rem;
+				}
 			}
 		}
 
@@ -169,7 +173,7 @@
 			input {
 				font-family: inherit;
 				border: 2px solid var(--acc-2);
-				background-color: var(--bg-2);
+				background: var(--bg-2);
 				height: 1.8rem;
 				width: 10rem;
 				text-indent: 0.5rem;
@@ -187,9 +191,11 @@
 	}
 
 	footer {
+		background: var(--bg-2);
 		display: flex;
 		justify-content: space-between;
-		margin: 3rem auto;
+		padding: 1.2rem;
+		margin: 2rem auto;
 		width: 100%;
 		max-width: 72rem;
 
@@ -227,7 +233,7 @@
 		}
 
 		a {
-			margin: 0.5rem 0;
+			margin: 0.3rem 0;
 			@include underline;
 		}
 	}
@@ -302,7 +308,7 @@
 	// 	}
 
 	// 	button {
-	// 		background-color: transparent;
+	// 		background: transparent;
 	// 		width: 1.5rem;
 	// 		height: 1.5rem;
 
@@ -317,7 +323,7 @@
 	// 			font-family: inherit;
 	// 			border: solid 1px var(--divider);
 	// 			border-radius: 0.6rem;
-	// 			background-color: transparent;
+	// 			background: transparent;
 	// 			height: 2rem;
 	// 			width: 20rem;
 	// 			text-indent: 0.5rem;

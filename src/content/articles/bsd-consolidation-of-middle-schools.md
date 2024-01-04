@@ -10,7 +10,7 @@ categories:
 year: 2023-2024
 quarter: fall
 readtime: 3
-description: '    '
+description: 'A look into the potential consolidation of middle schools in Bellevue School District.'
 ---
 
 For the high school students of Interlake, the end of October opens the lovely prospect of Halloween, trick-or-treating, and another month of learning. However, it’s not the same story for middle schools. Though news may have not yet reached you, something that will change the lives of many middle schoolers has just made its debut – middle school consolidation.

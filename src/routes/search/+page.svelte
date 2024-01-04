@@ -58,7 +58,7 @@
 			font-family: inherit;
 			border: solid 1px var(--divider);
 			border-radius: 0.6rem;
-			background-color: transparent;
+			background: transparent;
 			height: 2rem;
 			width: 20rem;
 			text-indent: 0.5rem;
@@ -69,7 +69,7 @@
 		}
 
 		button {
-			background-color: transparent;
+			background: transparent;
 			width: 1.5rem;
 			height: 1.5rem;
 			position: absolute;

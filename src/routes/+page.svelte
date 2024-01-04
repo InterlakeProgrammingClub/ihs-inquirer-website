@@ -112,7 +112,7 @@
 		display: grid;
 		margin: auto;
 		gap: 2rem;
-		grid-template-columns: 20% auto 20%;
+		grid-template-columns: 1fr minmax(auto, 40rem) 1fr;
 		grid-template-rows: auto auto;
 		grid-auto-flow: column;
 	}
@@ -141,6 +141,8 @@
 		grid-column: 2 / 3;
 		grid-row: 1 / 3;
 		text-align: center;
+		max-width: 40rem;
+		width: 100%;
 
 		h2 {
 			font-size: 1.8rem;
@@ -197,7 +199,7 @@
 		}
 
 		.more-article {
-			background-color: var(--bg-2);
+			background: var(--bg-2);
 			display: flex;
 			gap: 1rem;
 			justify-content: space-between;

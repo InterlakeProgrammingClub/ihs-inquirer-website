@@ -31,26 +31,41 @@
 
 <style lang="scss">
 	main {
-		margin: 0 auto 4rem auto;
+		margin: 1rem auto 4rem auto;
+		width: 100%;
 		max-width: 40rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin: 1.5rem 0 0 0;
 	}
 
 	h3 {
 		font-weight: 500;
+		margin: 1rem 0;
 	}
 
 	.featured {
-		margin: 2rem auto;
+		img {
+			aspect-ratio: 3/2;
+			object-fit: cover;
+		}
 	}
 
 	.header {
 		.description {
-			margin: 1rem 0 2rem 0;
+			margin: 1.5rem 0;
 			font-style: italic;
 		}
 	}
 
 	img {
 		width: 100%;
+	}
+
+	.article {
+		max-width: 40rem;
+		margin: 0 auto;
 	}
 </style>

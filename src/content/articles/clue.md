@@ -11,7 +11,7 @@ year: 2022-2023
 categories:
   - arts
 featured_img: /images/uploads/clue-1.png
-description: description here
+description: Interlake Theatre’s production of Clue was a delight from start to finish.
 ---
 
 <script>

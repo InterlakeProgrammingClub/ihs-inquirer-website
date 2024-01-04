@@ -14,7 +14,6 @@
 		min-width: 0%;
 		height: auto;
 		flex-grow: 1;
-		border-radius: 0.6rem;
 	}
 
 	.gallery {
