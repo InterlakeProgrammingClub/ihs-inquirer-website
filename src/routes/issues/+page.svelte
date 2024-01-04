@@ -19,7 +19,7 @@
 				{year.title}{year.year_name ? ' - ' + year.year_name : ''}
 			</h3>
 			{#each Object.entries(year.issues) as [issueSlug, issue], j}
-				<a href={`/issues/${issueSlug}`} class="issue">
+				<a href={`/issues/${issueSlug}`}>
 					{removeYear(issue.title, year.title)}
 				</a>
 			{/each}
@@ -29,27 +29,21 @@
 
 <style lang="scss">
 	main {
-		max-width: 50rem;
+		max-width: 40rem;
 		width: 100%;
 		margin: 0 auto;
 	}
 
-	h1 {
-		text-align: center;
-	}
-
-	.year {
-		font-weight: 600;
-	}
-
-	.issue {
-		margin: 1.5rem 1.5rem 1.5rem 3rem;
+	a {
+		background: var(--bg-2);
+		padding: 1rem;
+		margin: 0.6rem 0rem 0.6rem 0rem;
 		display: block;
 		font-size: 1.1rem;
+		@include underline;
 	}
 
 	.year-group {
-		// @include border;
-		margin: 1.5rem 0;
+		margin: 2rem 0;
 	}
 </style>

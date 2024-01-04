@@ -1,5 +1,4 @@
 <script>
-	import struct from '/src/bio/struct.json';
 	import PageHead from '$lib/components/PageHead.svelte';
 	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';

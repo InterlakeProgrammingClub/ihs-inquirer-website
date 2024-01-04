@@ -6,6 +6,8 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 
+	export let data;
+
 	let showSearch = false;
 	let query = '';
 	let pageClass = '';
@@ -50,9 +52,10 @@
 	<header class={pageClass}>
 		<a href="/"><h1>The <span>I</span>nterlake <span>I</span>nquirer</h1></a>
 		<nav>
-			<a href="/">Latest Issue</a>
+			<a href="/">Home</a>
+			<a href={data.latestIssueSlug}>Latest Issue</a>
 			<a href="/issues">Past Issues</a>
-			<a href="/weekly-woof">The Weekly Woof</a>
+			<a href="/weekly-woof">Weekly Woof</a>
 			<a href="/about">About</a>
 			<div class="search-container">
 				{#if showSearch}
@@ -87,8 +90,8 @@
 		</div>
 		<div class="links">
 			<h3>Links</h3>
-			<a href="/">Latest Issue</a>
-			<a href="/issues">Past Issues</a>
+			<a href="/">Home</a>
+			<a href="/issues">Issues</a>
 			<a href="/weekly-woof">Weekly Woof</a>
 			<a href="/about">About</a>
 		</div>
