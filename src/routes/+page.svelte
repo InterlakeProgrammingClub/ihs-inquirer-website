@@ -24,7 +24,7 @@
 				<div class="info">
 					<h2 class="title">{article.title}</h2>
 					<div class="author">
-						<AuthorLink names={article.authors} /> <span>|</span>
+						<AuthorLink names={article.authors} /> <span class="divider">|</span>
 						{formatDate(article.date)}
 					</div>
 				</div>
@@ -42,7 +42,7 @@
 					{featured.description}
 				</div>
 				<div class="author">
-					<AuthorLink names={featured.authors} /> <span>|</span>
+					<AuthorLink names={featured.authors} /> <span class="divider">|</span>
 					{formatDate(featured.date)}
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 				<div class="info">
 					<h2 class="title">{article.title}</h2>
 					<div class="author">
-						<AuthorLink names={article.authors} /> <span>|</span>
+						<AuthorLink names={article.authors} /> <span class="divider">|</span>
 						{formatDate(article.date)}
 					</div>
 				</div>
@@ -76,7 +76,7 @@
 						<div class="info">
 							<h3 class="title">{article.title}</h3>
 							<div class="author">
-								<AuthorLink names={article.authors} /> <span>|</span>
+								<AuthorLink names={article.authors} /> <span class="divider">|</span>
 								{formatDate(article.date)}
 							</div>
 						</div>
@@ -172,10 +172,6 @@
 
 	.description {
 		margin-bottom: 0.8rem;
-	}
-
-	span {
-		margin: 0 0.2rem;
 	}
 
 	a.header {

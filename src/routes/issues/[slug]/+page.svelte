@@ -19,7 +19,7 @@
 				<div class="info">
 					<h3 class="title">{article.title}</h3>
 					<div class="author">
-						<AuthorLink names={article.authors} /> <span>|</span>
+						<AuthorLink names={article.authors} /> <span class="divider">|</span>
 						{formatDate(article.date)}
 					</div>
 				</div>
