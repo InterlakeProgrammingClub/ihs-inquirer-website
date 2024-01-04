@@ -1,8 +1,11 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
 	export let data;
 </script>
+
+<PageHead title={data.meta.title} description="" />
 
 <main>
 	<div class="featured">

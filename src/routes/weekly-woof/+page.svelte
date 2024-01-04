@@ -1,6 +1,9 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	export let data;
 </script>
+
+<PageHead title="Weekly Woof" description="" />
 
 <main>
 	<h1>Weekly Woof</h1>

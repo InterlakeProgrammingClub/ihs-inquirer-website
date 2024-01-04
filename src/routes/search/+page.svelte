@@ -1,22 +1,41 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	import { goto } from '$app/navigation';
 	import AuthorLink from '../../lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
+	import Page from '../+page.svelte';
 
+	// export let data;
+	// let query = data.query;
+	// $: data, (query = data.query);
 	export let data;
 	let query = data.query;
-	$: data, (query = data.query);
+	let inputQuery = query;
 
+	// const search = (event) => {
+	// 	event.preventDefault();
+	// 	if (query === '') return;
+	// 	goto(`/search?q=${encodeURIComponent(query)}`);
+	// };
 	const search = (event) => {
 		event.preventDefault();
-		if (query === '') return;
+		if (inputQuery === '') return;
+		query = inputQuery; // update query when the form is submitted
 		goto(`/search?q=${encodeURIComponent(query)}`);
 	};
 </script>
 
+<PageHead title="Search" description="" />
+
 <div class="content">
-	<form on:submit={search}>
+	<!-- <form on:submit={search}>
 		<input placeholder="Search" bind:value={query} />
+		<button>
+			<img src="/search.png" alt="Search" />
+		</button>
+	</form> -->
+	<form on:submit={search}>
+		<input placeholder="Search" bind:value={inputQuery} />
 		<button>
 			<img src="/search.png" alt="Search" />
 		</button>
@@ -26,7 +45,11 @@
 		<div class="hor-divider" />
 		{#each data.results as article}
 			<a href={`/articles/${article.slug}`} class="article">
-				<img src={article.featured_img} alt="Featured" />
+				{#if !article.featured_img}
+					<img src="/images/placeholder.jpg" alt="Featured" />
+				{:else}
+					<img src={article.featured_img} alt="Featured" />
+				{/if}
 
 				<div class="articleText">
 					<h2 class="title">{article.title}</h2>

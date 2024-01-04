@@ -10,7 +10,7 @@
 	const rightPanel = articles.slice(3, 5);
 </script>
 
-<PageHead title="" description="" />
+<PageHead title="Home" description="" />
 
 <main>
 	<div class="articles">

@@ -1,4 +1,5 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	export let data;
 
 	function removeYear(title, year) {
@@ -8,6 +9,8 @@
 		return title;
 	}
 </script>
+
+<PageHead title="Past Issues" description="" />
 
 <main>
 	<h1>Past Issues</h1>
