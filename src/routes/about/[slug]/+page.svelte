@@ -1,9 +1,15 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
 
 	export let data;
 </script>
+
+<PageHead
+	title={data.bio.title}
+	description={`Meet ${data.bio.title}, ${data.bio.role} at the Interlake Inquirer.`}
+/>
 
 <div class="content">
 	<div class="bio">
@@ -53,6 +59,7 @@
 		background: var(--bg-2);
 		display: flex;
 		margin-top: 2rem;
+		justify-content: space-between;
 
 		h1 {
 			text-align: left;

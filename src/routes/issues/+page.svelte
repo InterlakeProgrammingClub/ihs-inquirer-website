@@ -1,4 +1,6 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
+
 	export let data;
 
 	function removeYear(title, year) {
@@ -9,10 +11,11 @@
 	}
 </script>
 
+<PageHead title="Past Issues" description="Past issues of the Interlake Inquirer." />
+
 <main>
 	<h1>Past Issues</h1>
 
-	<!-- <div class="hor-divider" /> -->
 	{#each Object.entries(data.years) as [yearSlug, year], i}
 		<div class="year-group">
 			<h3 class="year">

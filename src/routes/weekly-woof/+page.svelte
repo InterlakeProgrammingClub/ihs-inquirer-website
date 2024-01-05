@@ -1,9 +1,13 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
+
 	export let data;
 </script>
 
+<PageHead title="The Weekly Woof" description="A weekly newsletter from the Interlake Inquirer." />
+
 <main>
-	<h1>Weekly Woof</h1>
+	<h1>The Weekly Woof</h1>
 
 	{#each data.woofs as woof}
 		<div class="woof">

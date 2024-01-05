@@ -1,10 +1,12 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
 
 	export let data;
-	console.log(data);
 </script>
+
+<PageHead title={data.issue.title} description="Past issues of the Interlake Inquirer." />
 
 <main>
 	<h1>{data.issue.title}</h1>

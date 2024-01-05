@@ -1,8 +1,11 @@
 <script>
+	import PageHead from '$lib/components/PageHead.svelte';
 	import AuthorLink from '../../lib/components/AuthorLink.svelte';
 
 	export let data;
 </script>
+
+<PageHead title="About" description="Meet the staff and contributors of the Interlake Inquirer." />
 
 <main>
 	<h1>Staff</h1>
