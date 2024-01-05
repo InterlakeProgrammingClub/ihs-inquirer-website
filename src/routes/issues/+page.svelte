@@ -1,6 +1,5 @@
 <script>
 	import PageHead from '$lib/components/PageHead.svelte';
-
 	export let data;
 
 	function removeYear(title, year) {

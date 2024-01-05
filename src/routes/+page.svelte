@@ -10,7 +10,7 @@
 	const rightPanel = articles.slice(3, 5);
 </script>
 
-<PageHead title="" description="The Official Student Newspaper of Interlake High School." />
+<PageHead title="Home" description="The Official Student Newspaper of Interlake High School." />
 
 <main>
 	<div class="articles">
