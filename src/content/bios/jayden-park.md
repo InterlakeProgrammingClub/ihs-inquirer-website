@@ -2,7 +2,7 @@
 title: Jayden Park
 category: Staff
 role: Editor
-order: 6
+order: 1
 photo: /images/uploads/img_6381.jpg
 description: Heehoo
 ---
