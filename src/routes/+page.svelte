@@ -67,7 +67,7 @@
 	<br />
 	<br />
 	<br />
-	<h2><a class="header" href="/weekly-woof"> More Articles </a></h2>
+	<h2>More Articles</h2>
 	<div class="more-articles">
 		{#each [0, 1] as col}
 			<div class="column">
