@@ -1,6 +1,6 @@
 ---
 title: Olivia Chen
-category: Staff
+category: Contributor
 role: Writer
 order: 4
 photo: /images/uploads/c3f97b28-26c8-47be-adcc-ee8f09bb46ac.jpg
