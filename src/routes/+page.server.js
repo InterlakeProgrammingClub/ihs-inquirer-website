@@ -9,7 +9,8 @@ export async function load() {
 	for (const path in articleModules) {
 		const post = await articleModules[path]();
 		const slug = path.split('/').pop().split('.')[0];
-		articles.push({ slug, ...post.metadata });
+		post.metadata.slug = slug;
+		articles.push({ ...post.metadata });
 	}
 
 	articles.sort((a, b) => {

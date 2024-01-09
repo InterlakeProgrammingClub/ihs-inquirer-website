@@ -10,7 +10,8 @@ export async function load({ params }) {
 	for (const path in modules) {
 		const post = await modules[path]();
 		const slug = path.split('/').pop().split('.')[0];
-		articles.push({ ...post.metadata, slug: slug });
+		post.metadata.slug = slug;
+		articles.push({ ...post.metadata });
 	}
 
 	const results = articles.filter((item) => {
