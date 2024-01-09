@@ -16,8 +16,6 @@ export async function load() {
 		}
 	}
 
-	console.log(latestIssueSlug);
-
 	return {
 		latestIssueSlug: '/issues/' + latestIssueSlug
 	};

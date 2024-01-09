@@ -6,7 +6,6 @@ export async function load({ params }) {
 	let match = {};
 
 	for (const [path, resolver] of Object.entries(modules)) {
-		console.log(path);
 		if (path.split('/').pop().split('.')[0] === params.slug) {
 			match = { path, resolver };
 			break;
