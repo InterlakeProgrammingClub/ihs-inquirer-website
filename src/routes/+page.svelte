@@ -93,7 +93,7 @@
 	<br />
 	<br />
 	<br />
-	<h2><a class="header" href="/weekly-woof"> Latest Weekly Woof </a></h2>
+	<a class="header" href="/weekly-woof"><h2>Latest Weekly Woof</h2></a>
 	<div class="woof">
 		<img src={data.woof.image} alt="woof.title" />
 	</div>
@@ -158,8 +158,8 @@
 		object-fit: cover;
 	}
 
-	h2,
-	h3 {
+	a h2,
+	a h3 {
 		@include underline;
 	}
 
@@ -199,6 +199,8 @@
 			gap: 1rem;
 			justify-content: space-between;
 			text-decoration: none;
+
+			@include expand;
 
 			img {
 				max-width: 25%;

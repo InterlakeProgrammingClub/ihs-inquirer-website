@@ -58,6 +58,8 @@
 			justify-content: space-between;
 			text-decoration: none;
 
+			@include expand;
+
 			img {
 				max-width: 22%;
 				aspect-ratio: 4/3;

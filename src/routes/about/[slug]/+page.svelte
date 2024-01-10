@@ -99,6 +99,8 @@
 			justify-content: space-between;
 			text-decoration: none;
 
+			@include expand;
+
 			img {
 				max-width: 11rem;
 				width: 100%;
