@@ -35,11 +35,7 @@ export async function load() {
 	}
 
 	contributors.sort((a, b) => {
-		if (a.order != b.order) {
-			return a.order > b.order ? 1 : -1;
-		} else {
-			return a.title.localeCompare(b.title);
-		}
+		return a.title.localeCompare(b.title);
 	});
 
 	return { staff, contributors };
