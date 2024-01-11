@@ -17,9 +17,9 @@
 		{#each leftPanel as article, i}
 			<a href={`/articles/${article.slug}`} class="article">
 				{#if !article.featured_img}
-					<img src="/images/placeholder.jpg" alt="" />
+					<img src="/images/placeholder.jpg" alt="" width="224" height="168" />
 				{:else}
-					<img src={article.featured_img} alt="" />
+					<img src={article.featured_img} alt="" width="224" height="168" />
 				{/if}
 				<div class="info">
 					<h2 class="title">{article.title}</h2>
@@ -32,9 +32,9 @@
 		{/each}
 		<a href={`/articles/${featured.slug}`} class="featured">
 			{#if !featured.featured_img}
-				<img src="/images/placeholder.jpg" alt="" />
+				<img src="/images/placeholder.jpg" alt="" width="640" height="426.66" />
 			{:else}
-				<img src={featured.featured_img} alt="" />
+				<img src={featured.featured_img} alt="" width="640" height="426.66" />
 			{/if}
 			<div class="info">
 				<h2 class="title">{featured.title}</h2>
@@ -50,9 +50,9 @@
 		{#each rightPanel as article, i}
 			<a href={`/articles/${article.slug}`} class="article">
 				{#if !article.featured_img}
-					<img src="/images/placeholder.jpg" alt="" />
+					<img src="/images/placeholder.jpg" alt="" width="224" height="168" />
 				{:else}
-					<img src={article.featured_img} alt="" />
+					<img src={article.featured_img} alt="" width="224" height="168" />
 				{/if}
 				<div class="info">
 					<h2 class="title">{article.title}</h2>
@@ -69,25 +69,21 @@
 	<br />
 	<h2>More Articles</h2>
 	<div class="more-articles">
-		{#each [0, 1] as col}
-			<div class="column">
-				{#each articles.slice(5 + col * 3, 8 + col * 3) as article, i}
-					<a href={`/articles/${article.slug}`} class="more-article">
-						<div class="info">
-							<h3 class="title">{article.title}</h3>
-							<div class="author">
-								<AuthorLink names={article.authors} /> <span class="divider">|</span>
-								{formatDate(article.date)}
-							</div>
-						</div>
-						{#if !article.featured_img}
-							<img src="/images/placeholder.jpg" alt="" />
-						{:else}
-							<img src={article.featured_img} alt="" />
-						{/if}
-					</a>
-				{/each}
-			</div>
+		{#each articles.slice(5, 11) as article, i}
+			<a href={`/articles/${article.slug}`} class="more-article" class:col-2={i > 2}>
+				<div class="info">
+					<h3 class="title">{article.title}</h3>
+					<div class="author">
+						<AuthorLink names={article.authors} /> <span class="divider">|</span>
+						{formatDate(article.date)}
+					</div>
+				</div>
+				{#if !article.featured_img}
+					<img src="/images/placeholder.jpg" alt="" width="160" height="120" />
+				{:else}
+					<img src={article.featured_img} alt="" width="160" height="120" />
+				{/if}
+			</a>
 		{/each}
 	</div>
 	<br />
@@ -183,28 +179,29 @@
 	}
 
 	.more-articles {
-		display: flex;
+		display: grid;
 		gap: 1rem;
-
-		.column {
-			display: flex;
-			gap: 1rem;
-			flex-direction: column;
-			width: 100%;
-		}
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: column;
 
 		.more-article {
+			height: 7.5rem;
 			background: var(--bg-2);
 			display: flex;
 			gap: 1rem;
 			justify-content: space-between;
 			text-decoration: none;
+			width: 100%;
 
 			@include expand;
 
+			&.col-2 {
+				grid-column: 2;
+			}
+
 			img {
-				max-width: 25%;
-				aspect-ratio: 4/3;
+				height: 100%;
+				width: 10rem;
 			}
 
 			.info {
@@ -213,12 +210,16 @@
 				flex-direction: column;
 				justify-content: space-between;
 			}
-		}
 
-		h3 {
-			margin: 0rem;
+			h3 {
+				margin: 0rem;
 
-			@include line-clamp(2);
+				@include line-clamp(2);
+			}
+
+			.author {
+				@include line-clamp(2);
+			}
 		}
 	}
 
