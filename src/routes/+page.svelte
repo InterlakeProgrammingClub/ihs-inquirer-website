@@ -200,7 +200,7 @@
 			}
 
 			img {
-				max-width: 9rem;
+				max-width: 8.75rem;
 				width: 100%;
 			}
 
