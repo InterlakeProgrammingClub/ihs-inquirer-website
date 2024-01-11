@@ -79,9 +79,9 @@
 					</div>
 				</div>
 				{#if !article.featured_img}
-					<img src="/images/placeholder.jpg" alt="" width="160" height="120" />
+					<img src="/images/placeholder.jpg" alt="" width="144" height="104" />
 				{:else}
-					<img src={article.featured_img} alt="" width="160" height="120" />
+					<img src={article.featured_img} alt="" width="144" height="104" />
 				{/if}
 			</a>
 		{/each}
@@ -185,7 +185,7 @@
 		grid-auto-flow: column;
 
 		.more-article {
-			height: 7.5rem;
+			height: 6.5rem;
 			background: var(--bg-2);
 			display: flex;
 			gap: 1rem;
@@ -200,8 +200,8 @@
 			}
 
 			img {
-				height: 100%;
-				width: 10rem;
+				max-width: 9rem;
+				width: 100%;
 			}
 
 			.info {
@@ -214,7 +214,7 @@
 			h3 {
 				margin: 0rem;
 
-				@include line-clamp(2);
+				@include line-clamp(1);
 			}
 
 			.author {
