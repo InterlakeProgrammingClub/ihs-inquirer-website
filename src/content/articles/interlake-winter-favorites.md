@@ -10,6 +10,7 @@ issue: ""
 categories:
   - Student Life
 readtime: 2
+featured_img: /images/uploads/winter-issues.png
 description: "      "
 ---
 As the weather changes with the seasons, our favorite attire, food, and hobbies do too. Whether it’s transitioning from cropped baby tees to thermal long-sleeved shirts or switching from iced lemonade to a warm cup of tea, we’ve all experienced some degree of change as we transition into the winter season. However, everyone’s unique: while some students might enjoy the hilarious storyline of Home Alone, others prefer the nostalgic childhood memories that Frozen entails. To better understand what winter items Interlake students couldn’t live without, we’ve compiled a list of 64 students’ “Winter Favorites.”
