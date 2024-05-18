@@ -6,7 +6,7 @@ date: 2024-05-01T14:33:00.000Z
 authors:
   - title: Rohan Badgandi
 year: 2023-2024
-issue: 2022-2023 Winter Issue
+issue: ""
 categories:
   - Arts
 readtime: ""
