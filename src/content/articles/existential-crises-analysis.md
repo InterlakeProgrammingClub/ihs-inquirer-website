@@ -6,6 +6,8 @@ date: 2024-05-01T14:55:00.000Z
 authors:
   - title: Isabelle Wang
 year: 2023-2024
+categories:
+  - Student Life
 readtime: 2
 featured_img: /images/uploads/existential-crisis.png
 description: "    "
