@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Exactly What You Think This Is: An Analysis of Existential Crises  "
 slug: existential-crises-analysis
 date: 2024-05-01T14:55:00.000Z
