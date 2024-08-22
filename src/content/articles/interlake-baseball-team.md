@@ -10,6 +10,7 @@ issue: ""
 categories:
   - Sports
 readtime: 1
+featured_img: /images/uploads/d2xnn2ruwaawgsn.jpg
 description: "    "
 ---
 The Interlake Saints baseball team is facing a challenging
