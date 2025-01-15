@@ -1,116 +1,151 @@
 backend:
-  name: github
+  name: git-gateway
   repo: AppleEpic69/ihs-inquirer-website
 
-media_folder: 'static/images/uploads' # Media files will be stored in the repo under static/images/uploads
-public_folder: '/images/uploads' # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: 'article' # Used in routes, e.g., /admin/collections/blog
-    label: 'Article' # Used in the UI
-    folder: 'src/content/articles' # The path to the folder where the documents are stored
+  - name: "article" # Used in routes, e.g., /admin/collections/blog
+    label: "Article" # Used in the UI
+    folder: "src/content/articles" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{fields.slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{fields.slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Published', name: 'published', widget: 'boolean', default: false }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'URL ending', name: 'slug', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime', time_format: false }
-      - label: 'Authors'
-        name: 'authors'
-        widget: 'list'
+      - {
+          label: "Published",
+          name: "published",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL ending", name: "slug", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", time_format: false }
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
         fields:
-          - { label: 'Name', name: 'title', widget: 'string' }
+          - { label: "Name", name: "title", widget: "string" }
       - {
-          label: 'Year',
-          name: 'year',
-          widget: 'relation',
-          collection: 'years',
-          search_fields: ['title'],
-          value_field: 'title',
-          display_fields: ['title'],
-          required: false
+          label: "Year",
+          name: "year",
+          widget: "relation",
+          collection: "years",
+          search_fields: ["title"],
+          value_field: "title",
+          display_fields: ["title"],
+          required: false,
         }
       - {
-          label: 'Issue',
-          name: 'issue',
-          widget: 'relation',
-          collection: 'issues',
-          search_fields: ['title'],
-          value_field: 'title',
-          display_fields: ['title'],
-          required: false
+          label: "Issue",
+          name: "issue",
+          widget: "relation",
+          collection: "issues",
+          search_fields: ["title"],
+          value_field: "title",
+          display_fields: ["title"],
+          required: false,
         }
       - {
-          label: 'Categories',
-          name: 'categories',
-          widget: 'select',
+          label: "Categories",
+          name: "categories",
+          widget: "select",
           options:
-            ['Arts', 'Sports', 'Student Life', 'Academics', 'Entertainment', 'Miscellaneous'],
+            [
+              "Arts",
+              "Sports",
+              "Student Life",
+              "Academics",
+              "Entertainment",
+              "Miscellaneous",
+            ],
           multiple: true,
-          required: false
+          required: false,
         }
       - {
-          label: 'Readtime in minutes (optional)',
-          name: 'readtime',
-          widget: 'number',
-          value_type: 'int',
-          required: false
+          label: "Readtime in minutes (optional)",
+          name: "readtime",
+          widget: "number",
+          value_type: "int",
+          required: false,
         }
-      - { label: 'Featured Image', name: 'featured_img', widget: 'image', required: false }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'bios'
-    label: 'Bios'
-    folder: 'src/content/bios'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { label: 'Name', name: 'title', widget: 'string' }
-      - { label: 'Category', name: 'category', widget: 'select', options: ['Staff', 'Contributor'] }
-      - { label: 'Role', name: 'role', widget: 'string', required: false }
       - {
-          label: 'Order (lower number = higher up)',
-          name: 'order',
-          widget: 'number',
-          value_type: 'int',
-          default: 1
+          label: "Featured Image",
+          name: "featured_img",
+          widget: "image",
+          required: false,
         }
-      - { label: 'Photo', name: 'photo', widget: 'image', required: false }
-      - { label: 'Description', name: 'description', widget: 'text', required: false }
-  - name: 'years'
-    label: 'Years'
-    folder: 'src/content/years'
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "bios"
+    label: "Bios"
+    folder: "src/content/bios"
     create: true
-    slug: '{{slug}}'
+    slug: "{{slug}}"
     fields:
-      - { label: 'Year', name: 'title', widget: 'string' }
-      - { label: 'Year Name', name: 'year_name', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown', required: false }
-  - name: 'issues'
-    label: 'Issues'
-    folder: 'src/content/issues'
-    create: true
-    slug: '{{fields.year}}-{{fields.title}}'
-    fields:
-      - { label: 'Issue Name (PLEASE SPECIFY YEAR)', name: 'title', widget: 'string' }
+      - { label: "Name", name: "title", widget: "string" }
       - {
-          label: 'Year',
-          name: 'year',
-          widget: 'relation',
-          collection: 'years',
-          search_fields: ['title', 'year_name'],
-          value_field: 'title',
-          display_fields: ['title', 'year_name']
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Staff", "Contributor"],
         }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-  - name: 'woofs'
-    label: 'Weekly Woofs'
-    folder: 'src/content/woofs'
+      - { label: "Role", name: "role", widget: "string", required: false }
+      - {
+          label: "Order (lower number = higher up)",
+          name: "order",
+          widget: "number",
+          value_type: "int",
+          default: 1,
+        }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
+  - name: "years"
+    label: "Years"
+    folder: "src/content/years"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Year", name: "title", widget: "string" }
+      - { label: "Year Name", name: "year_name", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "issues"
+    label: "Issues"
+    folder: "src/content/issues"
+    create: true
+    slug: "{{fields.year}}-{{fields.title}}"
+    fields:
+      - {
+          label: "Issue Name (PLEASE SPECIFY YEAR)",
+          name: "title",
+          widget: "string",
+        }
+      - {
+          label: "Year",
+          name: "year",
+          widget: "relation",
+          collection: "years",
+          search_fields: ["title", "year_name"],
+          value_field: "title",
+          display_fields: ["title", "year_name"],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "woofs"
+    label: "Weekly Woofs"
+    folder: "src/content/woofs"
     create: true
     fields:
-      - { label: 'Week (Month StartDay-EndDay, Year)', name: 'title', widget: 'string' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - {
+          label: "Week (Month StartDay-EndDay, Year)",
+          name: "title",
+          widget: "string",
+        }
+      - { label: "Image", name: "image", widget: "image" }
   # - name: 'pages'
   #   label: 'Pages'
   #   files:
