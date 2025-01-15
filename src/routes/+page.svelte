@@ -2,13 +2,28 @@
 	import PageHead from '$lib/components/PageHead.svelte';
 	import AuthorLink from '$lib/components/AuthorLink.svelte';
 	import { formatDate } from '$lib/js/utils.js';
+	import { browser } from '$app/environment';
 
 	export let data;
 	const articles = data.articles;
 	const featured = articles[0];
 	const leftPanel = articles.slice(1, 3);
 	const rightPanel = articles.slice(3, 5);
+
+	if (browser && window.netlifyIdentity) {
+		window.netlifyIdentity.on('init', (user) => {
+			if (!user) {
+				window.netlifyIdentity.on('login', () => {
+					document.location.href = '/admin/';
+				});
+			}
+		});
+	}
 </script>
+
+<svelte:head>
+	<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</svelte:head>
 
 <PageHead title="Home" description="The Official Student Newspaper of Interlake High School." />
 
