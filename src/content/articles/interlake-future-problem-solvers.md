@@ -6,6 +6,9 @@ date: 2025-01-25T00:00:00.000Z
 authors:
   - title: Ruochen Xu
   - title: Isabelle Wang
+categories:
+  - Academics
+  - Student Life
 description: "     "
 ---
 
