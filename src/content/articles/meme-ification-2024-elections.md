@@ -6,6 +6,10 @@ slug: -meme-ification-2024-elections
 date: 2025-01-25T00:00:00.000Z
 authors:
   - title: Liba Mujtaba
+categories:
+  - Entertainment
+  - Student Life
+  - Miscellaneous
 featured_img: /images/uploads/memeificaiton-elections-2.jpg
 description: "     "
 ---
