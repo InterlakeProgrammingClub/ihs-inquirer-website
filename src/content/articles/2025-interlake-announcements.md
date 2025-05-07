@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Interlake Announcements
 slug: 2025-interlake-announcements
 date: 2025-05-06T00:00:00.000Z
