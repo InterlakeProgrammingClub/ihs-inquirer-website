@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Transition from Middle School to High School "
 slug: 2025-transition-middle-to-high
 date: 2025-05-06T00:00:00.000Z
