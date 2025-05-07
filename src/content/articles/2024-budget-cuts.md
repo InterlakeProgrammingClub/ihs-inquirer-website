@@ -1,7 +1,7 @@
 ---
 published: true
 title: Budget Cuts in the BSD
-slug: 2024-budget-cuts
+slug: 2025-budget-cuts
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: William Yoon
