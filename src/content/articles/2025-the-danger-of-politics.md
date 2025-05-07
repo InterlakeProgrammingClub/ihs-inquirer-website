@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Silence: The Danger of Politics"
 slug: 2025-the-danger-of-politics
 date: 2025-05-06T00:00:00.000Z
