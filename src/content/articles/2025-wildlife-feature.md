@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Wildlife Feature
 slug: 2025-wildlife-feature
 date: 2025-05-06T00:00:00.000Z
