@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "For the PTSA:"
 slug: 2025-ptsa-dedication
 date: 2025-05-06T00:00:00.000Z
