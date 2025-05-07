@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "Dear Parking Lot Parents: Stop Droppin' Your Kids Off in the Student Lot!"
 slug: 2025-student-lot
 date: 2025-05-06T00:00:00.000Z
