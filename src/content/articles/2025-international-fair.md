@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "A Meeting of Culture and Community: 3rd Annual PTSA International Fair"
 slug: 2025-international-fair
 date: 2025-05-06T00:00:00.000Z
