@@ -1,6 +1,6 @@
 ---
 published: true
-title: Diverse Immigrants of Interlake High School
+title: Interlake Immigrant Stories
 slug: 2024-IHS-Immigrations
 date: 2025-05-06T00:00:00.000Z
 authors:
