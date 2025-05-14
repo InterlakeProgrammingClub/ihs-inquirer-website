@@ -7,6 +7,7 @@ authors:
   - title: Willy Du
 categories:
   - Sports
+featured_img: /images/uploads/image-4-.jfif
 description: "     "
 ---
 
