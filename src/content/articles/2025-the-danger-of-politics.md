@@ -5,6 +5,7 @@ slug: 2025-the-danger-of-politics
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: Leslie Park
+featured_img: /images/uploads/image-5-.jfif
 description: Politics at Interlake
 ---
 
