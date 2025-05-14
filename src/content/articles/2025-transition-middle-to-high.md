@@ -5,6 +5,7 @@ slug: 2025-transition-middle-to-high
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: Corlie Zhuang
+featured_img: /images/uploads/image-6-.jfif
 description: Transition from middle school to high school
 ---
 
