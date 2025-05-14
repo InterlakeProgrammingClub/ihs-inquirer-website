@@ -5,6 +5,7 @@ slug: 2025-international-fair
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: Richard Hao
+featured_img: /images/uploads/image-2-.jfif
 description: 3rd Annual PTSA International Fair
 ---
 
