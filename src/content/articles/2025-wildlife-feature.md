@@ -5,7 +5,7 @@ slug: 2025-wildlife-feature
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: Zihan Zhao
-featured_img: /images/uploads/americancrow.jpg
+featured_img: /images/uploads/image-7-.jfif
 description: Birds at Interlake High School
 ---
 
