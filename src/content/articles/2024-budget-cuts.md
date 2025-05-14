@@ -5,6 +5,7 @@ slug: 2025-budget-cuts
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: William Yoon
+featured_img: /images/uploads/image.jfif
 description: Budget Cuts in the Bellevue School District
 ---
 
