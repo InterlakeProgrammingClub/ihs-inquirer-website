@@ -5,6 +5,7 @@ slug: 2025-holidays-Interlake
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: Richard Hao
+featured_img: /images/uploads/image-1-.jfif
 description: Holiday favorites in Interlake
 ---
 A holiday is always warmly welcomed as a student in high school, especially one that gets you a day off, or better yet, a week. However, when it comes to holidays and breaks, each of us have our personal favorites. To many of us, when we hear the word holiday or the phrase holiday season, our brains jump directly to Christmas and the New Year, filled with national celebrations such as the countdown in Times Square or the Christmas trees and multicolored lights that decorate our towns. Holiday spirit is everywhere from the wreaths on every door and Mariah on Spotify. 
