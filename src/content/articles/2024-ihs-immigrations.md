@@ -5,6 +5,7 @@ slug: 2024-IHS-Immigrations
 date: 2025-05-06T00:00:00.000Z
 authors:
   - title: Rohan Badgandi
+featured_img: /images/uploads/img_3717.jpeg
 description: Immigrants in IHS
 ---
 
