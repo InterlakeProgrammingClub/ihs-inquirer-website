@@ -7,7 +7,7 @@ authors:
   - title: Richard Hao
 description: Our thanks to the PTSA
 ---
-On behalf of the Interlake Inquirer team, thank you for funding our print edition. Without your generous funds, we would be unable to publish many copies of our newspaper, hindering our ability to spread important stories around the school. Your support allows us to share important stories, amplify student voices and opinions about a multitude of topics, and strengthen our school community spirit through communication and journalism. 
+On behalf of the Interlake Inquirer team, thank you for funding future print editions. Your generous donation will allow us to publish more copies of our newspaper, share important stories, amplify student voices, and strengthen our school community spirit through communication and journalism. 
 
 We truly appreciate your generosity and commitment to student journalism.
 
